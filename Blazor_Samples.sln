@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Shared\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared.csproj", "{615B2BF0-35EB-49B0-9A23-29CFC63D5281}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{88C195C6-1251-4675-BBB2-C7D85665BA92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{615B2BF0-35EB-49B0-9A23-29CFC63D5281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{615B2BF0-35EB-49B0-9A23-29CFC63D5281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{615B2BF0-35EB-49B0-9A23-29CFC63D5281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C195C6-1251-4675-BBB2-C7D85665BA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C195C6-1251-4675-BBB2-C7D85665BA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C195C6-1251-4675-BBB2-C7D85665BA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C195C6-1251-4675-BBB2-C7D85665BA92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{095D92B3-463F-4A99-84E3-92BC4E523797} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{EFF61D71-8C6D-42BB-9938-C7B9087D4EAA} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{615B2BF0-35EB-49B0-9A23-29CFC63D5281} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
+		{88C195C6-1251-4675-BBB2-C7D85665BA92} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C4819EF-5052-413A-BD79-3FC25D4E4A66}
