@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_DevResources", "src\App
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_BlazorApp", "src\Tutorial_BlazorApp\Tutorial_BlazorApp.csproj", "{EA416F40-4BF8-4434-8755-DBFE89B0E33B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_TodoListServer", "src\Tutorial_TodoListServer\Tutorial_TodoListServer.csproj", "{B3C6876A-6F10-4E65-869C-DBCD6265EF2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{EA416F40-4BF8-4434-8755-DBFE89B0E33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA416F40-4BF8-4434-8755-DBFE89B0E33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA416F40-4BF8-4434-8755-DBFE89B0E33B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C6876A-6F10-4E65-869C-DBCD6265EF2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C6876A-6F10-4E65-869C-DBCD6265EF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C6876A-6F10-4E65-869C-DBCD6265EF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C6876A-6F10-4E65-869C-DBCD6265EF2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
