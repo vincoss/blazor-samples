@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_MauiBlazorApp", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_WindowsFormsBlazorApp", "src\Tutorial_WindowsFormsBlazorApp\Tutorial_WindowsFormsBlazorApp.csproj", "{E7954138-AB78-4268-AAC4-AAAE15C5497B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_WpfBlazorApp", "src\Tutorial_WpfBlazorApp\Tutorial_WpfBlazorApp.csproj", "{9166EF6E-1BE5-4263-B42F-C6FAD5153F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_WpfBlazorAppRarorClassLibrary", "src\Tutorial_WpfBlazorAppRarorClassLibrary\Tutorial_WpfBlazorAppRarorClassLibrary.csproj", "{5642118F-DA85-42B1-A498-A34963715B91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{E7954138-AB78-4268-AAC4-AAAE15C5497B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7954138-AB78-4268-AAC4-AAAE15C5497B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7954138-AB78-4268-AAC4-AAAE15C5497B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9166EF6E-1BE5-4263-B42F-C6FAD5153F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9166EF6E-1BE5-4263-B42F-C6FAD5153F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9166EF6E-1BE5-4263-B42F-C6FAD5153F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9166EF6E-1BE5-4263-B42F-C6FAD5153F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5642118F-DA85-42B1-A498-A34963715B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5642118F-DA85-42B1-A498-A34963715B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5642118F-DA85-42B1-A498-A34963715B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5642118F-DA85-42B1-A498-A34963715B91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
