@@ -25,6 +25,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_TodoListWebAssembl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorServerSignalRAppServer", "src\Tutorial_BlazorServerSignalRAppServer\Tutorial_BlazorServerSignalRAppServer.csproj", "{539481B9-A480-4471-BB4B-0CD99525790F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblySignalRApp.Server", "src\Tutorial_BlazorWebAssemblySignalRApp\Server\Tutorial_BlazorWebAssemblySignalRApp.Server.csproj", "{B7CCE192-253F-409E-9EFC-AB9CA0DB200F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblySignalRApp.Client", "src\Tutorial_BlazorWebAssemblySignalRApp\Client\Tutorial_BlazorWebAssemblySignalRApp.Client.csproj", "{8B20045B-444F-4213-8BD8-D1FA98E5888D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblySignalRApp.Shared", "src\Tutorial_BlazorWebAssemblySignalRApp\Shared\Tutorial_BlazorWebAssemblySignalRApp.Shared.csproj", "{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +77,18 @@ Global
 		{539481B9-A480-4471-BB4B-0CD99525790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539481B9-A480-4471-BB4B-0CD99525790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{539481B9-A480-4471-BB4B-0CD99525790F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CCE192-253F-409E-9EFC-AB9CA0DB200F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CCE192-253F-409E-9EFC-AB9CA0DB200F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CCE192-253F-409E-9EFC-AB9CA0DB200F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CCE192-253F-409E-9EFC-AB9CA0DB200F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B20045B-444F-4213-8BD8-D1FA98E5888D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B20045B-444F-4213-8BD8-D1FA98E5888D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B20045B-444F-4213-8BD8-D1FA98E5888D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B20045B-444F-4213-8BD8-D1FA98E5888D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
