@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblyS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblySignalRApp.Shared", "src\Tutorial_BlazorWebAssemblySignalRApp\Shared\Tutorial_BlazorWebAssemblySignalRApp.Shared.csproj", "{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3130C615-FD05-438A-9EE2-2DDF217AFB47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,7 @@ Global
 		{EFF61D71-8C6D-42BB-9938-C7B9087D4EAA} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{615B2BF0-35EB-49B0-9A23-29CFC63D5281} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{88C195C6-1251-4675-BBB2-C7D85665BA92} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
+		{52BE9C62-1CCB-44D4-BB61-EFCDC5F366D4} = {3130C615-FD05-438A-9EE2-2DDF217AFB47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C4819EF-5052-413A-BD79-3FC25D4E4A66}
