@@ -1,0 +1,22 @@
+﻿@page "/customer-list"
+@inject IDataService DataRepository
+
+@if (customers != null)
+{
+    <ul>
+        @foreach (var customer in customers)
+        {
+            <li>@customer</li>
+        }
+    </ul>
+}
+
+@code {
+    private IEnumerable<string>? customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await DataRepository.GetCustomers();
+    }
+
+}

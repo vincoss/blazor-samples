@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration.Memory;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Logging;
+using Fundamentals_BlazorWebAssemblyApp.Interfaces;
+using Fundamentals_BlazorWebAssemblyApp.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -37,5 +39,8 @@ var memoryConfig = new MemoryConfigurationSource { InitialData = vehicleData };
 builder.Configuration.Add(memoryConfig);
 
 //builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
+
+// Dependency injection
+builder.Services.AddSingleton<IDataService, DataService>();
 
 await builder.Build().RunAsync();
