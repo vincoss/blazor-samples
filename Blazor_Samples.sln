@@ -7,15 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Default", "Default", "{6514
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorServerApp", "src\Default_BlazorServerApp\Default_BlazorServerApp.csproj", "{5DB7A3F7-49F1-4F0E-94C9-121C2DBF0703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Server\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server.csproj", "{095D92B3-463F-4A99-84E3-92BC4E523797}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Server\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server.csproj", "{095D92B3-463F-4A99-84E3-92BC4E523797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Client\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client.csproj", "{EFF61D71-8C6D-42BB-9938-C7B9087D4EAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Client\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client.csproj", "{EFF61D71-8C6D-42BB-9938-C7B9087D4EAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Shared\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared.csproj", "{615B2BF0-35EB-49B0-9A23-29CFC63D5281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Shared\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared.csproj", "{615B2BF0-35EB-49B0-9A23-29CFC63D5281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{88C195C6-1251-4675-BBB2-C7D85665BA92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{88C195C6-1251-4675-BBB2-C7D85665BA92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_DevResources", "src\App_DevResources\App_DevResources.csproj", "{52BE9C62-1CCB-44D4-BB61-EFCDC5F366D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App_DevResources", "src\App_DevResources\App_DevResources.csproj", "{52BE9C62-1CCB-44D4-BB61-EFCDC5F366D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_BlazorApp", "src\Tutorial_BlazorApp\Tutorial_BlazorApp.csproj", "{EA416F40-4BF8-4434-8755-DBFE89B0E33B}"
 EndProject
@@ -23,23 +23,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_TodoListServer", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_TodoListWebAssembly", "src\Tutorial_TodoListWebAssembly\Tutorial_TodoListWebAssembly.csproj", "{2FF258C7-65F9-41EE-BFAE-6AACFD627E3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorServerSignalRAppServer", "src\Tutorial_BlazorServerSignalRAppServer\Tutorial_BlazorServerSignalRAppServer.csproj", "{539481B9-A480-4471-BB4B-0CD99525790F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_BlazorServerSignalRAppServer", "src\Tutorial_BlazorServerSignalRAppServer\Tutorial_BlazorServerSignalRAppServer.csproj", "{539481B9-A480-4471-BB4B-0CD99525790F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblySignalRApp.Server", "src\Tutorial_BlazorWebAssemblySignalRApp\Server\Tutorial_BlazorWebAssemblySignalRApp.Server.csproj", "{B7CCE192-253F-409E-9EFC-AB9CA0DB200F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_BlazorWebAssemblySignalRApp.Server", "src\Tutorial_BlazorWebAssemblySignalRApp\Server\Tutorial_BlazorWebAssemblySignalRApp.Server.csproj", "{B7CCE192-253F-409E-9EFC-AB9CA0DB200F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblySignalRApp.Client", "src\Tutorial_BlazorWebAssemblySignalRApp\Client\Tutorial_BlazorWebAssemblySignalRApp.Client.csproj", "{8B20045B-444F-4213-8BD8-D1FA98E5888D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_BlazorWebAssemblySignalRApp.Client", "src\Tutorial_BlazorWebAssemblySignalRApp\Client\Tutorial_BlazorWebAssemblySignalRApp.Client.csproj", "{8B20045B-444F-4213-8BD8-D1FA98E5888D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_BlazorWebAssemblySignalRApp.Shared", "src\Tutorial_BlazorWebAssemblySignalRApp\Shared\Tutorial_BlazorWebAssemblySignalRApp.Shared.csproj", "{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_BlazorWebAssemblySignalRApp.Shared", "src\Tutorial_BlazorWebAssemblySignalRApp\Shared\Tutorial_BlazorWebAssemblySignalRApp.Shared.csproj", "{68EA8FF5-C710-44E2-ABBC-45E3E51F688D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3130C615-FD05-438A-9EE2-2DDF217AFB47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_MauiBlazorApp", "src\Default_MauiBlazorApp\Default_MauiBlazorApp.csproj", "{8B4155E6-EC29-4B3B-A5EA-B85D621650EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_MauiBlazorApp", "src\Default_MauiBlazorApp\Default_MauiBlazorApp.csproj", "{8B4155E6-EC29-4B3B-A5EA-B85D621650EF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_WindowsFormsBlazorApp", "src\Tutorial_WindowsFormsBlazorApp\Tutorial_WindowsFormsBlazorApp.csproj", "{E7954138-AB78-4268-AAC4-AAAE15C5497B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_WpfBlazorApp", "src\Tutorial_WpfBlazorApp\Tutorial_WpfBlazorApp.csproj", "{9166EF6E-1BE5-4263-B42F-C6FAD5153F05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_WpfBlazorApp", "src\Tutorial_WpfBlazorApp\Tutorial_WpfBlazorApp.csproj", "{9166EF6E-1BE5-4263-B42F-C6FAD5153F05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial_WpfBlazorAppRarorClassLibrary", "src\Tutorial_WpfBlazorAppRarorClassLibrary\Tutorial_WpfBlazorAppRarorClassLibrary.csproj", "{5642118F-DA85-42B1-A498-A34963715B91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial_WpfBlazorAppRarorClassLibrary", "src\Tutorial_WpfBlazorAppRarorClassLibrary\Tutorial_WpfBlazorAppRarorClassLibrary.csproj", "{5642118F-DA85-42B1-A498-A34963715B91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fundamentals_BlazorWebAssemblyApp", "src\Fundamentals_BlazorWebAssemblyApp\Fundamentals_BlazorWebAssemblyApp.csproj", "{5AC41654-75EE-47A4-AE79-FB762169C92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundamentals_BlazorComponent", "src\Fundamentals_BlazorComponent\Fundamentals_BlazorComponent.csproj", "{C17639C8-1F90-459A-BA69-C13D4B32AA62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +121,14 @@ Global
 		{5642118F-DA85-42B1-A498-A34963715B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5642118F-DA85-42B1-A498-A34963715B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5642118F-DA85-42B1-A498-A34963715B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AC41654-75EE-47A4-AE79-FB762169C92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC41654-75EE-47A4-AE79-FB762169C92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC41654-75EE-47A4-AE79-FB762169C92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC41654-75EE-47A4-AE79-FB762169C92D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C17639C8-1F90-459A-BA69-C13D4B32AA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17639C8-1F90-459A-BA69-C13D4B32AA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17639C8-1F90-459A-BA69-C13D4B32AA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17639C8-1F90-459A-BA69-C13D4B32AA62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

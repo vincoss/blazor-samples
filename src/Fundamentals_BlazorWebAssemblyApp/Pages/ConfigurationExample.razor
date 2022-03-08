@@ -1,0 +1,13 @@
+﻿@page "/configuration-example"
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<h1 style="font-size:@Configuration["h1FontSize"]">
+    Configuration example
+</h1>
+
+@code {
+    protected override void OnInitialized()
+    {
+    }
+}

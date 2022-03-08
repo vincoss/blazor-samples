@@ -1,0 +1,17 @@
+﻿@page "/route-parameter/{Id:int?}/{text?}"
+
+<h1>Route parameters - @Id - @Text!</h1>
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+
+    [Parameter]
+    public string? Text { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        Text = Text ?? "fantastic";
+    }
+}
