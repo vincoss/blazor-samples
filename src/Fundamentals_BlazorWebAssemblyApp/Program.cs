@@ -41,6 +41,7 @@ builder.Configuration.Add(memoryConfig);
 //builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
 
 // Dependency injection
-builder.Services.AddSingleton<IDataService, DataService>();
+builder.Services.AddHttpClient();
+builder.Services.AddTransient<IDataService, DataService>();
 
 await builder.Build().RunAsync();
