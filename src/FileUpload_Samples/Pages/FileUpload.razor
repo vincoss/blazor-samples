@@ -1,0 +1,188 @@
+﻿@page "/fileUpload"
+@using System.Linq
+@using System.Net.Http.Headers
+@using Microsoft.Extensions.Logging
+@using System.Net.Http;
+@using System.Text.Json
+@inject HttpClient Http
+@inject ILogger<FileUpload> Logger
+@inject IHttpClientFactory ClientFactory
+
+<h1>Upload Files</h1>
+
+<p>
+    <label>
+        Upload up to @_maxAllowedFiles files:
+        <InputFile type="file" OnChange="@OnInputFileChange" multiple />
+
+        <!--
+            accept=".csv,.xlsx" 
+
+        -->
+    </label>
+</p>
+
+@if (_filesToUpload.Count > 0)
+{
+    <div class="card">
+        <div class="card-body">
+            <ul>
+                @foreach (var file in _filesToUpload)
+                {
+                    <li>
+                        File: @file.Name
+                        <br>
+                        @if (FileUploadMethod(_uploadResults, file.Name, Logger, out var result))
+                        {
+                            <span>
+                                Stored File Name: @result.StoredFileName
+                            </span>
+                        }
+                        else
+                        {
+                            <span>
+                                There was an error uploading the file
+                                (Error: @result.ErrorMessage).
+                            </span>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}
+
+@code {
+    private List<File> _filesToUpload = new();
+    private List<UploadResult> _uploadResults = new();
+    private int _maxAllowedFiles = 30;
+    private const long MaxFileSize = 1024 * 1024 * 1024;
+
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        _uploadResults = new();
+        var upload = false;
+        using var content = new MultipartFormDataContent();
+
+        try
+        {
+
+            foreach (var file in e.GetMultipleFiles(_maxAllowedFiles))
+            {
+                Logger.LogInformation($"Begin prepare file: {file.Name}");
+
+                try
+                {
+                    var mimeType = GetMimeType(file);
+                    var fileContent = new StreamContent(file.OpenReadStream(MaxFileSize), 2048);
+                    fileContent.Headers.ContentType = new MediaTypeHeaderValue(mimeType);
+
+                    _filesToUpload.Add(new() { Name = file.Name });
+
+                    content.Add(
+                        content: fileContent,
+                        name: "\"files\"",
+                        fileName: file.Name);
+
+                    upload = true;
+
+
+                    Logger.LogInformation($"End prepare file: {file.Name}");
+                }
+                catch (Exception ex)
+                {
+                    Logger.LogError(ex, ex.Message);
+
+                    _uploadResults.Add(
+                        new()
+                            {
+                                FileName = file.Name,
+                                ErrorMessage = ex.Message,
+                                Uploaded = false
+                            });
+                }
+            }
+
+            if (upload)
+            {
+                Logger.LogInformation("Begin upload files.");
+
+                var client = ClientFactory.CreateClient();
+                var response = await client.PostAsync("https://localhost:5001/Filesave", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var options = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true,
+                        };
+
+                    using var responseStream = await response.Content.ReadAsStreamAsync();
+
+                    var newUploadResults = await JsonSerializer
+                        .DeserializeAsync<IList<UploadResult>>(responseStream, options);
+
+                    if (newUploadResults is not null)
+                    {
+                        _uploadResults = _uploadResults.Concat(newUploadResults).ToList();
+                    }
+                }
+
+                //response.EnsureSuccessStatusCode();
+
+                //Logger.LogInformation("End upload files.");
+
+                //var newUploadResults = await response.Content.ReadFromJsonAsync<IList<UploadResult>>();
+
+                //if (newUploadResults is not null)
+                //{
+                //    _uploadResults = _uploadResults.Concat(newUploadResults).ToList();
+                //}
+            }
+        }
+        finally
+        {
+            content.Dispose();
+        }
+    }
+
+    /// <summary>
+    /// NOTE: this throws for some file types.
+    /// </summary>
+    public static string GetMimeType(IBrowserFile file)
+    {
+        var type = "text/plain";
+        //try
+        //{
+        //    type = file.ContentType;
+        //}
+        //catch { }
+        return type;
+    }
+
+    private static bool FileUploadMethod(IList<UploadResult> uploadResults, string? fileName, ILogger<FileUpload> logger, out UploadResult result)
+    {
+        result = uploadResults.SingleOrDefault(f => f.FileName == fileName) ?? new();
+
+        if (!result.Uploaded)
+        {
+            logger.LogInformation("{FileName} not uploaded (Err: 5)", fileName);
+            result.ErrorMessage = "Bad error happened! " + result.ErrorMessage;
+        }
+
+        return result.Uploaded;
+    }
+
+    private class File
+    {
+        public string? Name { get; set; }
+    }
+
+     public class UploadResult
+    {
+        public bool Uploaded { get; set; }
+        public string? FileName { get; set; }
+        public string? StoredFileName { get; set; }
+        public string? ErrorMessage { get; set; }
+    }
+}
