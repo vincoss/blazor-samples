@@ -13,7 +13,7 @@ builder.Services.Configure<KestrelServerOptions>(options =>
 builder.Services.Configure<FormOptions>(x =>
 {
     x.ValueLengthLimit = int.MaxValue;
-    x.MultipartBodyLengthLimit = int.MaxValue; // if don't set default value is: 128 MB
+    x.MultipartBodyLengthLimit = long.MaxValue; // if don't set default value is: 128 MB
     x.MultipartHeadersLengthLimit = int.MaxValue;
 });
 
@@ -41,10 +41,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors(MyAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCors(MyAllowSpecificOrigins);
 app.UseRouting();
 
 app.UseAuthorization();

@@ -16,12 +16,12 @@ public class FilesaveController : ControllerBase
     }
 
     [HttpPost]
-    [RequestSizeLimit(4294967296)]
-    [RequestFormLimits(MultipartBodyLengthLimit = 4294967296)]
+    [RequestSizeLimit(9223372036854775807)]
+    [RequestFormLimits(MultipartBodyLengthLimit = 9223372036854775807)]
     public async Task<ActionResult<IList<UploadResult>>> PostFile([FromForm] IEnumerable<IFormFile> files)
     {
         var maxAllowedFiles = 30;
-        long maxFileSize = 1024 * 1024 * 1500;
+        long maxFileSize = long.MaxValue;
         var filesProcessed = 0;
         var resourcePath = new Uri($"{Request.Scheme}://{Request.Host}/");
         List<UploadResult> uploadResults = new();

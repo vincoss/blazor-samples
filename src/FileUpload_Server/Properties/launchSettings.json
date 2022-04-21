@@ -11,6 +11,7 @@
   "profiles": {
     "FileUpload_Server": {
       "commandName": "Project",
+      "commandLineArgs": "--Urls \"https://*:5001;\"",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {

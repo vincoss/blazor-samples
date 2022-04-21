@@ -4,6 +4,7 @@
 @using Microsoft.Extensions.Logging
 @using System.Net.Http;
 @using System.Text.Json
+@using System.Net
 @inject HttpClient Http
 @inject ILogger<FileUpload> Logger
 @inject IHttpClientFactory ClientFactory
@@ -56,13 +57,16 @@
     private List<File> _filesToUpload = new();
     private List<UploadResult> _uploadResults = new();
     private int _maxAllowedFiles = 30;
-    private const long MaxFileSize = 1024 * 1024 * 1024;
+    private const long MaxFileSize = long.MaxValue;
 
     private async Task OnInputFileChange(InputFileChangeEventArgs e)
     {
+
         _uploadResults = new();
         var upload = false;
-        using var content = new MultipartFormDataContent();
+        using var content = new MultipartFormDataContent(Guid.NewGuid().ToString());
+      //  content.Headers.ContentType.MediaType = "multipart/form-data";
+        var url = "https://localhost:5001/FilesaveLargeOther";
 
         try
         {
@@ -71,11 +75,30 @@
             {
                 Logger.LogInformation($"Begin prepare file: {file.Name}");
 
+                var client = ClientFactory.CreateClient();
+                client.Timeout = TimeSpan.FromDays(1);
+
+                //using (var fileStream = file.OpenReadStream(MaxFileSize))
+                //{
+                //    var fileContent = new StreamContent(fileStream);
+                //    fileContent.Headers.Add("Content-Disposition", $"form-data; name=\"files\"; filename=\"{file.Name}\"");
+                //    fileContent.Headers.Add("Content-Type", "application/octet-stream");
+                //    var response = await client.PostAsync(url, fileContent).ConfigureAwait(false);
+                //    response.EnsureSuccessStatusCode();
+                //}
+
+
                 try
                 {
                     var mimeType = GetMimeType(file);
                     var fileContent = new StreamContent(file.OpenReadStream(MaxFileSize), 2048);
-                    fileContent.Headers.ContentType = new MediaTypeHeaderValue(mimeType);
+
+                    //string boundary = Guid.NewGuid().ToString();
+                    //content.Headers.Remove("Content-Type"); 
+                    //content.Headers.TryAddWithoutValidation("Content-Type", "application/octet-stream; boundary=" + boundary);
+
+                    fileContent.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                    //fileContent.Headers.ContentType = new MediaTypeHeaderValue(mimeType);
 
                     _filesToUpload.Add(new() { Name = file.Name });
 
@@ -105,27 +128,37 @@
 
             if (upload)
             {
-                Logger.LogInformation("Begin upload files.");
-
-                var client = ClientFactory.CreateClient();
-                var response = await client.PostAsync("https://localhost:5001/Filesave", content);
-
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    var options = new JsonSerializerOptions
-                        {
-                            PropertyNameCaseInsensitive = true,
-                        };
+                    Logger.LogInformation("Begin upload files.");
 
-                    using var responseStream = await response.Content.ReadAsStreamAsync();
+                    var client = ClientFactory.CreateClient();
+                    client.Timeout = TimeSpan.FromDays(1);
+                    var response = await client.PostAsync(url, content);
 
-                    var newUploadResults = await JsonSerializer
-                        .DeserializeAsync<IList<UploadResult>>(responseStream, options);
+                    Logger.LogInformation("End upload files.");
 
-                    if (newUploadResults is not null)
+                    if (response.IsSuccessStatusCode)
                     {
-                        _uploadResults = _uploadResults.Concat(newUploadResults).ToList();
+                        var options = new JsonSerializerOptions
+                            {
+                                PropertyNameCaseInsensitive = true,
+                            };
+
+                        using var responseStream = await response.Content.ReadAsStreamAsync();
+
+                        var newUploadResults = await JsonSerializer
+                            .DeserializeAsync<IList<UploadResult>>(responseStream, options);
+
+                        if (newUploadResults is not null)
+                        {
+                            _uploadResults = _uploadResults.Concat(newUploadResults).ToList();
+                        }
                     }
+                }
+                catch(Exception ex)
+                {
+                     Logger.LogError(ex, ex.Message);
                 }
 
                 //response.EnsureSuccessStatusCode();
