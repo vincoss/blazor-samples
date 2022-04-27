@@ -6,6 +6,7 @@
 @using System.Diagnostics;
 @using System.Threading
 @inject HttpClient client
+@inject ILogger<FileUploadChunked> Logger
 
 <h1>Upload Large Files</h1>
 
@@ -131,6 +132,10 @@
             hasBeenCancelled = true;
             await InvokeAsync(StateHasChanged);
             await Task.Delay(1);
+        }
+        catch (Exception ex)
+        {   
+            Logger.LogError(ex, ex.Message); 
         }
         finally
         {
