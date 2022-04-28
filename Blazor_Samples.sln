@@ -51,9 +51,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUpload_Samples", "src\F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{D005D5BB-4D8F-4BDB-9551-88F090182F95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload_Server", "src\FileUpload_Server\FileUpload_Server.csproj", "{EC38387A-91C7-4365-B0C5-5B79755D0D3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUpload_Server", "src\FileUpload_Server\FileUpload_Server.csproj", "{EC38387A-91C7-4365-B0C5-5B79755D0D3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload_ServerWeb", "src\FileUpload_ServerWeb\FileUpload_ServerWeb.csproj", "{36F9CB17-BDF7-4673-9B9B-82AFA4023AA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUpload_ServerWeb", "src\FileUpload_ServerWeb\FileUpload_ServerWeb.csproj", "{36F9CB17-BDF7-4673-9B9B-82AFA4023AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundamentals_CurrentDate_Component", "src\CurrentDate_Component\Fundamentals_CurrentDate_Component.csproj", "{5B4AB397-5854-4B95-86D5-8307AF05F324}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,6 +157,10 @@ Global
 		{36F9CB17-BDF7-4673-9B9B-82AFA4023AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36F9CB17-BDF7-4673-9B9B-82AFA4023AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36F9CB17-BDF7-4673-9B9B-82AFA4023AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4AB397-5854-4B95-86D5-8307AF05F324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4AB397-5854-4B95-86D5-8307AF05F324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4AB397-5854-4B95-86D5-8307AF05F324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4AB397-5854-4B95-86D5-8307AF05F324}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

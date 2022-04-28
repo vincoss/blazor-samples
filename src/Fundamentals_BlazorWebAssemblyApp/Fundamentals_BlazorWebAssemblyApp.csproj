@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CurrentDate_Component\Fundamentals_CurrentDate_Component.csproj" />
     <ProjectReference Include="..\Fundamentals_BlazorComponent\Fundamentals_BlazorComponent.csproj" />
   </ItemGroup>
 
