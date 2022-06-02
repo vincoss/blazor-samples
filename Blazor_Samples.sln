@@ -59,7 +59,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fundamentals_CurrentDate_Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_BasicApp", "src\Blazor_BasicApp\Blazor_BasicApp.csproj", "{652E4610-EAA0-4749-A053-298BE4A21A8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyApp_BasicApp", "src\BlazorWebAssemblyApp_BasicApp\BlazorWebAssemblyApp_BasicApp.csproj", "{341BC2F2-A00B-40A2-B34C-C685670785B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp_BasicApp", "src\BlazorWebAssemblyApp_BasicApp\BlazorWebAssemblyApp_BasicApp.csproj", "{341BC2F2-A00B-40A2-B34C-C685670785B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyApp_GameCanvas_Samples", "src\BlazorWebAssemblyApp_GameCanvas_Samples\BlazorWebAssemblyApp_GameCanvas_Samples.csproj", "{3B316A05-613A-4D03-9A5C-420D2FD28B2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +175,10 @@ Global
 		{341BC2F2-A00B-40A2-B34C-C685670785B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{341BC2F2-A00B-40A2-B34C-C685670785B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{341BC2F2-A00B-40A2-B34C-C685670785B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B316A05-613A-4D03-9A5C-420D2FD28B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B316A05-613A-4D03-9A5C-420D2FD28B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B316A05-613A-4D03-9A5C-420D2FD28B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B316A05-613A-4D03-9A5C-420D2FD28B2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
