@@ -1,0 +1,39 @@
+﻿@page "/three"
+
+<PageTitle>Moving canvas sammple</PageTitle>
+
+<h3>Moving canvas sammple</h3>
+
+
+<div style="background-color: darkslategrey; width: 80vw; height: 80vh; margin-top:10px;" tabindex="0" @ref="mainDiv">
+    <div style="color: white; top: @(y)px; left: @(x)px; width: 20px; position: relative">
+        <p>test</p>
+        <p>@(y)</p>
+        <p>@(x)</p>
+    </div>
+</div>
+
+@code {
+    
+    private ElementReference mainDiv;   
+    private Timer _timer;
+
+    protected override Task OnInitializedAsync()
+    {
+        _timer = new Timer();
+        _timer.Interval = 10;
+        _timer.Elapsed += TimerElapsed;
+        _timer.AutoReset = true;
+        _timer.Enabled = true;        
+
+        return base.OnInitializedAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await mainDiv.FocusAsync();
+        }
+    }
+}
