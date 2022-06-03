@@ -1,0 +1,53 @@
+﻿@page "/two"
+
+<PageTitle>Moving canvas sammple</PageTitle>
+
+<h3>Moving canvas sammple</h3>
+
+<button class="btn btn-primary" @onclick="Decrement">Left</button>
+<button class="btn btn-primary" @onclick="Increment">Right</button>
+<button class="btn btn-primary" @onclick="DecrementTop">Top</button>
+<button class="btn btn-primary" @onclick="IncrementTop">Down</button>
+
+<div style="background-color: darkslategrey; width: 80vw; height: 80vh; margin-top:10px;" tabindex="0" @ref="mainDiv">
+    <div style="color: white; top: @(y)px; left: @(x)px; width: 20px; position: relative">
+         <p>test</p>
+        <p>@(y)</p>
+        <p>@(x)</p>
+    </div>
+</div>
+
+@code {
+    
+    private ElementReference mainDiv;   
+    private int y = 100;
+    private int x = 250;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await mainDiv.FocusAsync();
+        }
+    }
+
+    private void Increment()
+    {
+        x += 10;
+    }
+
+    private void Decrement()
+    {
+        x -= 10;
+    }
+
+    private void IncrementTop()
+    {
+        y += 10;
+    }
+
+    private void DecrementTop()
+    {
+        y -= 10;
+    }
+}
