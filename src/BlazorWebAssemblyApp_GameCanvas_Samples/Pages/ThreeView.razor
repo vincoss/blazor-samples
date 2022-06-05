@@ -1,27 +1,31 @@
 ﻿@page "/three"
+@using System.Timers
 
-<PageTitle>Moving canvas sammple</PageTitle>
+<PageTitle>Moving canvas sample</PageTitle>
 
 <h3>Moving canvas sammple</h3>
 
-
 <div style="background-color: darkslategrey; width: 80vw; height: 80vh; margin-top:10px;" tabindex="0" @ref="mainDiv">
-    <div style="color: white; top: @(y)px; left: @(x)px; width: 20px; position: relative">
-        <p>test</p>
-        <p>@(y)</p>
-        <p>@(x)</p>
-    </div>
+      @foreach (var item in _items)
+        {
+            <div style="color: white; top: @(item.Y)px; left: @(item.X)px; width: @(item.Width)px; height:@(item.Height)px; position: relative">
+                <p>test</p>
+                <p>@(item.Y)</p>
+                <p>@(item.X)</p>
+            </div>
+        }
 </div>
 
 @code {
-    
-    private ElementReference mainDiv;   
+
     private Timer _timer;
+    private ElementReference mainDiv;
+    private IList<Item> _items = Item.Start();
 
     protected override Task OnInitializedAsync()
     {
         _timer = new Timer();
-        _timer.Interval = 10;
+        _timer.Interval = 200;
         _timer.Elapsed += TimerElapsed;
         _timer.AutoReset = true;
         _timer.Enabled = true;        
@@ -34,6 +38,49 @@
         if (firstRender)
         {
             await mainDiv.FocusAsync();
+        }
+    }
+
+
+    private void TimerElapsed(Object source, ElapsedEventArgs e)
+    {
+        Console.WriteLine($"Tick {e.SignalTime}, items: {_items.Count}");
+
+        Item.Update(_items);
+        Draw();
+    }
+
+    private void Draw() => this.StateHasChanged();    
+
+    public class Item
+    {
+        public int X { get; set; }
+        public int Y { get; set; } = 0;
+
+        public int Height { get; set; } = 100; // this must be proportional to screen size
+        public int Width { get; set; } = 100;// this must be proportional to screen size
+
+        public static IList<Item> Start()
+        {
+            return new[]
+            {
+                new Item()
+            };
+        }
+
+        public static void Update(IList<Item> items)
+        {
+            var last = items.OrderBy(x => x.Y).Last();
+
+            if(last.Y > last.Height)
+            {
+                items.Insert(0, new Item());
+            }
+
+            foreach(var item in items)
+            {
+                item.Y++;
+            }
         }
     }
 }
