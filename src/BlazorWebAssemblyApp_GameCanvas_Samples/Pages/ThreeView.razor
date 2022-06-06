@@ -3,17 +3,27 @@
 
 <PageTitle>Moving canvas sample</PageTitle>
 
-<h3>Moving canvas sammple</h3>
+<h3>Moving canvas sample</h3>
 
 <div style="background-color: darkslategrey; width: 80vw; height: 80vh; margin-top:10px;" tabindex="0" @ref="mainDiv">
-      @foreach (var item in _items)
+     <div style="color: white; top: 0px; left: 0px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
+                <p>test</p>
+     </div>
+      <div style="color: white; top: 0px; left: 100px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
+                <p>test</p>
+     </div>
+      <div style="color: white; top: 0px; left: 200px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
+                <p>test</p>
+     </div>
+
+   @*   @foreach (var item in _items)
         {
-            <div style="color: white; top: @(item.Y)px; left: @(item.X)px; width: @(item.Width)px; height:@(item.Height)px; position: relative">
+            <div style="color: white; top: @(item.Y)px; left: @(item.X)px; width: @(item.Width)px; height:@(item.Height)px; position: relative;background-color:aquamarine;">
                 <p>test</p>
                 <p>@(item.Y)</p>
                 <p>@(item.X)</p>
             </div>
-        }
+        }*@
 </div>
 
 @code {
@@ -25,7 +35,7 @@
     protected override Task OnInitializedAsync()
     {
         _timer = new Timer();
-        _timer.Interval = 200;
+        _timer.Interval = 100;
         _timer.Elapsed += TimerElapsed;
         _timer.AutoReset = true;
         _timer.Enabled = true;        
@@ -46,11 +56,27 @@
     {
         Console.WriteLine($"Tick {e.SignalTime}, items: {_items.Count}");
 
-        Item.Update(_items);
+        Update();
         Draw();
     }
 
-    private void Draw() => this.StateHasChanged();    
+    private void Draw() => this.StateHasChanged();
+
+
+    public void Update()
+    {
+        var last = _items[_items.Count - 1];
+
+        if (last.Y > last.Height)
+        {
+            _items.Add(new Item());
+        }
+
+        foreach (var item in _items)
+        {
+            item.Y++;
+        }
+    }
 
     public class Item
     {
@@ -62,25 +88,14 @@
 
         public static IList<Item> Start()
         {
-            return new[]
-            {
-                new Item()
-            };
+            var items = new List<Item>();
+            items.Add(new Item());
+            return items;
         }
 
-        public static void Update(IList<Item> items)
+        public override string ToString()
         {
-            var last = items.OrderBy(x => x.Y).Last();
-
-            if(last.Y > last.Height)
-            {
-                items.Insert(0, new Item());
-            }
-
-            foreach(var item in items)
-            {
-                item.Y++;
-            }
+            return $"X: {X}, Y: {Y}";
         }
     }
 }
