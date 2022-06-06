@@ -1,5 +1,6 @@
 ﻿
 div
+canvas
 skia
 svg
 
@@ -7,6 +8,7 @@ need to get viewport size in blazor
 if the width is larger than height use that one if other way use height
 what to do if orientation change?
 	well the x position must be relative? how about y position well that too
+orientation change issue
 
 viewport sample
 	vw,vh
@@ -14,6 +16,7 @@ background for div
 	under water
 	dino
 	insect
+	repeat
 	
 canvas
 	vertical times ramdom fall
