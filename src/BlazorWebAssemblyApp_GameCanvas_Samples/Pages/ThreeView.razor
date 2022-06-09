@@ -6,24 +6,27 @@
 <h3>Moving canvas sample</h3>
 
 <div style="background-color: darkslategrey; width: 80vw; height: 80vh; margin-top:10px;" tabindex="0" @ref="mainDiv">
-    @* <div style="color: white; top: 0px; left: 0px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
+     <div style="color: white; top: 0px; left: 0px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
                 <p>test</p>
      </div>
-      <div style="color: white; top: 0px; left: 100px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
+      <div style="color: white; top: 10px; left: 100px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
                 <p>test</p>
      </div>
-      <div style="color: white; top: 0px; left: 200px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
+      <div style="color: white; top: 20px; left: 200px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
                 <p>test</p>
-     </div>*@
+     </div>
+      <div style="color: white; top: 10px; left: 200px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
+                <p>test</p>
+     </div>
 
-      @foreach (var item in _items)
+     @* @foreach (var item in _items)
         {
             <div style="color: white; top: @(item.Y)px; left: @(item.X)px; width: @(item.Width)px; height:@(item.Height)px; position: relative;background-color:aquamarine;margin:0px;padding:0px;display:block;">
                 <p>test</p>
                 <p>@(item.Y)</p>
                 <p>@(item.X)</p>
             </div>
-        }
+        }*@
 </div>
 
 @code {
