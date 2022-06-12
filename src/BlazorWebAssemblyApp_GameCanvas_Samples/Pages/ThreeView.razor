@@ -1,39 +1,17 @@
 ﻿@page "/three"
 @using System.Timers
+@inject IJSRuntime JS;
 
-<PageTitle>Moving canvas sample</PageTitle>
+<PageTitle>Moving canvas sample SVG</PageTitle>
 
-<h3>Moving canvas sample</h3>
+<div @ref="mainDiv">
 
-<div style="background-color: darkslategrey; width: 80vw; height: 80vh; margin-top:10px;" tabindex="0" @ref="mainDiv">
-     <div style="color: white; top: 0px; left: 0px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
-                <p>test</p>
-     </div>
-      <div style="color: white; top: 10px; left: 100px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
-                <p>test</p>
-     </div>
-      <div style="color: white; top: 20px; left: 200px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
-                <p>test</p>
-     </div>
-      <div style="color: white; top: 10px; left: 200px; width: 100px; height: 100px; position: relative; background-color:aquamarine;">
-                <p>test</p>
-     </div>
-
-     @* @foreach (var item in _items)
-        {
-            <div style="color: white; top: @(item.Y)px; left: @(item.X)px; width: @(item.Width)px; height:@(item.Height)px; position: relative;background-color:aquamarine;margin:0px;padding:0px;display:block;">
-                <p>test</p>
-                <p>@(item.Y)</p>
-                <p>@(item.X)</p>
-            </div>
-        }*@
 </div>
 
 @code {
 
     private Timer _timer;
     private ElementReference mainDiv;
-    private IList<Item> _items = Item.Start();
 
     protected override Task OnInitializedAsync()
     {
@@ -52,12 +30,14 @@
         {
             await mainDiv.FocusAsync();
         }
-    }
 
+        var args = new object[] { mainDiv };
+        var result = await JS.InvokeAsync<BoundingClientRect>("MyDOMGetBoundingClientRect", args);
+    }
 
     private void TimerElapsed(Object source, ElapsedEventArgs e)
     {
-        Console.WriteLine($"Tick {e.SignalTime}, items: {_items.Count}");
+        Console.WriteLine($"Tick {e.SignalTime}");
 
         // Update();
         // Draw();
@@ -65,45 +45,20 @@
 
     private void Draw() => this.StateHasChanged();
 
-
     public void Update()
     {
-        var last = _items[_items.Count - 1];
-
-        if (last.Y > last.Height)
-        {
-            _items.Add(new Item());
-        }
-
-        foreach (var item in _items)
-        {
-            item.Y++;
-        }
     }
 
-    public class Item
+    public class BoundingClientRect
     {
-        public int X { get; set; }
-        public int Y { get; set; } = 0;
-
-        public int Height { get; set; } = 100; // this must be proportional to screen size
-        public int Width { get; set; } = 100;// this must be proportional to screen size
-
-        public static IList<Item> Start()
-        {
-            var items = new List<Item>();
-            items.Add(new Item());
-            items.Add(new Item { Y = 10 });
-            items.Add(new Item());
-            items.Add(new Item { Y = 50 });
-            items.Add(new Item { Y = 60 });
-            items.Add(new Item { Y = 10 });
-        return items;
-        }
-
-        public override string ToString()
-        {
-            return $"X: {X}, Y: {Y}";
-        }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
+        public double Top { get; set; }
+        public double Right { get; set; }
+        public double Bottom { get; set; }
+        public double Left { get; set; }
     }
+
 }
