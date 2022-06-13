@@ -1,11 +1,10 @@
 ﻿
-TODO:
-review the other readme and remove it
-
 div
 canvas
-skia
 svg
+webgl
+css
+skia
 
 need to get viewport size in blazor
 if the width is larger than height use that one if other way use height
