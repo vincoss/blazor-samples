@@ -1,28 +1,4 @@
-﻿## get size
-public class BoundingClientRect
-{
-    public double X { get; set; }
-    public double Y { get; set; }
-    public double Width { get; set; }
-    public double Height { get; set; }
-    public double Top { get; set; }
-    public double Right { get; set; }
-    public double Bottom { get; set; }
-    public double Left { get; set; }
-}
-
-private async Task OnElementClick(MouseEventArgs e)
-{
-    var result = await JSRuntime.InvokeAsync<BoundingClientRect>("MyDOMGetBoundingClientRect", MyElementReference);
-
-    var x = (int) (e.ClientX - result.Left);
-    var y = (int) (e.ClientY - result.Top);
-   
-   // now you can work with the position relative to the element.
-}
-
-<script> MyDOMGetBoundingClientRect = (element, parm) => { return element.getBoundingClientRect(); }; </script>
-####  get size end
+﻿
 
 ## Resources
 https://codeincomplete.com/articles/javascript-tetris/
