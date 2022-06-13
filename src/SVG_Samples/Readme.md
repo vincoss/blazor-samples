@@ -1,4 +1,4 @@
-﻿https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+﻿https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients
 
 ## Resources
 https://developer.mozilla.org/en-US/docs/Web/SVG
