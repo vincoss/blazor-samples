@@ -20,8 +20,4 @@
     <Folder Include="Model\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\GameLoopLib\GameLoopLib.csproj" />
-  </ItemGroup>
-
 </Project>
