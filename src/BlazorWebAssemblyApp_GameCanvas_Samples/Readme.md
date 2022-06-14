@@ -12,6 +12,10 @@ what to do if orientation change?
 	well the x position must be relative? how about y position well that too
 orientation change issue
 
+windows resize and orientation change
+	see the solution there
+the xy shall be percent and reflect screen size
+
 viewport sample
 	vw,vh
 background for div
@@ -67,3 +71,8 @@ must test on large screen TV
 
 ## Resources
 https://www.pmichaels.net/2021/09/11/creating-a-game-in-blazor-part-1-moving-objects/
+
+
+// 
+pull new item in previous is +100% size from start
+	if not end
