@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+
+	<!--Text-->
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<text x="10" y="10">Hello World!</text>
+
+	<!--tspan-->
+	<svg x="10" y="50" width="350" height="60" xmlns="http://www.w3.org/2000/svg">
+		<text>
+			This is <tspan font-weight="bold" fill="red">bold and red</tspan>
+		</text>
+
+		<style>
+			<![CDATA[
+		  text{
+			dominant-baseline: hanging;
+			font: 28px Verdana, Helvetica, Arial, sans-serif;
+		  }
+		]]>
+		</style>
+	</svg>
+
+	<!--textPath-->
+	<svg x="10" y="100" width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+		<path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+		<text>
+			<textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+				A curve.
+			</textPath>
+		</text>
+
+		<style>
+			<![CDATA[
+  text{
+    dominant-baseline: hanging;
+    font: 28px Verdana, Helvetica, Arial, sans-serif;
+  }
+]]>
+		</style>
+	</svg>
+
+	<!--custom-font TODO:-->
+	<svg x="10" y="300" xmlns="http://www.w3.org/2000/svg" width="200" height="100">
+		<defs>
+			<style>
+				@font-face{
+				font-family:"testfont";
+				src: url('fonts/testfont.woff') format("woff");
+				font-weight:normal;font-style:normal;
+				}
+			</style>
+		</defs>
+		<text font-family="testfont" x="0" y="0">
+			&#xe800;
+		</text>
+		<glyph glyph-name="thumbs-up" unicode="&#xe800;" d="M143 100q0 15-11 25t-25 11-25-11-11-25 11-25 25-11 25 11 11 25z m643 321q0 29-22 50t-50 22h-196q0 32 27 89t26 89q0 55-17 81t-72 27q-14-15-21-48t-17-70-33-61q-13-13-43-51-2-3-13-16t-18-23-19-24-22-25-22-19-22-15-20-6h-18v-357h18q7 0 18-1t18-4 21-6 20-7 20-6 16-6q118-41 191-41h67q107 0 107 93 0 15-2 31 16 9 26 30t10 41-10 38q29 28 29 67 0 14-5 31t-14 26q18 1 30 26t12 45z m71 1q0-50-27-91 5-18 5-38 0-43-21-81 1-12 1-24 0-56-33-99 0-78-48-123t-126-45h-72q-54 0-106 13t-121 36q-65 23-77 23h-161q-29 0-50 21t-21 50v357q0 30 21 51t50 21h153q20 13 77 86 32 42 60 72 13 14 19 48t17 70 35 60q22 21 50 21 47 0 84-18t57-57 20-104q0-51-27-107h98q58 0 101-42t42-100z" horiz-adv-x="857.1" />
+
+	</svg>
+	<!--<svg x="10" y="200" width="350" height="60" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<style type="text/css">
+				@font-face {
+				font-family: "FontAwesome";
+				src: url('font/Font Awesome 6 Free-Solid-900.otf') format("truetype");
+
+				}
+				svg text {
+				font-family: 'Font Awesome 6 Free';
+				}
+			</style>
+		</defs>
+
+		<text x="10" y="10" font-family="FontAwesome" class="icon-heart">&#xf040;</text>
+
+		<g>
+			<text x="0" y="0">&#xf040;</text>
+		</g>
+	</svg>-->
+
+	<svg x="0" y="500" xmlns="http://www.w3.org/2000/svg">
+		<metadata>Copyright (C) 2022 by original authors @ fontello.com</metadata>
+		<defs>
+			<font id="testfont" horiz-adv-x="1000" >
+				<font-face font-family="testfont" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+				<missing-glyph horiz-adv-x="1000" />
+				<glyph glyph-name="thumbs-up" unicode="&#xe800;" d="M143 100q0 15-11 25t-25 11-25-11-11-25 11-25 25-11 25 11 11 25z m643 321q0 29-22 50t-50 22h-196q0 32 27 89t26 89q0 55-17 81t-72 27q-14-15-21-48t-17-70-33-61q-13-13-43-51-2-3-13-16t-18-23-19-24-22-25-22-19-22-15-20-6h-18v-357h18q7 0 18-1t18-4 21-6 20-7 20-6 16-6q118-41 191-41h67q107 0 107 93 0 15-2 31 16 9 26 30t10 41-10 38q29 28 29 67 0 14-5 31t-14 26q18 1 30 26t12 45z m71 1q0-50-27-91 5-18 5-38 0-43-21-81 1-12 1-24 0-56-33-99 0-78-48-123t-126-45h-72q-54 0-106 13t-121 36q-65 23-77 23h-161q-29 0-50 21t-21 50v357q0 30 21 51t50 21h153q20 13 77 86 32 42 60 72 13 14 19 48t17 70 35 60q22 21 50 21 47 0 84-18t57-57 20-104q0-51-27-107h98q58 0 101-42t42-100z" horiz-adv-x="857.1" />
+
+				<glyph glyph-name="thumbs-down" unicode="&#xe801;" d="M143 600q0 15-11 25t-25 11-25-11-11-25 11-25 25-11 25 11 11 25z m643-321q0 19-12 45t-30 26q8 10 14 27t5 31q0 38-29 66 10 17 10 38 0 21-10 41t-26 30q2 16 2 31 0 47-27 70t-76 23h-71q-73 0-191-41-3-1-16-5t-20-7-20-7-21-6-18-4-18-1h-18v-357h18q9 0 20-5t22-15 22-20 22-25 19-24 18-22 13-17q30-38 43-51 23-24 33-61t17-70 21-48q54 0 72 27t17 81q0 33-26 89t-27 89h196q28 0 50 22t22 50z m71-1q0-57-42-100t-101-42h-98q27-55 27-107 0-66-20-104-19-39-57-57t-84-18q-28 0-50 21-19 18-30 45t-14 51-10 47-17 36q-27 28-60 71-57 73-77 86h-153q-29 0-50 21t-21 51v357q0 29 21 50t50 21h161q12 0 77 23 72 24 125 36t111 13h63q78 0 126-44t48-121v-3q33-43 33-99 0-12-1-24 21-38 21-80 0-21-5-39 27-41 27-91z" horiz-adv-x="857.1" />
+			</font>
+		</defs>
+	</svg>
+	
+</svg>
