@@ -1,6 +1,12 @@
 ﻿
 ## Tasks
+finish reading
 use font icons
+box
+	Text
+	underline
+	font icon
+
 
 https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients
 

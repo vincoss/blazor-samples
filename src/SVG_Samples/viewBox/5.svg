@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--How to Scale, Stretch, and Squish SVG to Exactly Fit a Certain Size-->
+	<!--Option 2: Use preserveAspectRatio="none"-->
+	
+	<svg class="defs-only" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 200 100" preserveAspectRatio="none" >
+		<linearGradient id="sky-grad" x2="0%" y2="100%" >
+			<stop stop-color="lightblue" offset="10%" />
+			<stop stop-color="aliceblue" offset="100%" />
+		</linearGradient>
+		<linearGradient id="cloud-grad" x2="0%" y2="100%" >
+			<stop stop-color="white" offset="10%" />
+			<stop stop-color="silver" offset="100%" />
+		</linearGradient>
+		<radialGradient id="rainbow-grad">
+			<stop stop-opacity="0" offset="0%" />
+			<stop stop-color="#F00" stop-opacity="0" offset="39%" />
+			<stop stop-color="#F00" stop-opacity="1" offset="42%" />
+			<stop stop-color="#FF0" offset="65%" />
+			<stop stop-color="#0F0" offset="75%" />
+			<stop stop-color="#0FF" offset="85%" />
+			<stop stop-color="#00F" offset="100%" />
+		</radialGradient>
+		<symbol id="rainbow">
+			<rect height="100%" width="100%" fill="url(#sky-grad)"/>
+			<path id="cloud" fill="url(#cloud-grad)"
+				  d="M10,25 
+             C10,20 35,15 35,20 
+             C35,10 55,10 55,15 
+             C60,13 65,20 65,25
+             C65,30 45,40 45,35
+             C45,50 25,40 25,35
+             C20,40 10,35 10,25 Z"
+          />
+			<use xlink:href="#cloud" transform="scale(-1,1.1) translate(-140, -10)"/>
+			<use xlink:href="#cloud" transform="scale(1.1,0.9) translate(115, 10)"/>
+			<ellipse cx="50%" cy="120%" rx="50%" ry="100%" fill="url(#rainbow-grad)" />
+		</symbol>
+	</svg>
+
+	<svg viewBox="0 0 200 100" preserveAspectRatio="none" width="50" height="25">
+		<use xlink:href="#rainbow"/>
+	</svg>
+
+	<svg viewBox="0 0 200 100" preserveAspectRatio="none" width="100" height="50">
+		<use xlink:href="#rainbow"/>
+	</svg>
+
+	<svg viewBox="0 0 200 100" preserveAspectRatio="none" width="200" height="100">
+		<use xlink:href="#rainbow"/>
+	</svg>
+	<svg viewBox="0 0 200 100" preserveAspectRatio="none" width="200" height="50">
+		<use xlink:href="#rainbow"/>
+	</svg>
+
+	<svg viewBox="0 0 200 100" preserveAspectRatio="none" width="50" height="50">
+		<use xlink:href="#rainbow"/>
+	</svg>
+
+</svg>
