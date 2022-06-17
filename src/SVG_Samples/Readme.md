@@ -1,6 +1,7 @@
 ﻿
 ## Tasks
 finish reading
+find svg calculator
 use font icons
 box
 	Text

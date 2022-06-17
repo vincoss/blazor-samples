@@ -8,6 +8,10 @@
 
 	<svg x="2%" y="2%" viewBox="0 0 60 55" width="7%" height="7%">
 		<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+
+		<text x="50%" y="50%" fill="blue"
+              dominant-baseline="middle" text-anchor="middle"
+              ont-size="200%" font-weight="bold">999</text>
 	</svg>
 
 	<svg x="5%" y="10%"  viewBox="0 0 60 55" width="7%" height="7%">
