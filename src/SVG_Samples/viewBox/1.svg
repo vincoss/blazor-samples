@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+	<!--Non-Scaling SVG-->
+
 	<svg class="defs-only" xmlns="http://www.w3.org/2000/svg">
 		<linearGradient id="coin" x2="50%" y2="40%" spreadMethod="reflect">
 			<stop stop-color="gold" offset="30%" />
@@ -40,34 +42,35 @@
 		</symbol>
 	</svg>
 
-	<svg x="2%" y="2%" viewBox="0 0 60 55" width="50" height="25">
-		<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+	<svg x="10" y="10" width="50" height="25">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
 
-	<svg x="4%" y="2%"  viewBox="0 0 60 55" width="100" height="50">
-		<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+	<svg x="70" y="10" width="100" height="50">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
 
-	<svg x="7%" y="2%" viewBox="0 0 60 55" width="200" height="100">
-		<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+	<svg x="180" y="10" width="200" height="100">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
 
-	<svg x="14%" y="2%"  viewBox="0 0 60 55" width="200" height="50">
-		<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+	<svg x="400" y="10" width="200" height="50">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
 
-	<svg x="24%" y="2%"  viewBox="0 0 60 55" width="50" height="50">
-		<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+	<svg x="620" y="10" width="50" height="50">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
 
-	<svg x="28%" y="2%"  viewBox="0 0 60 55" width="5%" height="5%">
-		<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+	<svg x="700" y="10">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
-	
+
+
 </svg>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--SVG fonts-->
+
+	<defs>
+		<style type="text/css">
+			@font-face {
+			font-family: SuperSansMKringel;
+			src: url('./SuperSansMKringel.ttf');
+			}
+		</style>
+	</defs>
+
+	<text x="10" y="30" font-family="SuperSansMKringel">Super Sans MKringel</text>
+
+</svg>

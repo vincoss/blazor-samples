@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-	<svg class="defs-only" xmlns="http://www.w3.org/2000/svg">
+	<!--Scaling an SVG with a viewBox-->
+
+	<svg class="defs-only">
 		<linearGradient id="coin" x2="50%" y2="40%" spreadMethod="reflect">
 			<stop stop-color="gold" offset="30%" />
 			<stop stop-color="goldenrod" offset="70%" />
@@ -33,23 +35,41 @@
 			</g>
 			<path fill="url(#pot)" stroke="#751" stroke-width="0.5"
 				  d="M30,50 C45,50 55,45 55,35  
-             Q 55,27 50,25 C55,22 53,15 45,20
-             S 23,25 15,20 S5,22 10,25
-             Q 5,27 5,35 C5,45 15,50 30,50Z"
+                 Q 55,27 50,25 C55,22 53,15 45,20
+                 S 23,25 15,20 S5,22 10,25
+                 Q 5,27 5,35 C5,45 15,50 30,50Z"
           />
 		</symbol>
 	</svg>
 
-	<svg  x="2%" y="2%" viewBox="0 0 60 55" width="100" >
+	<svg x="10" y="10" viewBox="0 0 60 55" width="50" height="25">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
 
-	<svg  x="2%" y="20%" viewBox="0 0 60 55" height="50">
-		<use xlink:href="#potofgold" />
-	</svg>
-
-	<svg  x="2%" y="50%" viewBox="0 0 60 55">
+	<svg x="60" y="10" viewBox="0 0 60 55" width="100" height="50">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
 		<use xlink:href="#potofgold"/>
 	</svg>
-	
+
+	<svg x="170" y="10" viewBox="0 0 60 55" width="200" height="100">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
+		<use xlink:href="#potofgold"/>
+	</svg>
+
+	<svg x="370" y="10" viewBox="0 0 60 55" width="200" height="50">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
+		<use xlink:href="#potofgold"/>
+	</svg>
+
+	<svg x="570" y="10" viewBox="0 0 60 55" width="50" height="50">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
+		<use xlink:href="#potofgold"/>
+	</svg>
+
+	<svg x="650" y="10" viewBox="0 0 60 55" width="50" height="100">
+		<rect width="100%" height="100%" fill="#dcdcdc" />
+		<use xlink:href="#potofgold"/>
+	</svg>
+
 </svg>
