@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--SVG fonts-->
+
+	<defs>
+		<style type="text/css">
+			@font-face {
+			font-family: SuperSansMKringel;
+			src: url('./SuperSansMKringel.ttf');
+			}
+
+			@font-face {
+			font-family: 'Material Icons';
+			font-style: normal;
+			font-weight: 400;
+			src: url('./MaterialIcons.woff2') format('woff2');
+			}
+
+			.material-icons {
+			font-family: 'Material Icons';
+			font-weight: normal;
+			font-style: normal;
+			font-size: 24px;
+			line-height: 1;
+			letter-spacing: normal;
+			text-transform: none;
+			display: inline-block;
+			white-space: nowrap;
+			word-wrap: normal;
+			direction: ltr;
+			-webkit-font-feature-settings: 'liga';
+			-webkit-font-smoothing: antialiased;
+			}
+
+			@font-face {
+			font-family: 'Material Symbols Outlined';
+			font-style: normal;
+			font-weight: 400;
+			src: url('./Material-Symbols-Outlined.woff2') format('woff2');
+			}
+
+			.material-symbols-outlined {
+			font-family: 'Material Symbols Outlined';
+			font-weight: normal;
+			font-style: normal;
+			font-size: 24px;
+			line-height: 1;
+			letter-spacing: normal;
+			text-transform: none;
+			display: inline-block;
+			white-space: nowrap;
+			word-wrap: normal;
+			direction: ltr;
+			-webkit-font-feature-settings: 'liga';
+			-webkit-font-smoothing: antialiased;
+			font-variation-settings: "FILL" 1, "wght" 900, "GRAD" 0, "opsz" 48;
+			}
+
+			.size-48 {
+			font-size: 48px;
+			font-variation-settings: 'OPSZ' 48;
+			}
+
+			.dark-inactive {
+			background: black;
+			color: rgba(255, 255, 255, 0.3);
+			font-variation-settings: 'GRAD' -25;
+			}
+		</style>
+	</defs>
+
+	<text x="10" y="30" font-family="SuperSansMKringel">Super Sans MKringel</text>
+	<text x="10" y="100" font-size="200%" font-family="Material Icons">settings</text>
+	<text x="10" y="150" class="material-icons">settings</text>
+	<text x="10" y="200" class="material-symbols-outlined">settings</text>
+	<text x="40" y="200" class="material-symbols-outlined">favorite</text>
+	<text x="80" y="200" class="material-symbols-outlined"> home</text>
+	<text x="120" y="200" class="material-symbols-outlined size-48 dark-inactive">search</text>
+	
+</svg>

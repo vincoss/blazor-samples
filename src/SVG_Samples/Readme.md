@@ -1,9 +1,15 @@
 ﻿
+# Next
+fonts
+
+
 ## Tasks
 finish reading
-find svg calculator
+viewbox needs good samples
+html div fill SVG full
+read about cooridinate and understand it
 use font icons
-box
+box sample
 	Text
 	underline
 	font icon
@@ -11,7 +17,6 @@ box
 ## Issues
 font-variation-settings does not work
 
-https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients
 
 # Resources
 https://developer.mozilla.org/en-US/docs/Web/SVG
