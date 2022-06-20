@@ -3,7 +3,6 @@
 
 ## Tasks
 html div fill SVG full
-read about cooridinate and understand it
 use font icons
 box sample
 	Text
@@ -18,6 +17,7 @@ font-variation-settings does not work
 https://developer.mozilla.org/en-US/docs/Web/SVG
 https://css-tricks.com/scale-svg/
 https://webdesign.tutsplus.com/tutorials/svg-viewport-and-viewbox-for-beginners--cms-30844
+https://www.sarasoueidan.com/blog/svg-coordinate-systems/
 
 https://freesvg.org/
 https://github.com/FortAwesome/Font-Awesome
