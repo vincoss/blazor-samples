@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Stretch div height to fill parent div</title>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        #outer {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            background-color: pink;
+            margin: 0;
+            padding: 0;
+        }
+        #inner_fixed {
+            height: 100px;
+            background-color: grey;
+        }
+
+        #inner_remaining {
+            background-color: #DDDDDD;
+            flex-grow: 1;
+        }
+
+        .parent {
+            background: red;
+            padding: 10px;
+            display: flex;
+        }
+
+        .other-child {
+            width: 100px;
+            background: yellow;
+            height: 150px;
+            padding: .5rem;
+        }
+
+        .child {
+            width: 100px;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+
+        <div id="inner_fixed">
+            Fixed Height
+        </div>
+
+        <div id="inner_remaining">
+            Remaining Space
+            <div class="parent">
+                <div class="other-child">
+                    Only used for stretching the parent
+                </div>
+                <div class="child"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
