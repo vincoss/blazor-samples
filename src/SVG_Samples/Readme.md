@@ -1,11 +1,7 @@
 ﻿
-# Next
-fonts
 
 
 ## Tasks
-finish reading
-viewbox needs good samples
 html div fill SVG full
 read about cooridinate and understand it
 use font icons
@@ -21,6 +17,7 @@ font-variation-settings does not work
 # Resources
 https://developer.mozilla.org/en-US/docs/Web/SVG
 https://css-tricks.com/scale-svg/
+https://webdesign.tutsplus.com/tutorials/svg-viewport-and-viewbox-for-beginners--cms-30844
 
 https://freesvg.org/
 https://github.com/FortAwesome/Font-Awesome
@@ -32,6 +29,9 @@ https://developers.google.com/fonts/docs/material_icons
 https://fonts.googleapis.com/icon?family=Material+Icons
 https://developers.google.com/fonts/docs/material_symbols
 https://medium.com/@aitareydesign/understanding-of-font-formats-ttf-otf-woff-eot-svg-e55e00a1ef2
+
+## Icons
+https://elements.envato.com/graphics/icons
 
 ## Tools
 https://inkscape.org/
