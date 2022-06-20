@@ -32,3 +32,6 @@ https://developers.google.com/fonts/docs/material_icons
 https://fonts.googleapis.com/icon?family=Material+Icons
 https://developers.google.com/fonts/docs/material_symbols
 https://medium.com/@aitareydesign/understanding-of-font-formats-ttf-otf-woff-eot-svg-e55e00a1ef2
+
+## Tools
+https://inkscape.org/
