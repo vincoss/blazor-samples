@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title></title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <style>
+    <style type="text/css">
 
         /* Page */
 
@@ -33,43 +33,52 @@
 
         /* Nav */
 
-
-
         .oi {
-            width: 2rem;
             vertical-align: text-top;
-             color: #696969;
+            color: black;
         }
 
         .nav-item {
             font-size: 1rem;
         }
 
-            .nav-item:first-of-type {
-            }
+        .nav-item:first-of-type {
+        }
 
-            .nav-item:last-of-type {
-            }
+        .nav-item:last-of-type {
+        }
 
-            .nav-item a {
-                color: #696969;
-                border-radius: 4px;
-                height: 3rem;
-                display: flex;
-                align-items: center;
-                line-height: 3rem;
-            }
+        .nav-item a {
+            display: block;
+            width: 100%;
+            color: black;
+            align-items: center;
+            white-space: nowrap;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
 
-            .nav-item a.active {
-                background-color: rgba(255,255,255,0.25);
-                color: white;
-            }
+        .nav-item-active .nav-link {
+            border-right: 5px solid #ffc844;
+            background-color: #44474A;
+            color: #ffffff;
+            padding: 5px;
+        }
 
-            .nav-item a:hover {
-                background-color: rgba(255,255,255,0.1);
-                color: white;
-            }
+        .nav-item a.active {
+            border-right: 5px solid #ffc844;
+            background-color: #44474A;
+            color: #ffffff;
+            padding: 5px;
+        }
 
+        .nav-item a:hover {
+            border-right: 5px solid #ffc844;
+            background-color: #44474A;
+            color: #ffffff;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
@@ -78,20 +87,25 @@
         <div class="sidebar">
             <div class="">
                 <nav class="flex-column">
-                    <div class="nav-item px-2">
-                        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                            <span class="oi oi-home" aria-hidden="true"></span> One
-                        </NavLink>
+                    <div class="nav-item">
+                        <a class="nav-link">
+                            <span class="oi" aria-hidden="true"></span> One
+                        </a>
                     </div>
-                    <div class="nav-item px-2">
-                        <NavLink class="nav-link" href="plexergrid">
-                            <span class="oi oi-plus" aria-hidden="true"></span> Two
-                        </NavLink>
+                    <div class="nav-item nav-item-active">
+                        <a class="nav-link">
+                            <span class="oi" aria-hidden="true"></span> Two
+                        </a>
                     </div>
-                    <div class="nav-item px-2">
-                        <NavLink class="nav-link" href="gridnav">
-                            <span class="oi oi-plus" aria-hidden="true"></span> Three
-                        </NavLink>
+                    <div class="nav-item">
+                        <a class="nav-link">
+                            <span class="oi" aria-hidden="true"></span> Three
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link">
+                            <span class="oi" aria-hidden="true"></span> This is a long link that shall trim.
+                        </a>
                     </div>
                 </nav>
             </div>
