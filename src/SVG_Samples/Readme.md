@@ -10,10 +10,10 @@ box sample
 	Text
 	underline
 	font icon
+	must scale any screen
 
 ## Issues
-font-variation-settings does not work
-
+font-variation-settings does not work, see font samples
 
 # Resources
 https://developer.mozilla.org/en-US/docs/Web/SVG
