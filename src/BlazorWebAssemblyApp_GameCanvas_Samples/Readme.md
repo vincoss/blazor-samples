@@ -1,5 +1,4 @@
-﻿find blazor project or game
-
+﻿
 ## Resources
 https://codeincomplete.com/articles/javascript-tetris/
 https://expediteapps.net/2020/01/20/blazor-and-svg/
@@ -10,6 +9,8 @@ https://css-tricks.com/svg-text-typographic-designs/
 http://bl.ocks.org/mjromper/95fef29a83c43cb116c3
 https://cloudfour.com/thinks/svg-icon-stress-test/
 https://css-tricks.com/high-performance-svgs/
+
+find blazor project or game
 
 
 ## Add samples
@@ -33,12 +34,6 @@ the xy shall be percent and reflect screen size
 
 see viewport sample
 	vw,vh
-
-background for div
-	under water
-	dino
-	insect
-	repeat
 	
 canvas
 	start above canvas

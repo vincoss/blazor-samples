@@ -1,16 +1,17 @@
 ﻿
 
-
 ## Tasks
 html div fill SVG full
 	1.html
 	has issue with vertical scrool
-use font icons
+font scale with parent
+convert otf to woff
 box sample
 	Text
 	underline
 	font icon
 	must scale any screen
+	---
 
 ## Issues
 font-variation-settings does not work, see font samples
