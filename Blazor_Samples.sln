@@ -53,17 +53,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVG_Samples", "src\SVG_Samp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorServerApp", "src\Default_BlazorServerApp\Default_BlazorServerApp.csproj", "{6F2CF134-0402-4C5B-AB65-252D82507C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwa", "src\Default_BlazorWebAssemblyAppPwa\Default_BlazorWebAssemblyAppPwa.csproj", "{B6F9D534-E3D1-4A45-A608-F0926A3AC138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwa", "src\Default_BlazorWebAssemblyAppPwa\Default_BlazorWebAssemblyAppPwa.csproj", "{B6F9D534-E3D1-4A45-A608-F0926A3AC138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Server\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server.csproj", "{2783D1F0-B825-4339-A69E-9077F5FBE0F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Server\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Server.csproj", "{2783D1F0-B825-4339-A69E-9077F5FBE0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Client\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client.csproj", "{6CB031D9-3FE0-4A21-B7B5-5D68AA2556BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Client\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Client.csproj", "{6CB031D9-3FE0-4A21-B7B5-5D68AA2556BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Shared\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared.csproj", "{FB9600C4-EA23-4492-B0B4-16714D9497A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Shared\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared.csproj", "{FB9600C4-EA23-4492-B0B4-16714D9497A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_MauiBlazorApp", "src\Default_MauiBlazorApp\Default_MauiBlazorApp.csproj", "{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_MauiBlazorApp", "src\Default_MauiBlazorApp\Default_MauiBlazorApp.csproj", "{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{C4814962-4C84-4110-BC3D-410401A1C251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{C4814962-4C84-4110-BC3D-410401A1C251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Html_Css_Samples", "src\Html_Css_Samples\Html_Css_Samples.csproj", "{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,6 +187,10 @@ Global
 		{C4814962-4C84-4110-BC3D-410401A1C251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4814962-4C84-4110-BC3D-410401A1C251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4814962-4C84-4110-BC3D-410401A1C251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
