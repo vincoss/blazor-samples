@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--SVG fonts-->
+
+	<defs>
+		<style type="text/css">
+			@font-face {
+			font-family: SeaLife;
+			src: url('./Sea-Life.otf');
+			}
+		</style>
+	</defs>
+
+	<text x="10" y="70" font-family="SeaLife" font-size="500%" fill="red">A</text>
+	<text x="100" y="70" font-family="SeaLife" font-size="500%" fill="red">Y</text>
+	
+</svg>

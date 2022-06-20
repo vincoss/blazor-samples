@@ -1,24 +1,39 @@
 ﻿find blazor project or game
 
-div
+## Resources
+https://codeincomplete.com/articles/javascript-tetris/
+https://expediteapps.net/2020/01/20/blazor-and-svg/
+https://developer.mozilla.org/en-US/docs/Web/SVG
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/onclick
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
+https://css-tricks.com/svg-text-typographic-designs/
+http://bl.ocks.org/mjromper/95fef29a83c43cb116c3
+https://cloudfour.com/thinks/svg-icon-stress-test/
+https://css-tricks.com/high-performance-svgs/
+
+
+## Add samples
 canvas
-svg
 webgl
 css
 skia
++div
++svg
 
+## Size change
 need to get viewport size in blazor
 if the width is larger than height use that one if other way use height
 what to do if orientation change?
 	well the x position must be relative? how about y position well that too
 orientation change issue
-
+see the sample ThreeView.razor always retrieves windows size
 windows resize and orientation change
 	see the solution there
 the xy shall be percent and reflect screen size
 
-viewport sample
+see viewport sample
 	vw,vh
+
 background for div
 	under water
 	dino
@@ -26,54 +41,20 @@ background for div
 	repeat
 	
 canvas
-	vertical times ramdom fall
-	like escalator
 	start above canvas
 		example item size 50x50, will start -50 above canval
+	percent all xy
 	increment Y +1 until reach can height + item size
 	increment X +- to have item floating right or left like a ship (nice to have)
 	item must not touch left or right size
-	when reach bottom reset to start again
-		x shall be random fill
+	when reach bottom
+		remove the item
 	whow many items show per canvas?
 		it depends on canvas and item size
 		canvas height / item height
 	must get the larger size of the canvas to for the size
 	each interval tick increment wisible items Y 
 	find how to virtualize items in html
-		
-Default blank canvas
-	***** out canvas		
-	00000	
-	00000	
-	00000	
-	00000	
-	00000	
-	***** out canvas
-		
-Canvas with items
-***** out canvas		
-10000	
-01000	
-00100	
-00010	
-00001	
-***** out canvas
-		
-		
-		
-## times
-horizontal
-	can use the arrows and walk to solve the value
- 
-
-## Testing
-must test on large screen TV
 
 ## Resources
 https://www.pmichaels.net/2021/09/11/creating-a-game-in-blazor-part-1-moving-objects/
-
-
-// 
-pull new item in previous is +100% size from start
-	if not end
