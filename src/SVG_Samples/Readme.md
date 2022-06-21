@@ -4,7 +4,7 @@
 html div fill SVG full
 	1.html
 	has issue with vertical scrool
-font scale with parent
+font scale to fit parent
 convert otf to woff
 box sample
 	Text
