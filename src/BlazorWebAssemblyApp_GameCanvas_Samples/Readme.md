@@ -7,8 +7,6 @@ https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/onclick
 https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
 https://css-tricks.com/svg-text-typographic-designs/
 http://bl.ocks.org/mjromper/95fef29a83c43cb116c3
-https://cloudfour.com/thinks/svg-icon-stress-test/
-https://css-tricks.com/high-performance-svgs/
 
 find blazor project or game
 
