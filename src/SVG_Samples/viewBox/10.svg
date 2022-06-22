@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-	<svg x="10" y="10" height="100" width="200" viewBox="0 0 1500 1000" preserveAspectRatio="none"
-		 xmlns="http://www.w3.org/2000/svg">
+	<svg x="10" y="10" height="100" width="200" viewBox="0 0 1500 1000" preserveAspectRatio="none">
 		<desc>
 			Example ViewBox - uses the viewBox
 			attribute to automatically create an initial user coordinate
@@ -26,8 +25,7 @@
 		</text>
 	</svg>
 
-	<svg x="210" y="10" height="100" width="200" viewBox="0 0 1500 1000"
-		 xmlns="http://www.w3.org/2000/svg">
+	<svg x="210" y="10" height="100" width="200" viewBox="0 0 1500 1000">
 		<desc>
 			Example ViewBox - uses the viewBox
 			attribute to automatically create an initial user coordinate

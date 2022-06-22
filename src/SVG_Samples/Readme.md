@@ -2,9 +2,14 @@
 
 ## Tasks
 buttons 0-9
+see 'use', 'g', 'symbol' elements
 reuse components
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
+see attribute fill="url
+review 7-Texts
+	GetttingStarted
+	all
 tools review and how to use
 	incscape
 	SVG VS Code

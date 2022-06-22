@@ -5,7 +5,7 @@
 	<!--Auto-Scaling Inline SVG with a viewBox
 		—not reliable cross-browser-->
 
-	<svg class="defs-only" xmlns="http://www.w3.org/2000/svg">
+	<svg>
 		<linearGradient id="coin" x2="50%" y2="40%" spreadMethod="reflect">
 			<stop stop-color="gold" offset="30%" />
 			<stop stop-color="goldenrod" offset="70%" />

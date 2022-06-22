@@ -3,7 +3,7 @@
 
 	<!--Scaling an SVG with a viewBox-->
 
-	<svg class="defs-only">
+	<svg>
 		<linearGradient id="coin" x2="50%" y2="40%" spreadMethod="reflect">
 			<stop stop-color="gold" offset="30%" />
 			<stop stop-color="goldenrod" offset="70%" />

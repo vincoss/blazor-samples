@@ -5,7 +5,7 @@
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
-	<svg x="10" y="10" width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<svg x="10" y="10" width="120" height="240">
 		<defs>
 			<linearGradient id="Gradient1">
 				<stop class="stop1" offset="0%"/>
@@ -33,7 +33,7 @@
 	</svg>
 	
 	<!--Radial Gradient-->
-	<svg x="150" y="10" width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<svg x="150" y="10" width="120" height="240">
 		<defs>
 			<radialGradient id="RadialGradient1">
 				<stop offset="0%" stop-color="red"/>
@@ -51,7 +51,7 @@
 	</svg>
 	
 	<!--Center and focal point-->
-	<svg x="300" y="10" width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<svg x="300" y="10" width="120" height="120">
 		<defs>
 			<radialGradient id="Gradient"
 				  cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
@@ -72,7 +72,7 @@
 	</svg>
 	
 	<!--spreadMethod-->
-	<svg x="10" y="250" width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<svg x="10" y="250" width="220" height="220">
 		<defs>
 			<radialGradient id="GradientPad"
 				  cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"

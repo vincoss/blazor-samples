@@ -5,7 +5,7 @@
 	<!--Option 1: Use percentages-->
 	<!--Scaling an SVG with No Aspect Ratio-->
 	
-	<svg class="defs-only" xmlns="http://www.w3.org/2000/svg">
+	<svg>
 		<linearGradient id="sky" x2="50%" y2="50%" spreadMethod="repeat">
 			<stop stop-color="lightblue" offset="10%" />
 			<stop stop-color="white" offset="40%" />
