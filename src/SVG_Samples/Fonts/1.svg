@@ -67,15 +67,41 @@
 			color: rgba(255, 255, 255, 0.3);
 			font-variation-settings: 'GRAD' -25;
 			}
+
+			@font-face {
+			font-family: SeaLife;
+			src: url('./Sea-Life.otf');
+			}
+
+			@font-face {
+			font-family: FontAwesome;
+			src: url('./Font-Awesome-5-Free-Solid-900.otf');
+			}
 		</style>
 	</defs>
 
 	<text x="10" y="30" font-family="SuperSansMKringel">Super Sans MKringel</text>
+	
+	<!--Material-->
 	<text x="10" y="100" font-size="200%" font-family="Material Icons">settings</text>
 	<text x="10" y="150" class="material-icons">settings</text>
 	<text x="10" y="200" class="material-symbols-outlined">settings</text>
 	<text x="40" y="200" class="material-symbols-outlined">favorite</text>
 	<text x="80" y="200" class="material-symbols-outlined"> home</text>
 	<text x="120" y="200" class="material-symbols-outlined size-48 dark-inactive">search</text>
+
+	<!--SeaLife-->
+	<text x="10" y="300" font-family="SeaLife" font-size="500%" fill="red">A</text>
+	<text x="100" y="300" font-family="SeaLife" font-size="500%" fill="red">Y</text>
+
+	<!-- FontAwesome-->
+	<text x="10" y="350" font-family="FontAwesome" fill="red">Home</text>
+	<text x="40" y="350" font-family="FontAwesome" fill="red">bell</text>
+	<text x="80" y="350" font-family="FontAwesome" fill="red">radiation</text>
+	<text x="120" y="350" font-family="FontAwesome" fill="red">question</text>
+	<text x="160" y="350" font-family="FontAwesome" fill="red">brush</text>
+	<text x="200" y="350" font-family="FontAwesome" fill="red">align-justify</text>
+	<text x="240" y="350" font-family="FontAwesome" fill="red">person-booth</text>
+	<text x="280" y="350" font-family="FontAwesome" fill="red">kiss-wink-heart</text>
 	
 </svg>
