@@ -5,6 +5,9 @@ buttons 0-9
 reuse components
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
+tools review and how to use
+	incscape
+	SVG VS Code
 convert otf to woff
 box sample
 	Text
