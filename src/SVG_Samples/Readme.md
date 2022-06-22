@@ -1,8 +1,6 @@
 ﻿
 
 ## Tasks
-font scale to fit parent
-font center
 buttons 0-9
 convert otf to woff
 box sample
@@ -14,6 +12,10 @@ box sample
 	must have right and wrong
 https://storybook.js.org/blog/storybook-6-5/
 
+## Done
+font scale to fit parent
+font center
+
 ## Issues
 font-variation-settings does not work, see font samples
 
@@ -23,10 +25,8 @@ https://css-tricks.com/scale-svg/
 https://webdesign.tutsplus.com/tutorials/svg-viewport-and-viewbox-for-beginners--cms-30844
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
 http://xahlee.info/js/svg.html
-
-https://freesvg.org/
-https://github.com/FortAwesome/Font-Awesome
 https://github.com/BerndK/SvgToXaml
+https://www.justinmccandless.com/demos/viewbox/index.html
 
 ### Fonts
 https://github.com/google/material-design-icons/tree/master/font
@@ -41,6 +41,7 @@ https://fontawesome.com/v5/cheatsheet
 
 ## Icons
 https://elements.envato.com/graphics/icons
+https://freesvg.org/
 
 ## Tools
 https://inkscape.org/
