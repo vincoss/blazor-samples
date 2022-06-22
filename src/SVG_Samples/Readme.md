@@ -2,6 +2,9 @@
 
 ## Tasks
 buttons 0-9
+reuse components
+effect
+	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
 convert otf to woff
 box sample
 	Text

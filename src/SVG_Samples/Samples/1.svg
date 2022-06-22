@@ -34,10 +34,10 @@
 
 	</svg>
 
-	<svg x="15%" y="30%" viewBox="0 0 100 100" >
-		<rect width="100%" height="100%" fill="gray" fill-opacity="0.4" />
+	<svg x="15%" y="30%" width="50%" height="10%" viewBox="0 0 50 50" >
 
 		<svg>
+			<rect width="100%" height="100%" fill="gray" fill-opacity="0.4" />
 			<text x="10" y="10"
 			  font-weight="bold"
 			  dominant-baseline="central" text-anchor="middle" >0</text>
