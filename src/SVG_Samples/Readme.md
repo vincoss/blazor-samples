@@ -10,6 +10,9 @@ effect
 see attribute fill="url
 transform what element can be used with
 rewrite the svg performance with blazor
+read css book
+read blazor documentation whole
+read maui documentation whole
 buttons 0-9
 	svg
 	integrate with html
