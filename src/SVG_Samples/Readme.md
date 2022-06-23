@@ -1,12 +1,19 @@
 ﻿
 
 ## Tasks
-buttons 0-9
 see 'use', 'g', 'symbol' elements
 reuse components
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
 see attribute fill="url
+transform what element can be used with
+buttons 0-9
+	svg
+	integrate with html
+	test on multiple screens
+		size
+		orientation change
+		use the larger value: height > width 
 review 7-Texts
 	GetttingStarted
 	all
@@ -22,6 +29,7 @@ box sample
 	---
 	must have right and wrong
 https://storybook.js.org/blog/storybook-6-5/
+review resources urls
 
 ## Done
 font scale to fit parent
