@@ -1,12 +1,15 @@
 ﻿
 
 ## Tasks
+Maui see GraphicsView
+see open-iconic
 see 'use', 'g', 'symbol' elements
 reuse components
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
 see attribute fill="url
 transform what element can be used with
+rewrite the svg performance with blazor
 buttons 0-9
 	svg
 	integrate with html
