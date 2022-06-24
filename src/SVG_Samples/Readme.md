@@ -1,12 +1,9 @@
 ﻿
 
 ## Tasks
-Maui see GraphicsView
-see open-iconic
-see 'use', 'g', 'symbol' elements
-reuse components
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
+find already created svg and review those
 see attribute fill="url
 transform what element can be used with
 rewrite the svg performance with blazor
@@ -38,6 +35,11 @@ https://storybook.js.org/blog/storybook-6-5/
 review resources urls
 
 ## Done
+see 'use', 'g', 'symbol' elements
+reuse components
+	with use, g and symbol elements
+see open-iconic
+Maui see GraphicsView
 font scale to fit parent
 font center
 
