@@ -3,7 +3,7 @@
 
 	<!--Scaling an SVG with Nested <svg> that Scale Separately-->
 
-	<svg class="defs-only">
+	<svg>
 		<symbol id="rainbow">
 			<svg viewBox="0 0 200 100" preserveAspectRatio="none" >
 				<linearGradient id="sky-grad" x2="0%" y2="100%" >

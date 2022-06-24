@@ -40,7 +40,7 @@
 	</svg>
 	
 	<!--Complex transformations with matrix()-->
-	<svg x="10" y="400" xmlns="http://www.w3.org/2000/svg">
+	<svg x="10" y="400">
 		<rect x="10" y="10" width="30" height="20" fill="green" />
 
 		<!--

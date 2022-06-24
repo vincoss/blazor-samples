@@ -7,8 +7,6 @@ https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/onclick
 https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
 https://css-tricks.com/svg-text-typographic-designs/
 http://bl.ocks.org/mjromper/95fef29a83c43cb116c3
-https://cloudfour.com/thinks/svg-icon-stress-test/
-https://css-tricks.com/high-performance-svgs/
 
 find blazor project or game
 
@@ -22,18 +20,18 @@ skia
 +svg
 
 ## Size change
-need to get viewport size in blazor
 if the width is larger than height use that one if other way use height
 what to do if orientation change?
 	well the x position must be relative? how about y position well that too
-orientation change issue
-see the sample ThreeView.razor always retrieves windows size
+	use percent
 windows resize and orientation change
 	see the solution there
+	see the sample ThreeView.razor always retrieves windows size
 the xy shall be percent and reflect screen size
-
 see viewport sample
 	vw,vh
+
++need to get viewport size in blazor (BoundingClientRect) does that
 	
 canvas
 	start above canvas
