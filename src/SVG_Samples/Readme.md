@@ -3,6 +3,7 @@
 ## Tasks
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
+see overflow="visible"
 find already created svg and review those
 see attribute fill="url
 transform what element can be used with
