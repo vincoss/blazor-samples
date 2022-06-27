@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<!--https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/overflow-->
+	
+	<svg viewBox="0 0 200 30" overflow="auto">
+		<text y="20">This text is wider than the SVG, so there should be a scrollbar shown.</text>
+	</svg>
+
+
+
+</svg>
