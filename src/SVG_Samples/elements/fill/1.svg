@@ -20,9 +20,9 @@
 		<circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
 
 		<!--
-  Keeping the final state of an animated circle
-  which is a circle with a radius of 40.
-  -->
+		  Keeping the final state of an animated circle
+		  which is a circle with a radius of 40.
+		  -->
 		<circle cx="250" cy="50" r="20">
 			<animate attributeType="XML"
 					 attributeName="r"

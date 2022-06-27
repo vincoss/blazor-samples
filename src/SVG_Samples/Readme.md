@@ -3,6 +3,8 @@
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
+rect radius
+transform need more samples
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
 transform what element can be used with
@@ -33,6 +35,10 @@ box sample
 	must have right and wrong
 https://storybook.js.org/blog/storybook-6-5/
 review resources urls
+review all samples
+test multiple fonts, sealife, animals, insect, santa
+complete UI sample as one svg file
+
 
 
 ## Done

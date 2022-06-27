@@ -92,7 +92,8 @@
 
 	<!--SeaLife-->
 	<text x="10" y="300" font-family="SeaLife" font-size="500%" fill="red">A</text>
-	<text x="100" y="300" font-family="SeaLife" font-size="500%" fill="red">Y</text>
+	<text x="40" y="300" font-family="SeaLife" font-size="500%" fill="red">Y</text>
+	<text x="80" y="300" font-family="SeaLife" font-size="500%" fill="red">F</text>
 
 	<!-- FontAwesome-->
 	<text x="10" y="350" font-family="FontAwesome" fill="red">Home</text>
