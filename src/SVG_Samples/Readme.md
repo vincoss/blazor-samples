@@ -70,6 +70,7 @@ https://fontawesome.com/v5/cheatsheet
 ## Icons
 https://elements.envato.com/graphics/icons
 https://freesvg.org/
+https://www.svgrepo.com/
 
 ## Tools
 https://inkscape.org/
