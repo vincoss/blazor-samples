@@ -5,7 +5,6 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 ## Tasks
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
-see attribute fill="url
 transform what element can be used with
 rewrite the svg performance with blazor
 read css book
@@ -37,6 +36,7 @@ review resources urls
 
 
 ## Done
+see attribute fill="url
 find already created svg and review those
 see overflow="visible"
 see 'use', 'g', 'symbol' elements
