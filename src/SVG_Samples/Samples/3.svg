@@ -1,30 +1,42 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%">
 
-	<rect width="100%" height="100%" fill="#dcdcdc" />
+	<defs>
+		<style type="text/css">
+
+			@font-face {
+			font-family: SeaLife;
+			src: url('./Sea-Life.otf');
+			}
+		</style>
+	</defs>
+	
+	<rect width="100%" height="100%" fill="orange" />
 
 	<svg x="0" y="0">
 
-		<rect width="100%" height="100%" fill="pink" />
 
 	</svg>
 
-	<svg width="20%" height="8%">
+	<svg x="20" y="0" width="10%" height="10%">
 
-		<svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMax meet">
-		<rect width="100%" height="100%" fill="orange" />
+		<rect width="100%" height="100%" fill="#dcdcdc" rx="2" ry="2"/>
+
+		<svg viewBox="0 0 300 350" preserveAspectRatio="xMidYMax meet">
 			<svg x="0" y="0" width="300" height="200">
-				
+
 				<svg x="0" y="0">
-					<text x="50%" y="50%" font-weight="bold" font-size="600%" 
+					<text x="50%" y="50%" font-weight="bold" font-size="1000%"
 						  dominant-baseline="central"
-						  text-anchor="middle">--</text>
+						  text-anchor="middle">888</text>
 				</svg>
 			</svg>
-			<svg x="0" y="200" width="300" height="200">
-					<text x="50%" y="50%" font-weight="bold" font-size="600%" 
-						  dominant-baseline="central"
-						  text-anchor="middle">111</text>
+			<svg x="0" y="200" width="300" height="150">
+				
+				<text x="50%" y="50%" font-family="SeaLife" font-size="1200%" 
+					fill="red"
+					  dominant-baseline="central"
+					  text-anchor="middle">D</text>
 			</svg>
 		</svg>
 	</svg>
