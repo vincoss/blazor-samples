@@ -3,5 +3,12 @@
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
+	<!--https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect-->
+	
+	<!-- Simple rectangle -->
+	<rect x="10" y="10" width="100" height="100" fill="orange" />
 
+	<!-- Rounded corner rectangle -->
+	<rect x="10" y="120" width="100" height="100" rx="15" fill="orange" />
+	
 </svg>
