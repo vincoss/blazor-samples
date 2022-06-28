@@ -3,7 +3,6 @@
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
-rect radius
 transform need more samples
 effect
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
@@ -42,6 +41,7 @@ complete UI sample as one svg file
 
 
 ## Done
+rect radius
 see attribute fill="url
 find already created svg and review those
 see overflow="visible"
