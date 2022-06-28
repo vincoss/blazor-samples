@@ -17,6 +17,7 @@
 	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
 	https://tympanus.net/codrops/2019/01/15/svg-filters-101/
 	https://alistapart.com/article/finessing-fecolormatrix/
+	https://css-tricks.com/creating-patterns-with-svg-filters/
 	-->
 
 	<svg x="10" y="10" width="230" height="120">
@@ -26,6 +27,14 @@
 
 		<filter id="drop-shadow">
 			<feGaussianBlur in="SourceAlpha" stdDeviation="3" result="DROP"></feGaussianBlur>
+		</filter>
+
+		<filter id="filter">
+			<feTurbulence baseFrequency="0.2"/>
+			<feColorMatrix values="0 0 0 9 -4
+                               0 0 0 9 -4
+                               0 0 0 9 -4
+                               0 0 0 0 1"/>
 		</filter>
 
 		<filter id="drop-shadow2">
@@ -92,6 +101,11 @@
 	</svg>
 	
 	<svg x="10" y="500" filter="url(#drop-shadow3)">
+		<rect x="10" y="10" width="20" height="20" fill="orange" />
+		<rect x="20" y="20" width="20" height="20" fill="red" />
+	</svg>
+
+	<svg x="10" y="600" filter="url(#filter)">
 		<rect x="10" y="10" width="20" height="20" fill="orange" />
 		<rect x="20" y="20" width="20" height="20" fill="red" />
 	</svg>

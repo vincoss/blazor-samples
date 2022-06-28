@@ -3,7 +3,16 @@
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
-rewrite the svg performance with blazor
+box sample
+	Text
+	underline
+	font icon
+	must scale any screen
+	---
+	must have right and wrong
+pattern
+	https://css-tricks.com/optimizing-svg-patterns/
+	https://codepen.io/collection/DRMKdB?cursor=ZD0xJm89MSZwPTEmdj0yNw==
 read css book
 read blazor documentation whole
 read maui documentation whole
@@ -14,25 +23,16 @@ buttons 0-9
 		size
 		orientation change
 		use the larger value: height > width 
-review 7-Texts
-	GetttingStarted
-	all
 tools review and how to use
 	incscape
 	SVG VS Code
 convert otf to woff
-box sample
-	Text
-	underline
-	font icon
-	must scale any screen
-	---
-	must have right and wrong
 https://storybook.js.org/blog/storybook-6-5/
 review resources urls
 review all samples
 test multiple fonts, sealife, animals, insect, santa
 complete UI sample as one svg file
+rewrite the svg performance with blazor
 
 
 
