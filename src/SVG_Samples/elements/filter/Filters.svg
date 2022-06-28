@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<filter id="blurMeFile">
+		<feGaussianBlur stdDeviation="5"/>
+	</filter>
+
+</svg>

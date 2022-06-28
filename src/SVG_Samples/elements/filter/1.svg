@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<defs>
+		<style type="text/css">
+
+			.icon:hover {
+			filter: url('./Filters.svg#blurMeFile');
+			}
+		</style>
+	</defs>
+	
+	<!--
+	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter
+	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
+	https://tympanus.net/codrops/2019/01/15/svg-filters-101/
+	https://alistapart.com/article/finessing-fecolormatrix/
+	-->
+
+	<svg x="10" y="10" width="230" height="120">
+		<filter id="blurMe">
+			<feGaussianBlur stdDeviation="5"/>
+		</filter>
+
+		<filter id="drop-shadow">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="3" result="DROP"></feGaussianBlur>
+		</filter>
+
+		<filter id="drop-shadow2">
+
+			<!-- Get the source alpha and blur it; we'll name the result "DROP"  -->
+			<feGaussianBlur in="SourceAlpha" stdDeviation="10" result="DROP"></feGaussianBlur>
+
+			<!-- flood the region with a ligh grey color; we'll name this layer "COLOR" -->
+			<feFlood flood-color="#bbb" result="COLOR"></feFlood>
+
+			<!-- Composite the DROP and COLOR layers together to colorize the shadow. The result is named "SHADOW"  -->
+			<feComposite in="COLOR" in2="DROP" operator="in" result="SHADOW"></feComposite>
+
+			<!-- Move the SHADOW layer 20 pixels down and to the right. The new layer is now called "DROPSHADOW"  -->
+			<feOffset in="SHADOW" dx="20" dy="20" result="DROPSHADOW"></feOffset>
+
+			<!-- Layer the DROPSHADOW and the Source Image, ensuring the image is positioned on top (remember: MergeNode order matters)  -->
+			<feMerge>
+				<feMergeNode in="DROPSHADOW"></feMergeNode>
+				<feMergeNode in="SourceGraphic"></feMergeNode>
+			</feMerge>
+		</filter>
+
+		<filter id="drop-shadow3">
+
+			<!-- Get the source alpha and blur it,  -->
+			<feGaussianBlur in="SourceAlpha" stdDeviation="10" result="DROP"></feGaussianBlur>
+
+			<!-- offset the drop shadow  -->
+			<feOffset in="SHADOW" dx="20" dy="20" result="DROPSHADOW"></feOffset>
+
+			<!-- make the shadow translucent by reducing the alpha channel value to 0.3  -->
+			<feColorMatrix type="matrix" in="DROPSHADOW" result="FINALSHADOW"
+									  values="1 0 0 0 0 
+					  0 1 0 0 0 
+					  0 0 1 0 0 
+					  0 0 0 0.3 0">
+			</feColorMatrix>
+
+			<!-- Merge the shadow and the source image  -->
+			<feMerge>
+				<feMergeNode in="FINALHADOW"></feMergeNode>
+				<feMergeNode in="SourceGraphic"></feMergeNode>
+			</feMerge>
+		</filter>
+		
+		<circle cx="60" cy="60" r="50" fill="green"/>
+
+		<circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)"/>
+		
+	</svg>
+
+	<svg x="10" y="150" class="icon">
+		<circle cx="170" cy="60" r="50" fill="green" />
+	</svg>
+
+	<svg x="10" y="300">
+		<circle cx="170" cy="60" r="50" fill="green" filter="url(#drop-shadow)"/>
+	</svg>
+
+	<svg x="10" y="400" filter="url(#drop-shadow2)">
+		<rect x="10" y="10" width="20" height="20" fill="orange" />
+		<rect x="20" y="20" width="20" height="20" fill="red" />
+	</svg>
+	
+	<svg x="10" y="500" filter="url(#drop-shadow3)">
+		<rect x="10" y="10" width="20" height="20" fill="orange" />
+		<rect x="20" y="20" width="20" height="20" fill="red" />
+	</svg>
+
+</svg>

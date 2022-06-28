@@ -3,9 +3,6 @@
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
-effect
-	https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
-transform what element can be used with
 rewrite the svg performance with blazor
 read css book
 read blazor documentation whole
