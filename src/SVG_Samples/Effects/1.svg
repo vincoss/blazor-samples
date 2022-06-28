@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<defs>
+		<style type="text/css">
+
+			/* mouse over link */
+			.icon:hover {
+			fill: red;
+			}
+
+			/* selected link */
+			.icon:active {
+			fill: yellow;
+			}
+
+			.graysepia:hover {
+			filter: grayscale(100%) sepia(100%);
+			}
+
+			.sepiagray:hover {
+			filter: sepia(100%) grayscale(100%);
+			}
+
+			.invert:hover {
+			filter: invert(0.5)
+			sepia(1)
+			hue-rotate(200deg)
+			saturate(4)
+			brightness(1);
+			}
+		</style>
+	</defs>
+
+	<rect x="10" y="10" width="100" height="100" fill="orange" class="icon" />
+
+	<svg x="10" y="120" class="graysepia">
+		<rect x="10" y="10" width="20" height="20" fill="orange" />
+		<rect x="20" y="20" width="20" height="20" fill="red" />
+	</svg>
+
+	<svg x="10" y="180" class="sepiagray">
+		<rect x="10" y="10" width="20" height="20" fill="orange" />
+		<rect x="20" y="20" width="20" height="20" fill="red" />
+	</svg>
+
+	<svg x="10" y="240" class="invert">
+		<rect x="10" y="10" width="20" height="20" fill="orange" />
+		<rect x="20" y="20" width="20" height="20" fill="red" />
+	</svg>
+
+</svg>
