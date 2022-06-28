@@ -5,11 +5,11 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 ## Tasks
 box sample
 	Text
-	underline
 	font icon
 	must scale any screen
 	---
 	must have right and wrong
+html add font as a style and refrence in svg
 pattern
 	https://css-tricks.com/optimizing-svg-patterns/
 	https://codepen.io/collection/DRMKdB?cursor=ZD0xJm89MSZwPTEmdj0yNw==

@@ -14,21 +14,18 @@
 	<rect width="100%" height="100%" fill="white" />
 
 	<svg x="0" y="0">
-
-
 	</svg>
 
-	<svg x="20" y="20" width="20%" height="20%">
+	<svg x="20" y="20" width="150" height="150">
 
 		<rect width="100%" height="100%" fill="gray" rx="5" fill-opacity="20%"/>
 
 		<svg viewBox="0 0 300 380" preserveAspectRatio="xMidYMax meet">
 			<svg x="0" y="0" width="300" height="200">
-				<rect width="100%" height="100%" fill="blue" />
 				<svg x="0" y="0">
 					<text x="50%" y="50%" font-weight="bold" font-size="1000%"
 						  dominant-baseline="central"
-						  text-anchor="middle">000</text>
+						  text-anchor="middle">---</text>
 				</svg>
 			</svg>
 			<svg x="0" y="210" width="300" height="180">
@@ -36,7 +33,7 @@
 				<text x="50%" y="50%" font-family="SeaLife" font-size="1200%" 
 					fill="red"
 					  dominant-baseline="central"
-					  text-anchor="middle">Z</text>
+					  text-anchor="middle">Y</text>
 			</svg>
 		</svg>
 	</svg>
