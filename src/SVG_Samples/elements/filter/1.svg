@@ -87,7 +87,81 @@
 			<feComposite in2="expanded" operator="in"/>
 			<feComposite in="SourceGraphic"/>
 		</filter>
-		
+
+		<filter id="outline2"
+       style="color-interpolation-filters:sRGB;"
+       x="-0.086447818"
+       y="-0.099939665"
+       width="1.1728956"
+       height="1.1998793">
+			<feTurbulence
+			   seed="10"
+			   baseFrequency="0.12 0.02"
+			   numOctaves="10"
+			   type="fractalNoise"
+			   id="feTurbulence3547" />
+			<feColorMatrix
+			   values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.7 0 "
+			   result="result5"
+			   id="feColorMatrix3549" />
+			<feComposite
+			   in2="result5"
+			   operator="out"
+			   in="SourceGraphic"
+			   id="feComposite3551" />
+			<feMorphology
+			   result="result3"
+			   radius="1.3"
+			   operator="dilate"
+			   id="feMorphology3553" />
+			<feTurbulence
+			   seed="25"
+			   type="turbulence"
+			   baseFrequency="0.08 0.05"
+			   numOctaves="8"
+			   result="result91"
+			   id="feTurbulence3555" />
+			<feDisplacementMap
+			   result="result4"
+			   scale="5"
+			   yChannelSelector="G"
+			   xChannelSelector="R"
+			   in="result3"
+			   in2="result91"
+			   id="feDisplacementMap3557" />
+			<feSpecularLighting
+			   specularExponent="35"
+			   specularConstant="1"
+			   surfaceScale="2"
+			   lighting-color="rgb(255,255,255)"
+			   result="result1"
+			   in="result4"
+			   id="feSpecularLighting3561">
+				<feDistantLight
+				   azimuth="235"
+				   elevation="75"
+				   id="feDistantLight3559" />
+			</feSpecularLighting>
+			<feComposite
+			   operator="in"
+			   result="result2"
+			   in="result1"
+			   in2="result4"
+			   id="feComposite3563" />
+			<feComposite
+			   k3="1"
+			   k2="1"
+			   operator="arithmetic"
+			   result="result4"
+			   in="result4"
+			   in2="result2"
+			   id="feComposite3565" />
+			<feBlend
+			   mode="multiply"
+			   in2="result4"
+			   id="feBlend3567" />
+		</filter>
+
 		<circle cx="60" cy="60" r="50" fill="green"/>
 
 		<circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)"/>
@@ -119,6 +193,11 @@
 	
 	<svg x="10" y="700" filter="url(#outline)">
 		<rect x="10" y="10" width="20" height="20" fill="orange" />
+		<rect x="20" y="20" width="20" height="20" fill="red" />
+	</svg>
+
+	<svg x="10" y="800">
+		<rect x="10" y="10" width="20" height="20" fill="orange" filter="url(#outline2)"/>
 		<rect x="20" y="20" width="20" height="20" fill="red" />
 	</svg>
 
