@@ -9,6 +9,10 @@ box sample
 	must scale any screen
 	---
 	must have right and wrong
+	border
+	focus current item (backgground colour or shade)
+progress
+	0/0
 html add font as a style and refrence in svg
 pattern
 	https://css-tricks.com/optimizing-svg-patterns/
