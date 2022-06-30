@@ -63,6 +63,8 @@ https://webdesign.tutsplus.com/tutorials/svg-viewport-and-viewbox-for-beginners-
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
 http://xahlee.info/js/svg.html
 https://github.com/BerndK/SvgToXaml
+https://github.com/wieslawsoltes/SvgToXaml
+https://github.com/wieslawsoltes/Svg.Skia
 https://www.justinmccandless.com/demos/viewbox/index.html
 
 ### Fonts
