@@ -67,12 +67,19 @@ https://github.com/wieslawsoltes/SvgToXaml
 https://github.com/wieslawsoltes/Svg.Skia
 https://www.justinmccandless.com/demos/viewbox/index.html
 
+## Inkscape
+https://gamedev.stackexchange.com/questions/19832/tool-for-creating-complex-paths/19833#19833
+
 ### Fonts
 https://github.com/google/material-design-icons/tree/master/font
 https://developers.google.com/fonts/docs/material_icons
 https://fonts.googleapis.com/icon?family=Material+Icons
 https://developers.google.com/fonts/docs/material_symbols
 https://medium.com/@aitareydesign/understanding-of-font-formats-ttf-otf-woff-eot-svg-e55e00a1ef2
+https://jsfiddle.net/ykx7kp8L/121/
+https://fontdrop.info/
+https://github.com/google/fonts/
+https://gero3.github.io/facetype.js/
 
 ### Font-Awesome
 https://github.com/FortAwesome/Font-Awesome
