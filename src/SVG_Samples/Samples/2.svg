@@ -2,6 +2,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
-	
-	
+
+	<!--Progress-->
+	<svg x="10" y="10" height="20%">
+		<svg viewBox="0, 0, 270, 100" preserveAspectRatio="xMidYMax meet">
+			<svg x="0" y="0" width="270" height="100">
+				<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+					text-anchor="middle"
+					fill="red">000/999</text>
+			</svg>
+		</svg>
+	</svg>
+	<!--Duration|Time-->
+	<svg x="10" y="60" height="20%">
+		<svg viewBox="0, 0, 270, 100" preserveAspectRatio="xMidYMax meet">
+			<svg x="0" y="0" width="270" height="100">
+				<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+					text-anchor="middle"
+					fill="red">59</text>
+			</svg>
+		</svg>
+	</svg>
 </svg>

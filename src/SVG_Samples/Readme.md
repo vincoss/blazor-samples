@@ -11,36 +11,45 @@ box sample
 	must have right and wrong
 	border
 	focus current item (backgground colour or shade)
-progress
-	0/0
+layout, button, progress, duration and other
+	use rectangles
+add all sample icons into blazor app to review on devices
 html add font as a style and refrence in svg
+	use that in css fontface
+		then use the .css file to attach that to the whole .svg
 pattern
 	https://css-tricks.com/optimizing-svg-patterns/
 	https://codepen.io/collection/DRMKdB?cursor=ZD0xJm89MSZwPTEmdj0yNw==
 read css book
 read blazor documentation whole
 read maui documentation whole
-buttons 0-9
-	svg
-	integrate with html
+svg samples integrate with html
 	test on multiple screens
 		size
 		orientation change
 		use the larger value: height > width 
+		must resize based on screen change
+		test on windws app window resize UI must update according to screen changes
 tools review and how to use
 	incscape
 	SVG VS Code
 convert otf to woff
-https://storybook.js.org/blog/storybook-6-5/
+	wheter is required
 review resources urls
 review all samples
-test multiple fonts, sealife, animals, insect, santa
 complete UI sample as one svg file
 rewrite the svg performance with blazor
-
-
+	make that simple
+	just add child svg and change x,y on timer
+		when reach x,y max or min, random next x,y (min or max)
+		make is as ocean and use te fish fonts
 
 ## Done
+buttons 0-9
+	svg
+progress
+	0/0
+duration time
 rect radius
 see attribute fill="url
 find already created svg and review those
