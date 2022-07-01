@@ -3,6 +3,7 @@
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
+z index
 box sample
 	Text
 	font icon
@@ -38,13 +39,13 @@ convert otf to woff
 review resources urls
 review all samples
 complete UI sample as one svg file
+
+## Done
 rewrite the svg performance with blazor
 	make that simple
 	just add child svg and change x,y on timer
 		when reach x,y max or min, random next x,y (min or max)
 		make is as ocean and use te fish fonts
-
-## Done
 buttons 0-9
 	svg
 progress
