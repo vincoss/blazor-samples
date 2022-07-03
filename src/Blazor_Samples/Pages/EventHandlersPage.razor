@@ -27,6 +27,7 @@
 }
 
 <button class="btn btn-primary" @onclick="OnClickParameter">Click me!</button>
+<button @onclick="(() => OnPassValue(111))">Pass Argument</button>
 
 @code {
 
@@ -60,5 +61,10 @@
     {
         showMessage = true;
         message = "Hi there.";
+    }
+
+    private void OnPassValue(int value)
+    {
+        
     }
 }
