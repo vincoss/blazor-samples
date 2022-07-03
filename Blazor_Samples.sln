@@ -65,7 +65,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_MauiBlazorApp", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{C4814962-4C84-4110-BC3D-410401A1C251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Html_Css_Samples", "src\Html_Css_Samples\Html_Css_Samples.csproj", "{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Html_Css_Samples", "src\Html_Css_Samples\Html_Css_Samples.csproj", "{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Samples", "src\Blazor_Samples\Blazor_Samples.csproj", "{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,6 +193,10 @@ Global
 		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

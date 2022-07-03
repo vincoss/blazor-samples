@@ -1,0 +1,64 @@
+﻿@page "/eventhandlerspage"
+@inject  HttpClient Http
+
+
+<button @onclick="OnClick">Click me!</button>
+<button @onclick="OnClickMouse">Click me!</button>
+
+@foreach (var buttonLabel in buttonLabels)
+{
+    <button @onclick='(() => Console.WriteLine($"Button clicked {buttonLabel}") )'>@buttonLabel</button>
+}
+
+<button @onclick="OnClickAsync">Click me!</button>
+
+<button @onclick="ShowMessage">Get message</button>
+
+@if (showMessage)
+{
+    @if (message == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <p>The message is: @message</p>
+    }
+}
+
+<button class="btn btn-primary" @onclick="OnClickParameter">Click me!</button>
+
+@code {
+
+    bool showMessage = false;
+    string message;
+
+    private IEnumerable<string> buttonLabels = new[]
+    {
+            "Milk", "Bread", "Butter"
+    };
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickParameter { get; set; }
+
+    void OnClick()
+    {
+        Console.WriteLine("The button was clicked!");
+    }
+
+    void OnClickMouse(MouseEventArgs e)
+    {
+        Console.WriteLine($"Mouse clicked at {e.ScreenX}, {e.ScreenY}.");
+    }
+
+    async Task OnClickAsync()
+    {
+        var result = await Http.GetAsync("api/values");
+    }
+
+    public async Task ShowMessage()
+    {
+        showMessage = true;
+        message = "Hi there.";
+    }
+}

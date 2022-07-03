@@ -1,0 +1,10 @@
+﻿<h3>ErrorThrowPage</h3>
+
+@code {
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        throw new Exception("Bad error");
+    }
+}
