@@ -4,23 +4,19 @@
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
 	<!--Progress-->
-	<svg x="10" y="10" height="20%">
-		<svg viewBox="0, 0, 270, 100" preserveAspectRatio="xMidYMax meet">
-			<svg x="0" y="0" width="270" height="100">
-				<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
-					text-anchor="middle"
-					fill="red">000/999</text>
-			</svg>
+	<svg y="1%" height="5%" viewBox="0 0 290 100" preserveAspectRatio="xMaxYMin meet">
+		<svg width="290" height="100">
+			<rect width="100%" height="100%" fill="gray" rx="15" fill-opacity="30%" />
+			<text x="50%" y="50%" font-weight="bold" font-size="500%"
+			dominant-baseline="central" text-anchor="middle" fill="red">000/999</text>
 		</svg>
 	</svg>
 	<!--Duration|Time-->
-	<svg x="10" y="60" height="20%">
-		<svg viewBox="0, 0, 270, 100" preserveAspectRatio="xMidYMax meet">
-			<svg x="0" y="0" width="270" height="100">
-				<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
-					text-anchor="middle"
-					fill="red">59</text>
-			</svg>
+	<svg y="6.1%" height="5%" viewBox="0 0 100 100" preserveAspectRatio="xMaxYMin meet">
+		<svg width="100" height="100">
+			<rect width="100%" height="100%" fill="gray" rx="15" fill-opacity="30%" />
+			<text x="50%" y="50%" font-weight="bold" font-size="500%"
+				  dominant-baseline="central" text-anchor="middle" fill="red">60</text>
 		</svg>
 	</svg>
 </svg>
