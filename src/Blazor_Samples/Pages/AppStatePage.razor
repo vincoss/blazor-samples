@@ -1,0 +1,34 @@
+﻿@page "/appstate"
+
+<p>App message: @_state.Message</p>
+
+@code {
+    private AppState _state = new AppState(); // NOTE inject as external service
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        _state.OnChange += StateHasChanged;
+
+        _state.UpdateMessage("Hi there.");
+    }
+
+
+    public class AppState
+    {
+        public string Message { get; private set; } = "None";
+
+        // Lets components receive change notifications
+        public event Action OnChange;
+
+        public void UpdateMessage(string message)
+        {
+            Message = message;
+            NotifyStateChanged();
+        }
+
+        private void NotifyStateChanged() => OnChange?.Invoke();
+    }
+}
+
