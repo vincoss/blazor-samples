@@ -1,0 +1,13 @@
+﻿@page "/databinding"
+
+<input type="checkbox" @bind="isChecked" />
+<input value="@isChecked" @onchange="(ChangeEventArgs e) => isChecked = (bool)e.Value" />
+<p>@isChecked</p>
+
+<input @bind="text" @bind:event="oninput" />
+<p>@text</p>
+
+@code {
+    bool isChecked;
+    string text;
+}
