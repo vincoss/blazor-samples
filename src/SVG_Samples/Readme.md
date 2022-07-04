@@ -4,6 +4,9 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
 routing arguments
+text aling
+	progress
+	time
 box sample
 	Text
 	font icon
@@ -12,6 +15,8 @@ box sample
 	must have right and wrong
 	border
 	focus current item (backgground colour or shade)
+buttons
+	click effect
 layout, button, progress, duration and other
 	use rectangles
 add all sample icons into blazor app to review on devices
