@@ -3,7 +3,7 @@
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
-z index
+routing arguments
 box sample
 	Text
 	font icon
@@ -41,6 +41,7 @@ review all samples
 complete UI sample as one svg file
 
 ## Done
+z index
 rewrite the svg performance with blazor
 	make that simple
 	just add child svg and change x,y on timer
