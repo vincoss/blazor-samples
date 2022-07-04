@@ -67,7 +67,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_RazorClassLibrary",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Html_Css_Samples", "src\Html_Css_Samples\Html_Css_Samples.csproj", "{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Samples", "src\Blazor_Samples\Blazor_Samples.csproj", "{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples", "src\Blazor_Samples\Blazor_Samples.csproj", "{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
