@@ -4,7 +4,6 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
 routing arguments
-svg margin or padding
 box sample
 	Text
 	font icon
@@ -25,6 +24,7 @@ pattern
 read css book
 read blazor documentation whole
 read maui documentation whole
+reuse the styles and components
 svg samples integrate with html
 	test on multiple screens
 		size
