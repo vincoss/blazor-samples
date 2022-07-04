@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--In the SVG specification version 1.1 the rendering order is based on the document order:-->
+	<svg>
+		<circle fill="orange" cx="100" cy="95" r="20"/>
+		
+		<circle fill="green" cx="100" cy="105" r="20"/>
+	</svg>
+	
+</svg>
