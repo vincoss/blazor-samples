@@ -1,0 +1,16 @@
+﻿@page "/TemplateParameterViewParentPage"
+
+<SimpleListView Items="messages" TItem="string">
+    <Heading>
+        <h1>My list</h1>
+    </Heading>
+    <ItemTemplate Context="message">
+        <p>The message is: @message</p>
+    </ItemTemplate>
+</SimpleListView>
+
+@code {
+    private string[] messages = new[] { "C#", "do", "while", "goto" };
+    private string message = "empty";
+
+}
