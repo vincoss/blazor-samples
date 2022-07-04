@@ -14,36 +14,15 @@
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="errorboundary">
-                <span class="oi oi-plus" aria-hidden="true"></span> Error Boundary
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="eventhandlerspage">
-                <span class="oi oi-plus" aria-hidden="true"></span> Event Handlers
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="databinding">
-                <span class="oi oi-plus" aria-hidden="true"></span> Data Binding
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="appstate">
-                <span class="oi oi-plus" aria-hidden="true"></span> App State
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="ChildContentParentPage">
-                <span class="oi oi-plus" aria-hidden="true"></span> Child Content
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="TemplateParameterViewParentPage">
-                <span class="oi oi-plus" aria-hidden="true"></span> Template Parameters
-            </NavLink>
-        </div>
+
+        @foreach(var item in MenuItems)
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@item.Url">
+                    <span class="oi oi-plus" aria-hidden="true"></span>@item.Title
+                </NavLink>
+            </div>
+        }
     </nav>
 </div>
 
@@ -51,9 +30,27 @@
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private IEnumerable<MenuInfo> MenuItems = new[]
+    {
+        new MenuInfo { Url = "errorboundary", Title = "Error Boundary"},
+        new MenuInfo { Url = "eventhandlerspage", Title = "Event Handlers"},
+        new MenuInfo { Url = "databinding", Title = "Data Binding"},
+        new MenuInfo { Url = "appstate", Title = "App State"},
+        new MenuInfo { Url = "ChildContentParentPage", Title = "Child Content"},
+        new MenuInfo { Url = "TemplateParameterViewParentPage", Title = "Template Parameters"},
+        new MenuInfo { Url = "codebehindpage", Title = "Code-behind"},
+        new MenuInfo { Url = "NavigationViewPage", Title = "Navigation"},
+        new MenuInfo { Url = "CustomPageLayoutPage", Title = "Custom Page Layout"},
+    };
 
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    public class MenuInfo
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
     }
 }
