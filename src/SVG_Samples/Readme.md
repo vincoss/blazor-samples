@@ -24,6 +24,7 @@ pattern
 read css book
 read blazor documentation whole
 read maui documentation whole
+reuse the styles and components
 svg samples integrate with html
 	test on multiple screens
 		size
