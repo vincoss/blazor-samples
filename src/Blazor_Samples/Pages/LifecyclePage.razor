@@ -1,0 +1,19 @@
+﻿@page "/LifecyclePage"
+<h3>LifecyclePage</h3>
+
+<p>@Message</p>
+
+@code {
+
+    private string Message;
+
+    protected override async Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+        await Task.Delay(2000);
+
+        Message = nameof(OnInitializedAsync);
+    }
+
+}
