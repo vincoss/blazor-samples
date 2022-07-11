@@ -1,0 +1,37 @@
+﻿@page "/SvgPage"
+
+<img alt="Example image" src="/images/1.svg" />
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" rx="10" ry="10" width="200" height="200" stroke="black"
+          fill="none" />
+    <foreignObject x="20" y="20" width="160" height="160">
+        <p>@message</p>
+    </foreignObject>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="200" height="200">
+        <label>
+            Two-way binding:
+            <input @bind="value" @bind:event="oninput" />
+        </label>
+    </foreignObject>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="200" height="200">
+       <SvgChidView/>
+    </foreignObject>
+</svg>
+
+<div class="element-class">
+    <h1>css</h1>
+</div>
+
+@code {
+    private string message = "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                             "elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+    private string? value;
+}

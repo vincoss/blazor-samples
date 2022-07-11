@@ -1,0 +1,106 @@
+﻿@page "/InvokeComponentMethodExternallyPage"
+@implements IDisposable
+
+<h1>Receive Notifications</h1>
+
+<h2>Timer Service</h2>
+
+<button @onclick="StartTimer">Start Timer</button>
+
+<h2>Notifications</h2>
+
+<p>
+    Status:
+    @if (lastNotification.key is not null)
+    {
+        <span>@lastNotification.key = @lastNotification.value</span>
+    }
+    else
+    {
+        <span>Awaiting first notification</span>
+    }
+</p>
+
+@code {
+    private TimerService Timer;
+    private NotifierService Notifier = new NotifierService();
+
+    private (string key, int value) lastNotification;
+
+    protected override void OnInitialized()
+    {
+        Timer = new TimerService(Notifier);
+        Notifier.Notify += OnNotify;
+    }
+
+    public async Task OnNotify(string key, int value)
+    {
+        await InvokeAsync(() =>
+        {
+            lastNotification = (key, value);
+            StateHasChanged();
+        });
+    }
+
+    private async Task StartTimer()
+    {
+        await Timer.Start();
+    }
+
+    public void Dispose()
+    {
+        Notifier.Notify -= OnNotify;
+    }
+}
+
+@code {
+    public class TimerService : IDisposable
+    {
+        private int elapsedCount;
+        private readonly static TimeSpan heartbeatTickRate = TimeSpan.FromSeconds(5);
+        private readonly NotifierService notifier;
+        private PeriodicTimer? timer;
+
+        public TimerService(NotifierService notifier)
+        {
+            this.notifier = notifier;
+        }
+
+        public async Task Start()
+        {
+            if (timer is null)
+            {
+                timer = new(heartbeatTickRate);
+                Console.WriteLine("Started");
+
+                using (timer)
+                {
+                    while (await timer.WaitForNextTickAsync())
+                    {
+                        elapsedCount += 1;
+                        await notifier.Update("elapsedCount", elapsedCount);
+                        Console.WriteLine($"elapsedCount: {elapsedCount}");
+                    }
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            timer?.Dispose();
+        }
+    }
+
+    public class NotifierService
+    {
+        public async Task Update(string key, int value)
+        {
+            if (Notify != null)
+            {
+                await Notify.Invoke(key, value);
+            }
+        }
+
+        public event Func<string, int, Task>? Notify;
+    }
+}
