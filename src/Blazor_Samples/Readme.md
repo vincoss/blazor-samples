@@ -1,6 +1,7 @@
 ﻿
 ## Resources
 
+navigation from page or component to another page
 
 https://github.com/dotnet-architecture/eShopOnBlazor
 
