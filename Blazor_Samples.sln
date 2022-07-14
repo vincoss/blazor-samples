@@ -69,6 +69,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Html_Css_Samples", "src\Htm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples", "src\Blazor_Samples\Blazor_Samples.csproj", "{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Samples_RazorClassLibrary", "src\Blazor_Samples_RazorClassLibrary\Blazor_Samples_RazorClassLibrary.csproj", "{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -197,6 +199,10 @@ Global
 		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
