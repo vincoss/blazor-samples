@@ -1,6 +1,11 @@
 ﻿
 ## Resources
-
+pause
+over (center full screen)
+	title
+	4/5
+	again
+	button
 navigation from page or component to another page
 maui - splash screen
 maui - setup UI (long running)
