@@ -1,6 +1,5 @@
 ﻿
 ## Resources
-pause
 over (center full screen)
 	title
 	4/5
