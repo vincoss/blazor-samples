@@ -69,7 +69,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Html_Css_Samples", "src\Htm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples", "src\Blazor_Samples\Blazor_Samples.csproj", "{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Samples_RazorClassLibrary", "src\Blazor_Samples_RazorClassLibrary\Blazor_Samples_RazorClassLibrary.csproj", "{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples_RazorClassLibrary", "src\Blazor_Samples_RazorClassLibrary\Blazor_Samples_RazorClassLibrary.csproj", "{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
