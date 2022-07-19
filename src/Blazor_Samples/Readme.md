@@ -5,7 +5,6 @@ over (center full screen)
 	4/5
 	again
 	button
-navigation from page or component to another page
 maui - blazor appear & dissapear page event pause, run sample
 	navigation from page shall stop timer, in blazor, navigate back shall start timer
 maui - splash screen
