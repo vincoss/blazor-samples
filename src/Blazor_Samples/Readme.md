@@ -1,5 +1,6 @@
 ﻿
 ## Resources
+even add, step increment
 over (center full screen)
 	title
 	4/5
@@ -16,6 +17,10 @@ see licensing for the fonts
 	the sea-life and other
 	list those as third party terms
 mmaui - see Tizen platform Samsung, LG and other
+
+matrix font fain
+	canvas in maui
+	svg sample https://codepen.io/riazxrazor/pen/Gjomdp
 
 https://github.com/dotnet-architecture/eShopOnBlazor
 
