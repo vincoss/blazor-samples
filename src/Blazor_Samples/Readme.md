@@ -6,8 +6,8 @@ over (center full screen)
 	again
 	button
 maui - blazor appear & dissapear page event pause, run sample
-	navigation from page shall stop timer, in blazor, navigate back shall start timer
-	see App.Current.MainPage.Loaded event
+		navigation from page shall stop timer, in blazor, navigate back shall start timer
+		see App.Current.MainPage.Loaded event
 maui - splash screen
 maui - setup UI (long running)
 
