@@ -3,6 +3,10 @@
 https://docs.microsoft.com/en-gb/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-6.0
 https://github.com/dotnet-architecture/eShopOnBlazor
 
+matrix font fain
+	canvas in maui
+	svg sample https://codepen.io/riazxrazor/pen/Gjomdp
+
 over (center full screen)
 	title
 	4/5
@@ -28,22 +32,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model
 
 hot reload,
 how to build component in isolation
-
-##
-use Skip counting for 2,3,(etc.)
-	show selected title
-		Count by 4
-must be min 12 for level
-
-Enum
-Default (no prefill)
-Random (Start & End)
-
-
-Random Start (0, 100) by 1 end max
-Backwards Random Start (0, 100) by 1 end min
-
-Random Start (0, 100) by 1 and end random
-Backwards Random Start (0, 100) by 1 and end random
-
 
