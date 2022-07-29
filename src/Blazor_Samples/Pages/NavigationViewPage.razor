@@ -1,11 +1,33 @@
 ﻿@page "/NavigationViewPage"
 @inject NavigationManager NavigationManager
+@inject ILogger<NavigationViewPage> Logger
+@implements IDisposable
 
 <button @onclick="Navigate">Navigate</button>
 
-@code {
+<!--
+    https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-6.0
+-->
+
+@code 
+{
+    protected override void OnInitialized()
+    {
+        NavigationManager.LocationChanged += HandleLocationChanged;
+    }
+
     void Navigate()
     {
         NavigationManager.NavigateTo("appstate");
+    }
+
+    private void HandleLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        Logger.LogInformation("URL of new location: {Location}", e.Location);
+    }
+
+    public void Dispose()
+    {
+        Logger.LogInformation("Dispose");
     }
 }
