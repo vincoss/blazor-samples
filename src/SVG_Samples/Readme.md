@@ -1,8 +1,20 @@
 ﻿
 ## Temp
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
+https://stackoverflow.com/questions/22487266/how-to-scale-inline-svg-uniformly-with
+https://css-tricks.com/scale-svg/
 
 ## Tasks
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+</style>
+tspan with text format and colour
 routing arguments
 text aling
 	progress
@@ -85,6 +97,7 @@ https://github.com/wieslawsoltes/Svg.Skia
 https://www.justinmccandless.com/demos/viewbox/index.html
 
 ## Inkscape
+https://inkscape.org/
 https://gamedev.stackexchange.com/questions/19832/tool-for-creating-complex-paths/19833#19833
 
 ### Fonts
