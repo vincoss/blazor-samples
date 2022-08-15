@@ -1,6 +1,31 @@
 ﻿@page "/keyboardpage"
+@inject IJSRuntime JS
 
+<div tabindex="0" @ref="myDiv"
+    @onkeydown="@KeyDown" style="background-color: orange">
+    <p>Test code:</p>
+    <p>@Key</p>
+    <p>@Code</p>
+</div>
 
-@code {
+@code 
+{
+    private string Key;
+    private string Code;
+    protected ElementReference myDiv; 
 
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) 
+        {
+            await myDiv.FocusAsync();
+            //await JS.InvokeVoidAsync("SetFocusTo", myDiv);
+        }  
+    }
+
+    protected void KeyDown(KeyboardEventArgs e)
+    {
+        Code = e.Key;
+        Key = e.Code;
+    }
 }
