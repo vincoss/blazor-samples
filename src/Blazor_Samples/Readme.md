@@ -1,4 +1,5 @@
 ﻿
+logger andd http logger
 maui - NavigatingFrom test web view each platform wheter its called to dispose some view model
 
 see https://github.com/ctrl-alt-d/Blagario
