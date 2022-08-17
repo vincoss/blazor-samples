@@ -1,13 +1,15 @@
-﻿@page "/NavigationViewPage"
+﻿
+<!--
+    https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-6.0
+-->
+
+
+@page "/NavigationViewPage"
 @inject NavigationManager NavigationManager
 @inject ILogger<NavigationViewPage> Logger
 @implements IDisposable
 
 <button @onclick="Navigate">Navigate</button>
-
-<!--
-    https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-6.0
--->
 
 @code 
 {

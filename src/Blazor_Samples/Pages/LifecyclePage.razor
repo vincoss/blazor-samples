@@ -9,11 +9,10 @@
 
     protected override async Task OnInitializedAsync()
     {
-        base.OnInitializedAsync();
+       await  base.OnInitializedAsync();
 
         await Task.Delay(2000);
 
         Message = nameof(OnInitializedAsync);
     }
-
 }

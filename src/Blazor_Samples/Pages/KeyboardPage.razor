@@ -1,5 +1,4 @@
 ﻿@page "/keyboardpage"
-@inject IJSRuntime JS
 
 <div tabindex="0" @ref="myDiv"
     @onkeydown="@KeyDown" style="background-color: orange">
@@ -19,13 +18,26 @@
         if (firstRender) 
         {
             await myDiv.FocusAsync();
-            //await JS.InvokeVoidAsync("SetFocusTo", myDiv);
         }  
     }
 
     protected void KeyDown(KeyboardEventArgs e)
     {
-        Code = e.Key;
-        Key = e.Code;
+        Code = e.Code;
+        Key = e.Key;
+
+        var sb = new StringBuilder();
+        sb.AppendLine(nameof(KeyDown));
+        sb.AppendLine($"{nameof(e.Key)} - {e.Key}");
+        sb.AppendLine($"{nameof(e.Code)} - {e.Code}");
+        sb.AppendLine($"{nameof(e.Location)} - {e.Location}");
+        sb.AppendLine($"{nameof(e.Repeat)} - {e.Repeat}");
+        sb.AppendLine($"{nameof(e.CtrlKey)} - {e.CtrlKey}");
+        sb.AppendLine($"{nameof(e.ShiftKey)} - {e.ShiftKey}");
+        sb.AppendLine($"{nameof(e.AltKey)} - {e.AltKey}");
+        sb.AppendLine($"{nameof(e.MetaKey)} - {e.MetaKey}");
+        sb.AppendLine($"{nameof(e.Type)} - {e.Type}");
+
+        Console.WriteLine(sb.ToString());
     }
 }

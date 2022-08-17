@@ -1,8 +1,7 @@
-﻿
-logger andd http logger
+﻿logger andd http logger
 maui - NavigatingFrom test web view each platform wheter its called to dispose some view model
 
-see https://github.com/ctrl-alt-d/Blagario
+
 
 
 matrix font fain
@@ -14,6 +13,7 @@ over (center full screen)
 	4/5
 	again
 	button
+
 maui - blazor appear & dissapear page event pause, run sample
 		navigation from page shall stop timer, in blazor, navigate back shall start timer
 		see App.Current.MainPage.Loaded event
@@ -32,7 +32,6 @@ maui - see Tizen platform Samsung, LG and other
 https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work#render
 https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model
-
 
 hot reload,
 how to build component in isolation

@@ -1,6 +1,10 @@
-﻿@page "/eventhandlerspage"
-@inject  HttpClient Http
+﻿
+<!--
+    https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-6.0
+-->
 
+@page "/eventhandlerspage"
+@inject  HttpClient Http
 
 <button @onclick="OnClick">Click me!</button>
 <button @onclick="OnClickMouse">Click me!</button>
@@ -28,6 +32,10 @@
 
 <button class="btn btn-primary" @onclick="OnClickParameter">Click me!</button>
 <button @onclick="(() => OnPassValue(111))">Pass Argument</button>
+
+<div style="height:200px;width:200px;background-color:palegoldenrod" @ontouchend="OnTouchend">
+
+</div>
 
 @code {
 
@@ -65,6 +73,24 @@
 
     private void OnPassValue(int value)
     {
-        
+
+    }
+
+    void OnTouchend(TouchEventArgs e)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine(nameof(OnTouchend));
+        sb.AppendLine($"{nameof(e.Detail)}-{e.Detail}");
+        sb.AppendLine($"{nameof(e.Touches)}-{e.Touches}");
+        sb.AppendLine($"{nameof(e.TargetTouches)}-{e.TargetTouches}");
+        sb.AppendLine($"{nameof(e.ChangedTouches)}-{e.ChangedTouches}");
+        sb.AppendLine($"{nameof(e.CtrlKey)}-{e.CtrlKey}");
+        sb.AppendLine($"{nameof(e.ShiftKey)}-{e.ShiftKey}");
+        sb.AppendLine($"{nameof(e.AltKey)}-{e.AltKey}");
+        sb.AppendLine($"{nameof(e.MetaKey)}-{e.MetaKey}");
+        sb.AppendLine($"{nameof(e.Type)}-{e.Type}");
+
+
+        Console.WriteLine(sb.ToString());
     }
 }
