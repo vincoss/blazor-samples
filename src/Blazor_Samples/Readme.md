@@ -1,6 +1,7 @@
 ﻿logger andd http logger
 maui - NavigatingFrom test web view each platform wheter its called to dispose some view model
 find what label to use, remaining
+.net catch all exceptions AppDomain
 
 
 
