@@ -1,6 +1,4 @@
 ﻿
-see https://github.com/ctrl-alt-d/Blagario
-
 
 matrix font fain
 	canvas in maui
@@ -11,6 +9,7 @@ over (center full screen)
 	4/5
 	again
 	button
+
 maui - blazor appear & dissapear page event pause, run sample
 		navigation from page shall stop timer, in blazor, navigate back shall start timer
 		see App.Current.MainPage.Loaded event
@@ -30,6 +29,11 @@ https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work#rende
 https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model
 
+## see
+AppStatePage.razor
+possible to have an universe with rocked and it will fly to the next task
+player name
+https://github.com/ctrl-alt-d/Blagario
 
 hot reload,
 how to build component in isolation
