@@ -7,29 +7,34 @@
 		<style type="text/css">
 
 			/* mouse over link */
-			.icon:hover {
-			fill: red;
+			.icon:hover
+			{
+				fill: red;
 			}
 
 			/* selected link */
-			.icon:active {
-			fill: yellow;
+			.icon:active
+			{
+				fill: yellow;
 			}
 
-			.graysepia:hover {
-			filter: grayscale(100%) sepia(100%);
+			.graysepia:hover
+			{
+				filter: grayscale(100%) sepia(100%);
 			}
 
-			.sepiagray:hover {
-			filter: sepia(100%) grayscale(100%);
+			.sepiagray:hover
+			{
+				filter: sepia(100%) grayscale(100%);
 			}
 
-			.invert:hover {
-			filter: invert(0.5)
-			sepia(1)
-			hue-rotate(200deg)
-			saturate(4)
-			brightness(1);
+			.invert:hover
+			{
+				filter: invert(0.5)
+				sepia(1)
+				hue-rotate(200deg)
+				saturate(4)
+				brightness(1);
 			}
 		</style>
 	</defs>
