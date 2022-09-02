@@ -26,11 +26,11 @@
 		<circle cx="250" cy="50" r="20">
 			<animate attributeType="XML"
 					 attributeName="r"
-					 from="0" to="40" dur="5s"
+					 from="0" to="40" dur="2s"
 					 fill="freeze" />
 		</circle>
 	</svg>
 
-
+	<rect x="100" y="800" width="200" height="200" fill="url(#myGradient)" />
 
 </svg>
