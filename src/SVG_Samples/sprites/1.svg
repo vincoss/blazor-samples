@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<defs>
+		<g id="rect-1">
+			<rect width="100" height="100" fill="orange" />
+		</g>
+
+		<path fill="red" id="heart-icon" d="M256,465.559c0,0- 239.054-135.345-239.054-291.062c0-159
+		   .761,224.692-177.574,239.054-7.756 c17.244-169.692,239.054-152.008,239.054,
+		   7.756C495.054,330.214,256,465.559,256,465.559z"/>
+	</defs>
+
+	<svg x="10" y="10">
+		<use xlink:href="#rect-1"></use>
+	</svg>
+
+	<svg x="110" y="10"   viewBox="0 0 32 32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+</svg>
