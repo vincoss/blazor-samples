@@ -8,6 +8,11 @@
 			font-family: SeaLife;
 			src: url('./Sea-Life.otf');
 			}
+			.out
+			{ outline-width: 5px;
+			outline-style: dashed;
+			outline-color: red;
+			}
 		</style>
 	</defs>
 
@@ -22,7 +27,7 @@
 	</svg>
 	
 	<!--viewBox="0 0 670 940"-->
-	<svg x="0" y="30" width="150" height="150" viewBox="0 0 940 940" preserveAspectRatio="xMidYMax meet">
+	<svg x="0" y="30" width="150" height="150" viewBox="0 0 940 940" preserveAspectRatio="xMidYMax meet" class="out">
 		<rect width="100%" height="100%" fill="gray" rx="15" fill-opacity="20%"/>
 		<svg x="0" y="0" width="940" height="270">
 			<rect width="100%" height="100%" fill="green" fill-opacity="30%"/>
