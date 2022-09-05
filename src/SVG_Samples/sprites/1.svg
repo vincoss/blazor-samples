@@ -1,23 +1,151 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-	<rect width="100%" height="100%" fill="#dcdcdc" />
+	<!--
+	https://tympanus.net/codrops/2013/11/27/svg-icons-ftw/
+	-->
+	
+	<rect width="100%" height="100%" fill="white" />
+
+	<style type="text/css">
+		.icon{
+		width: 32px;
+		height: 32px;
+		fill: #ccc;
+		}
+
+		.icon.is-check{
+		fill: #FE4365;
+		}
+
+		.icon.is-outlined{
+		stroke:  #FE4365;
+		stroke-width: 2px;
+		fill: transparent;
+		}
+
+		.icon.is-x2{
+		width: 64px;
+		height: 64px;
+		}
+
+		.icon.is-hoverable:hover{
+		fill: #FE4365;
+		cursor: pointer;
+		}
+
+		.icon.is-activeable:active{
+		transform: scale(1.25);
+		cursor: pointer;
+		}
+
+		.icon.is-pink--onhover:hover{
+		fill: pink;
+		}
+
+		.icon.is-transit{
+		-webkit-transition: all .35s ease-out;
+		-moz-transition: all .35s ease-out;
+		-ms-transition: all .35s ease-out;
+		-o-transition: all .35s ease-out;
+		transition: all .35s ease-out;
+		}
+
+
+
+		body{
+		font-family: monospace;
+		color: #0099CC;
+		}
+	</style>
+
+	<filter id='inset-shadow'>
+		<!-- Shadow offset -->
+		<feOffset
+		dx='0'
+		dy='0'/>
+
+		<!-- Shadow blur -->
+		<feGaussianBlur
+		stdDeviation='1'
+		result='offset-blur'/>
+
+		<!-- Invert drop shadow to make an inset shadow -->
+		<feComposite
+		operator='out'
+		in='SourceGraphic'
+		in2='offset-blur'
+		result='inverse'/>
+
+		<!-- Cut color inside shadow -->
+		<feFlood
+		flood-color='black'
+		flood-opacity='.95'
+		result='color'/>
+		<feComposite
+		operator='in'
+		in='color'
+		in2='inverse'
+		result='shadow'/>
+
+		<!-- Placing shadow over element -->
+		<feComposite
+		operator='over'
+		in='shadow'
+		in2='SourceGraphic'/>
+	</filter>
 
 	<defs>
 		<g id="rect-1">
-			<rect width="100" height="100" fill="orange" />
+			<rect width="30" height="30" fill="orange" />
 		</g>
 
-		<path fill="red" id="heart-icon" d="M256,465.559c0,0- 239.054-135.345-239.054-291.062c0-159
-		   .761,224.692-177.574,239.054-7.756 c17.244-169.692,239.054-152.008,239.054,
-		   7.756C495.054,330.214,256,465.559,256,465.559z"/>
+		<g id="heart-icon">
+			<path d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454 C30,20.335,16,28.261,16,28.261z"/>
+		</g>
+
+		<g id="heart-icon-1" filter="url(#inset-shadow)">
+			<path d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454 C30,20.335,16,28.261,16,28.261z"/>
+		</g>
 	</defs>
 
 	<svg x="10" y="10">
 		<use xlink:href="#rect-1"></use>
 	</svg>
 
-	<svg x="110" y="10"   viewBox="0 0 32 32">
+	<svg class="icon" viewBox="0 0 32 32" x="40" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon is-check" viewBox="0 0 32 32" x="80" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon is-outlined" viewBox="0 0 32 32" x="120" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon is-outlined is-hoverable" viewBox="0 0 32 32" x="160" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon is-outlined is-hoverable is-transit is-activeable" viewBox="0 0 32 32" x="200" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon is-x2 is-outlined is-hoverable is-transit" viewBox="0 0 32 32" x="240" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon is-x2 is-hoverable is-activeable is-transit" viewBox="0 0 32 32" x="280" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon is-x2 is-hoverable is-outlined is-pink--onhover" viewBox="0 0 32 32" x="320" y="10" width="32" height="32">
+		<use xlink:href="#heart-icon"></use>
+	</svg>
+
+	<svg class="icon" viewBox="0 0 32 32" x="40" y="50" width="32" height="32">
 		<use xlink:href="#heart-icon"></use>
 	</svg>
 

@@ -119,6 +119,7 @@ https://fontawesome.com/v5/cheatsheet
 https://elements.envato.com/graphics/icons
 https://freesvg.org/
 https://www.svgrepo.com/
+https://visualpharm.com/
 
 ## Tools
 https://inkscape.org/
