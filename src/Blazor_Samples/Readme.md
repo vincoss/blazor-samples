@@ -1,8 +1,15 @@
 ﻿
 
 
+list view template - sample
+	font Icon
+	Title
+	Description
+	some value
+	svg icon
+	enabled or disabled
 
-
+find sounds
 matrix font fain
 	canvas in maui
 	svg sample https://codepen.io/riazxrazor/pen/Gjomdp

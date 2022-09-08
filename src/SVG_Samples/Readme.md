@@ -5,6 +5,7 @@ https://stackoverflow.com/questions/22487266/how-to-scale-inline-svg-uniformly-w
 https://css-tricks.com/scale-svg/
 
 ## Tasks
+
 <style>
 .material-symbols-outlined {
   font-variation-settings:
