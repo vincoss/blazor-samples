@@ -4,7 +4,76 @@
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
 	<defs>
-		<g id="keyboard" >
+		<g id="keyboard-portrait" >
+			<svg height="20%" y="80%" viewBox="0, 0, 505, 201" preserveAspectRatio="xMidYMax meet">
+				<rect width="100%" height="100%" fill="gold" />
+				<svg width="505" height="201">
+					<!--TOP-->
+					<svg x="0" y="0" width="100" height="100" tabindex="1">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">0</text>
+					</svg>
+
+					<svg x="101" y="0" width="100" height="100" tabindex="2">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">1</text>
+					</svg>
+
+					<svg x="202" y="0" width="100" height="100" tabindex="3">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">2</text>
+					</svg>
+
+					<svg x="303" y="0" width="100" height="100" tabindex="4">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">3</text>
+					</svg>
+
+					<svg x="404" y="0" width="100" height="100" tabindex="5">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">4</text>
+					</svg>
+
+					<!--Bottom-->
+					<svg x="0" y="101" width="100" height="100" tabindex="6">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">5</text>
+					</svg>
+
+					<svg x="101" y="101" width="100" height="100" tabindex="7">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">6</text>
+					</svg>
+
+					<svg x="202" y="101" width="100" height="100" tabindex="8">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">7</text>
+					</svg>
+
+					<svg x="303" y="101" width="100" height="100" tabindex="9">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">8</text>
+					</svg>
+
+					<svg x="404" y="101" width="100" height="100" tabindex="10">
+						<rect width="100%" height="100%" fill="red" fill-opacity="0.4" />
+						<text x="50%" y="50%" font-weight="bold" font-size="500%" dominant-baseline="central"
+							text-anchor="middle">9</text>
+					</svg>
+				</svg>
+			</svg>
+
+		</g>
+		<g id="keyboard-landscape" >
 			<svg height="30%" y="70%" viewBox="0, 0, 505, 201" preserveAspectRatio="xMidYMax meet">
 				<rect width="100%" height="100%" fill="gold" />
 				<svg width="505" height="201">
@@ -80,7 +149,7 @@
 		<svg viewBox="0 0 1440 3088">
 			<rect width="1440" height="3088" fill="orange" />
 			<rect x="10" y="10" width="350" height="350" fill="red" />
-			<!--<use xlink:href="#keyboard"></use>-->
+			<use xlink:href="#keyboard-portrait"></use>
 		</svg>
 		
 		
@@ -90,7 +159,7 @@
 		<svg viewBox="0 0 3088 1440">
 			<rect width="3088" height="1440" fill="orange" />
 			<rect x="10" y="10" width="250" height="250" fill="red" />
-			
+			<use xlink:href="#keyboard-landscape"></use>
 		</svg>
 	</svg>
 
