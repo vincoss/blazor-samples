@@ -76,9 +76,9 @@
 	</defs>
 
 	<!-- Rectangle with location -->
-	<svg x="10" y="10" height="932" width="430">
-		<svg viewBox="0 0 1290 2796">
-			<rect width="1290" height="2796" fill="orange" />
+	<svg x="10" y="10" height="772" width="360">
+		<svg viewBox="0 0 1440 3088">
+			<rect width="1440" height="3088" fill="orange" />
 			<rect x="10" y="10" width="350" height="350" fill="red" />
 			<!--<use xlink:href="#keyboard"></use>-->
 		</svg>
@@ -86,9 +86,9 @@
 		
 	</svg>
 
-	<svg x="450" y="10" height="430" width="932">
-		<svg viewBox="0 0 2796 1290">
-			<rect width="2796" height="1290" fill="orange" />
+	<svg x="500" y="10" height="360" width="772">
+		<svg viewBox="0 0 3088 1440">
+			<rect width="3088" height="1440" fill="orange" />
 			<rect x="10" y="10" width="250" height="250" fill="red" />
 			
 		</svg>
