@@ -151,8 +151,6 @@
 			<rect x="10" y="10" width="350" height="350" fill="red" />
 			<use xlink:href="#keyboard-portrait"></use>
 		</svg>
-		
-		
 	</svg>
 
 	<svg x="500" y="10" height="360" width="772">
