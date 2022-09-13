@@ -3,7 +3,7 @@
 
 	<rect width="100%" height="100%" fill="#dcdcdc"/>
 
-	<svg x="10" y="10" width="180" height="180" class="out">
+	<svg x="10" y="10" width="180" height="180">
 
 		<rect width="100%" height="100%" fill="fuchsia"/>
 
