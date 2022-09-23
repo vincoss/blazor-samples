@@ -1,6 +1,6 @@
 ﻿
 
-
+detact orientation in maui app, blazor
 list view template - sample
 	font Icon
 	Title
