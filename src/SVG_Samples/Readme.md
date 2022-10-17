@@ -5,6 +5,8 @@ https://stackoverflow.com/questions/22487266/how-to-scale-inline-svg-uniformly-w
 https://css-tricks.com/scale-svg/
 
 ## Tasks
+see shape-rendering="auto" whats that
+	<rect width="100%" height="100%" fill="gray" fill-opacity="70%" shape-rendering="auto" />
 
 <style>
 .material-symbols-outlined {
