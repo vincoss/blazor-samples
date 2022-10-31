@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Hosting;
-
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 var services = builder.Services;
-services.AddSpaStaticFiles(configuration => { configuration.RootPath = "one"; });
+//services.AddSpaStaticFiles(configuration => { configuration.RootPath = "one"; });
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -27,16 +27,27 @@ app.UseHttpsRedirection();
 
 
 app.UseStaticFiles();
-app.UseSpaStaticFiles();
+//app.UseStaticFiles(new StaticFileOptions
+//{
+//    ServeUnknownFileTypes = true
+  
+//});
+//app.UseStaticFiles(new StaticFileOptions()
+//{
+//    FileProvider = new PhysicalFileProvider(@"C:\_Documents\_Data\GitHub\azure-samples\blazor-samples\src\Blazor_HostAspNetCoreWebApi\bin\Debug\net6.0\one"),
+//    ServeUnknownFileTypes = true // <<<<<<
+//});
+
+//app.UseSpaStaticFiles();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseSpa(spa =>
-{
-    spa.Options.SourcePath = "one";
-});
+//app.UseSpa(spa =>
+//{
+//    spa.Options.SourcePath = "one";
+//});
 
 app.Run();
 
