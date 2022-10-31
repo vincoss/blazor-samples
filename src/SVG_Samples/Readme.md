@@ -7,9 +7,6 @@ https://css-tricks.com/scale-svg/
 
 ## Tasks
 
-
-tspan with text format and colour
-
 text aling
 	progress
 	time
@@ -69,6 +66,7 @@ review all samples
 complete UI sample as one svg file
 
 ## Done
+tspan with text format and colour
 These are not working with SVG
 	<style>
 	.material-symbols-outlined {

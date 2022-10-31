@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg">
+	
+	<!--
+		https://developer.mozilla.org/en-US/docs/Web/SVG/Element/tspan
+	-->
 
 	<!--Text-->
 
@@ -10,7 +14,7 @@
 	<!--tspan-->
 	<svg x="10" y="50" width="350" height="60">
 		<text>
-			This is <tspan font-weight="bold" fill="red">bold and red</tspan>
+			This is <tspan font-weight="bold" fill="red" font-size="150%">| bold and red</tspan>
 		</text>
 
 		<style>
