@@ -1,10 +1,13 @@
 ﻿
 ## Temp
+https://stackoverflow.com/questions/20783374/i-it-possible-to-include-external-svg-defs
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 https://stackoverflow.com/questions/22487266/how-to-scale-inline-svg-uniformly-with
 https://css-tricks.com/scale-svg/
 
 ## Tasks
+see shape-rendering="auto" whats that
+	<rect width="100%" height="100%" fill="gray" fill-opacity="70%" shape-rendering="auto" />
 
 <style>
 .material-symbols-outlined {
@@ -15,11 +18,15 @@ https://css-tricks.com/scale-svg/
   'opsz' 48
 }
 </style>
+
 tspan with text format and colour
-routing arguments
+
+routing arguments??? just google svg routing arguments
+
 text aling
 	progress
 	time
+
 box sample
 	Text
 	font icon
@@ -28,11 +35,22 @@ box sample
 	must have right and wrong
 	border
 	focus current item (backgground colour or shade)
+
 buttons
-	click effect
+	click and tap effect
+	this is possible with CSS styles
+
 layout, button, progress, duration and other
 	use rectangles
+
+reference parent svg (share base elements)
+	parent
+	url
+		element a
+		element b
+
 add all sample icons into blazor app to review on devices
+
 html add font as a style and refrence in svg
 	use that in css fontface
 		then use the .css file to attach that to the whole .svg
@@ -40,9 +58,13 @@ pattern
 	https://css-tricks.com/optimizing-svg-patterns/
 	https://codepen.io/collection/DRMKdB?cursor=ZD0xJm89MSZwPTEmdj0yNw==
 read css book
+	where is the book???
 read blazor documentation whole
 read maui documentation whole
 reuse the styles and components
+	must create a sample
+		styles
+		svg elements
 svg samples integrate with html
 	test on multiple screens
 		size
@@ -61,6 +83,7 @@ complete UI sample as one svg file
 
 ## Done
 z index
+	basically items order is as they are added on the screen
 rewrite the svg performance with blazor
 	make that simple
 	just add child svg and change x,y on timer
