@@ -6,22 +6,9 @@ https://stackoverflow.com/questions/22487266/how-to-scale-inline-svg-uniformly-w
 https://css-tricks.com/scale-svg/
 
 ## Tasks
-see shape-rendering="auto" whats that
-	<rect width="100%" height="100%" fill="gray" fill-opacity="70%" shape-rendering="auto" />
 
-<style>
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-</style>
 
 tspan with text format and colour
-
-routing arguments??? just google svg routing arguments
 
 text aling
 	progress
@@ -82,6 +69,16 @@ review all samples
 complete UI sample as one svg file
 
 ## Done
+These are not working with SVG
+	<style>
+	.material-symbols-outlined {
+	  font-variation-settings:
+	  'FILL' 0,
+	  'wght' 400,
+	  'GRAD' 0,
+	  'opsz' 48
+	}
+	</style>
 z index
 	basically items order is as they are added on the screen
 rewrite the svg performance with blazor
