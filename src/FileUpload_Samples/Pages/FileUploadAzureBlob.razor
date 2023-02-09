@@ -1,4 +1,4 @@
-﻿@page "/fileuploadChunkedClean"
+﻿@page "/fileuploadAzureBlob"
 @using System.IO
 @using FileUpload_Samples.Services;
 @using Microsoft.AspNetCore.Components.Forms;
@@ -9,7 +9,6 @@
 @using System.Text;
 @using System.Xml.Linq;
 @using System.Xml;
-@inject HttpClient client
 @inject ILogger<FileUploadChunked> Logger
 
 <h1>Upload Files - Card Name</h1>
@@ -86,19 +85,13 @@
             upload.FileSizeInBytes = file.Size;
             upload.FileName = file.Name;
 
-            using(var stream = file.OpenReadStream(upload.FileSizeInBytes))
-            {
-                if(IsFileValid(upload.FileName, stream))
-                {
-                    await UploadFile(upload, stream);   
-                }
-            }
+            await UploadFile(upload, file.OpenReadStream(upload.FileSizeInBytes));
         }
     }
 
     async Task UploadFile(Upload upload, Stream stream)
     {
-        if (upload.ChunkSizeInKB == 0 || hasBeenCancelled)
+        if (hasBeenCancelled)
         {
             return;
         }
@@ -110,11 +103,6 @@
 
         isUploading = true;
         totalBytesRead = 0;
-        int bufferSize = 1024 * upload.ChunkSizeInKB; // bytes
-        byte[] buffer = new byte[bufferSize];
-        int bytesRead = 0;
-        int counter = 0;
-        var url = "https://localhost:5001/FilesaveChunked";
 
         if (string.IsNullOrEmpty(upload.FileName))
             upload.UniqueFileName = Path.GetRandomFileName() + ".bin";
@@ -125,25 +113,6 @@
         sw.Start();
         try
         {
-            // A
-            //await   PutFile(stream);
-            //StateHasChanged();
-
-            // B
-            //while ((bytesRead = await stream.ReadAsync(buffer, cancellation.Token)) != 0)
-            //{
-            //    counter++;
-            //    totalBytesRead += bytesRead;
-            //    using( var tmpMemoryStream = new MemoryStream(buffer, 0, bytesRead))
-            //    {
-            //        await PutFileLarge(tmpMemoryStream, upload.FileName, counter);
-
-            //        StateHasChanged();
-            //    }
-            //};
-
-            //await CommitBlockList();
-
 
             var sasUrl = "TODO: SAS here";
             await new AzureBlobService().UploadAsync(sasUrl, upload.FileName, stream, (p) =>
@@ -151,26 +120,6 @@
                 totalBytesRead = p;
                 StateHasChanged();
             });
-
-            // Original
-            //while ((bytesRead = await stream.ReadAsync(buffer, cancellation.Token)) != 0)
-            //{
-            //    counter++;
-            //    totalBytesRead += bytesRead;
-            //    using( var tmpMemoryStream = new MemoryStream(buffer, 0, bytesRead))
-            //    {
-            //        using MultipartFormDataContent content = new();
-            //        content.Add(
-            //            content: new StreamContent(tmpMemoryStream, Convert.ToInt32(tmpMemoryStream.Length)),
-            //            name: "\"uploadFile\"",
-            //            fileName: upload.UniqueFileName
-            //            );
-            //        var response = await client.PostAsync(url, content);
-            //        response.EnsureSuccessStatusCode();
-
-            //        StateHasChanged();
-            //    }
-            //};
         }
         catch (OperationCanceledException)
         {
@@ -198,7 +147,7 @@
             upload.MegaBytesPerSeconds = upload.CalculateMegabytesPerSeconds(ts.TotalSeconds);
 
             result = "<h4>Result:</h4>";
-            result += $"<p><b>{upload.FileSizeInMB.ToString("F2")}</b> MB upload in {((counter == 1) ? "a chunk" : "chunks")} of <b>{upload.ChunkSizeInKB}</b> KB completed in <b>{upload.Duration}</b> (mm:ss.ms)</p>";
+            result += $"<p><b>{upload.FileSizeInMB.ToString("F2")}</b> MB upload of <b>{upload.ChunkSizeInKB}</b> KB completed in <b>{upload.Duration}</b> (mm:ss.ms)</p>";
             result += $"<p>Throughput: <b>{upload.MegaBytesPerSeconds.ToString("F2")}</b> MB/s</p>";
         }
 
@@ -264,7 +213,7 @@
 
     private static async Task CommitBlockList()
     {
-        var blobUrl = "";
+        var blobUrl = "TODO: SAS here";
 
         var uri = new Uri(string.Format("{0}&comp=blocklist", blobUrl));
 
