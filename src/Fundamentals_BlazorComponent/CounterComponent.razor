@@ -1,0 +1,18 @@
+﻿<h3>Componennt - Counter</h3>
+
+<h3>Current count: @count</h3>
+<button @onclick="IncrementCount">Count</button>
+
+@code {
+    
+    [Parameter]
+    [SupplyParameterFromQuery(Name = "IncBy")]
+    public int IncrementAmount { get; set; } = 1;
+
+    int count = 0;
+
+    void IncrementCount()
+    {
+        count += IncrementAmount;
+    }
+}

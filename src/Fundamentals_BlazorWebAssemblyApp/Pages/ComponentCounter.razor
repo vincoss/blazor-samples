@@ -1,0 +1,11 @@
+﻿@page "/component-counter"
+<PageTitle>Componennt - Counter</PageTitle>
+
+<ErrorBoundary>
+    <ChildContent>
+        <CounterComponent IncrementAmount="2" />
+    </ChildContent>
+    <ErrorContent>
+        Oops! The counter isn't working right now; please try again later.
+    </ErrorContent>
+</ErrorBoundary>
