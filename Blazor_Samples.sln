@@ -59,10 +59,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared", "src\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted\Shared\Default_BlazorWebAssemblyAppPwaAspNetCoreHosted.Shared.csproj", "{FB9600C4-EA23-4492-B0B4-16714D9497A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_MauiBlazorApp", "src\Default_MauiBlazorApp\Default_MauiBlazorApp.csproj", "{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{C4814962-4C84-4110-BC3D-410401A1C251}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Html_Css_Samples", "src\Html_Css_Samples\Html_Css_Samples.csproj", "{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples", "src\Blazor_Samples\Blazor_Samples.csproj", "{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}"
@@ -71,7 +67,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples_RazorClassLi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_HostAspNetCoreWebApi", "src\Blazor_HostAspNetCoreWebApi\Blazor_HostAspNetCoreWebApi.csproj", "{60C6AEBF-76AF-43D3-901F-2DCC5F2850D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyAppPwa", "src\Default_BlazorWebAssemblyAppPwa\Default_BlazorWebAssemblyAppPwa.csproj", "{16002D26-B53F-4CDC-9F65-0888CFE376DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppPwa", "src\Default_BlazorWebAssemblyAppPwa\Default_BlazorWebAssemblyAppPwa.csproj", "{16002D26-B53F-4CDC-9F65-0888CFE376DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -179,16 +175,6 @@ Global
 		{FB9600C4-EA23-4492-B0B4-16714D9497A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB9600C4-EA23-4492-B0B4-16714D9497A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB9600C4-EA23-4492-B0B4-16714D9497A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{C4814962-4C84-4110-BC3D-410401A1C251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4814962-4C84-4110-BC3D-410401A1C251}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4814962-4C84-4110-BC3D-410401A1C251}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4814962-4C84-4110-BC3D-410401A1C251}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D8E6314-E024-438E-87DA-6BD89A5FDA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -221,8 +207,6 @@ Global
 		{2783D1F0-B825-4339-A69E-9077F5FBE0F4} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{6CB031D9-3FE0-4A21-B7B5-5D68AA2556BD} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{FB9600C4-EA23-4492-B0B4-16714D9497A3} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
-		{9BE041E1-DCBB-4C8E-8A5F-D9301C72E947} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
-		{C4814962-4C84-4110-BC3D-410401A1C251} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{60C6AEBF-76AF-43D3-901F-2DCC5F2850D8} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{16002D26-B53F-4CDC-9F65-0888CFE376DE} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 	EndGlobalSection
