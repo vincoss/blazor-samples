@@ -3,6 +3,7 @@
 
 
 ## Current
+https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-7.0
 https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-7.0
 
 # Resources
