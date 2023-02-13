@@ -1,10 +1,10 @@
 ﻿
 
-
+## Next
+https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0
 
 ## Current
-popup
-https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-7.0
+https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-7.0
 
 # Resources
 
