@@ -1,0 +1,15 @@
+﻿@page "/popup-page"
+
+<a class="btn btn-login" @onclick="RedirectPage">Log in</a>
+
+<PopupView @ref="popupRef" />
+
+@code {
+    private PopupView popupRef;
+
+    private void RedirectPage()
+    {
+        // Shows the popup at the center of the screen
+        popupRef.Show("Popup body text");
+    }
+}
