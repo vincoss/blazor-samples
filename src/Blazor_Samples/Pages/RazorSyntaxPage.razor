@@ -33,6 +33,157 @@
 @*@Html.Raw("<span>Hello World</span>")*@
 
 @*Razor code blocks*@
+@{
+    var quote = "This is razor code block.";
+}
+
+<p>@quote</p>
+
+@{
+    quote = "Update code block";
+}
+
+<p>@quote</p>
+
+@{
+    void RenderName(string name)
+    {
+        <p>Name: <strong>@name</strong></p>
+    }
+
+    RenderName("C");
+    RenderName("C++");
+    RenderName("C#");
+}
+
+@*Implicit transitions*@
+@{
+    var inCSharp = true;
+    <p>Now in HTML, was in C# @inCSharp</p>
+}
+
+@*Explicit delimited transition*@
+@for (var ij = 0; ij < "C#".Length; ij++)
+{
+    var value = "C#"[ij];
+    <text>Char: value</text>
+}
+
+@*Explicit line transition*@
+@for (var ik = 0; ik < "C#".Length; ik++)
+{
+    var value = "C#"[ik];
+    @:Char: @value
+}
+
+@*Conditional attribute rendering*@
+@*<div class="@false">False</div>
+<div class="@null">Null</div>
+<div class="@("")">Empty</div>
+<div class="@("false")">False String</div>
+<div class="@("active")">String</div>
+<input type="checkbox" checked="@true" name="true" />
+<input type="checkbox" checked="@false" name="false" />
+<input type="checkbox" checked="@null" name="null" />*@
+
+@*Conditionals @if, else if, else, and @switch*@
+@if (3 % 2 == 0)
+{
+    <p>The value was even.</p>
+}
+else if (3 >= 1337)
+{
+    <p>The value is large.</p>
+}
+else
+{
+    <p>The value is odd and small.</p>
+}
+
+@switch (3)
+{
+    case 1:
+        <p>The value is 1!</p>
+        break;
+    case 1337:
+        <p>Your number is 1337!</p>
+        break;
+    default:
+        <p>Your number wasn't 1 or 1337.</p>
+        break;
+}
+
+@*Looping @for, @foreach, @while, and @do while*@
+
+@{
+    var people = new Person[]
+    {
+          new Person("Fero", 45),
+          new Person("Minjin", 42)
+    };
+
+    @for (var ia = 0; ia < people.Length; ia++)
+    {
+        var person = people[ia];
+        <p>Name: @person.Name</p>
+        <p>Age: @person.Age</p>
+    }
+
+    @foreach (var person in people)
+    {
+        <p>Name: @person.Name</p>
+        <p>Age: @person.Age</p>
+    }
+
+    var i = 0;
+    @while (i < people.Length)
+    {
+        var person = people[i];
+        <p>Name: @person.Name</p>
+        <p>Age: @person.Age</p>
+
+        i++;
+    }
+
+    var j = 0;
+    @do
+    {
+        var person = people[j];
+        <p>Name: @person.Name</p>
+        <p>Age: @person.Age</p>
+
+        j++;
+    } while (j < people.Length);
+}
+
+@*Compound @using*@
+
+@*@using (Html.BeginForm())
+{
+    <div>
+        Email: <input type="email" id="Email" value="">
+        <button>Register</button>
+    </div>
+}*@
+
+@*@lock*@
+
+@*Comments*@
+@{
+    /* C# comment */
+    // Another C# comment
+}
+<!-- HTML comment -->
+
+@*Directives*@
+@{
+    var quote1 = "Getting old ain't for wimps! - Anonymous";
+}
+
+<div>Quote of the Day: @quote1</div>
+
+@*@attribute*@
+@*@attribute [Authorize]*@
 
 @code {
     private string Username = "Test User";
