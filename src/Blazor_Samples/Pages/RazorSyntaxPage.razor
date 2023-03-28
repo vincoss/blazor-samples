@@ -1,4 +1,5 @@
 ﻿@page "/RazorSyntaxPage"
+@implements IDisposable
 
 @*To escape an @ symbol in Razor markup, use a second @ symbol:*@
 <p>@@Username</p>
@@ -184,6 +185,29 @@ else
 
 @*@attribute*@
 @*@attribute [Authorize]*@
+
+@*@code*@
+
+@*@functions*@
+@functions {
+    public string GetHello()
+    {
+        return "Hello";
+    }
+    public void RenderString(string name)
+    {
+     //  <p>Name: <strong>@name</strong></p>
+    }
+
+    private bool _isDisposed;
+
+    public void Dispose() => _isDisposed = true;
+}
+<div>From method: @GetHello()</div>
+@{
+    //RenderName("C#");
+    //RenderName("Maui .NET");
+}
 
 @code {
     private string Username = "Test User";
