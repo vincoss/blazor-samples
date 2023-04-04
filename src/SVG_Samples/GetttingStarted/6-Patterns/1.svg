@@ -2,6 +2,11 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 
 	<!--Patterns-->
+	<defs>
+		<pattern id="pat" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+			<image x="0" y="0" width="50" height="50" href="close-circle-svgrepo-com.svg"></image>
+		</pattern>
+	</defs>
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
@@ -26,5 +31,11 @@
 		<rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
 	</svg>
 
+
+	<circle cx="0" cy="0" r="250" fill="url(#pat)"></circle>
+
+	<svg x="20" y="20" width="200" height="200" viewBox="0 0 512 512">
+		<use href="close-circle-svgrepo-com.svg#close-circle"/>
+	</svg>
 
 </svg>
