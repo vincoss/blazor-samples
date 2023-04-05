@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+	<!--
+	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use
+	-->
+	
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
 	<svg x="10" y="10" viewBox="0 0 30 10" width="100" height="100">
@@ -12,7 +16,7 @@
 			Most attributes (except for x, y, width, height and (xlink:)href)
 			do not override those set in the ancestor.
 			That's why the circles have different x positions, but the same stroke value.
-  -->
+		-->
 	</svg>
 
 

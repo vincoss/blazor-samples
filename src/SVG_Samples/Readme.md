@@ -1,11 +1,17 @@
 ﻿
 ## Temp
+https://cloudfour.com/thinks/svg-icon-stress-test/
+https://css-tricks.com/too-many-svgs-clogging-up-your-markup-try-use/
 https://stackoverflow.com/questions/20783374/i-it-possible-to-include-external-svg-defs
+https://stackoverflow.com/questions/20783374/i-it-possible-to-include-external-svg-defs
+https://css-tricks.com/svg-use-external-source/
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 https://stackoverflow.com/questions/22487266/how-to-scale-inline-svg-uniformly-with
 https://css-tricks.com/scale-svg/
 
 ## Tasks
+
+defs from external svg file
 
 text aling
 	progress

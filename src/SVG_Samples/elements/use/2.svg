@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-	<use xlink:href="bronze.svg#Layer_1"/>
-
+	<use href="bronze.svg#Layer_1"/>
 
 </svg>
