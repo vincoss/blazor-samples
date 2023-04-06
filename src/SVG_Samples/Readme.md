@@ -7,7 +7,6 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
 
-defs from external svg file
 
 text aling
 	progress
