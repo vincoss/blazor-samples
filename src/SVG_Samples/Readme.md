@@ -146,3 +146,4 @@ https://visualpharm.com/
 
 ## Tools
 https://inkscape.org/
+https://github.com/Yqnn/svg-path-editor
