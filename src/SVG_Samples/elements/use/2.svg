@@ -1,6 +1,21 @@
-﻿<?xml version="1.0" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 
-	<use href="bronze.svg#Layer_1"/>
+	<!--
+		NOTE: Will show error: URLs are treated as unique security origins.
+		See Readme how to display those svg files.
+	-->
+	
+	<svg width="32" height="32" viewBox="0 0 32 32">
+		<g>
+			<use xlink:href="icons.svg#faq"/>
+		</g>
+	</svg>
+
+	<svg width="32" height="32" viewBox="0 0 32 32" x="40">
+		<g>
+			<use xlink:href="bronze.svg#Layer_1"/>
+		</g>
+	</svg>
 
 </svg>

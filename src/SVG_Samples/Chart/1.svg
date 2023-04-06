@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+	
+	<svg width="500" height="200" viewBox="0 0 500 200">
+		<!--
+			📊 Render our graph bars as boxes to visualise our data.
+			This part is different for each graph, since each of them displays different sets of data.
+		-->
+		<g class="graph-data">
+			<rect x="10" y="20" width="10" height="80" fill="#e74c3c" />
+			<rect x="30" y="20" width="10" height="30" fill="#16a085" />
+			<rect x="50" y="20" width="10" height="44" fill="#16a085" />
+			<rect x="70" y="20" width="10" height="110" fill="#e74c3c" />
+			<!-- Render the rest of the graph boxes ... -->
+		</g>
+
+		<!--
+			Render our graph footer lines and labels.
+		-->
+		
+		<g class="graph-footer">
+			<!-- Left side labels -->
+			<text x="10" y="40" fill="white">400k</text>
+			<text x="10" y="60" fill="white">300k</text>
+			<text x="10" y="80" fill="white">200k</text>
+			<!-- Footer labels -->
+			<text x="10" y="190" fill="white">01</text>
+			<text x="30" y="190" fill="white">11</text>
+			<text x="50" y="190" fill="white">21</text>
+			<!-- Footer lines -->
+			<line x1="2" y1="195" x2="2" y2="200" stroke="white" strokeWidth="1" />
+			<line x1="4" y1="195" x2="2" y2="200" stroke="white" strokeWidth="1" />
+			<line x1="6" y1="195" x2="2" y2="200" stroke="white" strokeWidth="1" />
+			<line x1="8" y1="195" x2="2" y2="200" stroke="white" strokeWidth="1" />
+			<!-- Rest of the footer lines... -->
+		</g>
+	</svg>
+
+</svg>

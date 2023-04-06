@@ -1,8 +1,6 @@
 ﻿
 ## Temp
-https://cloudfour.com/thinks/svg-icon-stress-test/
-https://css-tricks.com/too-many-svgs-clogging-up-your-markup-try-use/
-https://stackoverflow.com/questions/20783374/i-it-possible-to-include-external-svg-defs
+
 https://stackoverflow.com/questions/20783374/i-it-possible-to-include-external-svg-defs
 https://css-tricks.com/svg-use-external-source/
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
@@ -109,6 +107,15 @@ font center
 
 ## Issues
 font-variation-settings does not work, see font samples
+
+## Running Issue 1
+```
+chrome Referrer Policy: strict-origin-when-cross-origin
+Open command line
+cd to C:\Program Files\Google\Chrome\Application
+disable web security
+chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+```
 
 # Resources
 https://developer.mozilla.org/en-US/docs/Web/SVG
