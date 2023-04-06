@@ -28,12 +28,6 @@ buttons
 layout, button, progress, duration and other
 	use rectangles
 
-reference parent svg (share base elements)
-	parent
-	url
-		element a
-		element b
-
 add all sample icons into blazor app to review on devices
 
 html add font as a style and refrence in svg
