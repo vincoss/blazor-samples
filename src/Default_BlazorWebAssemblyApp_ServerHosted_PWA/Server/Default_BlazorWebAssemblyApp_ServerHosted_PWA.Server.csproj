@@ -7,10 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Client\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Client.csproj" />
     <ProjectReference Include="..\Shared\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Shared.csproj" />
   </ItemGroup>
 
