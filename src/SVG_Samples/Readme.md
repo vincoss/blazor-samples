@@ -96,6 +96,148 @@ Maui see GraphicsView
 font scale to fit parent
 font center
 
+```
+var base_w = 1024;
+var base_h = 768;
+var aspect = base_w / base_h ; // get the GAME aspect ratio
+if (display_get_width() < display_get_height())
+    {
+    //portrait
+    var ww = min(base_w, display_get_width());
+    var hh = ww / aspect;
+    }
+else
+    {
+    //landscape
+    var hh = min(base_h, display_get_height());
+    var ww = hh * aspect;
+    }
+surface_resize(application_surface, ww, hh);
+
+// Or
+var base_w = 1024;
+var base_h = 768;
+var max_w = display_get_width();
+var max_h = display_get_height();
+var aspect = display_get_width() / display_get_height();
+if (max_w < max_h)
+    {
+    // portait
+     var VIEW_WIDTH = min(base_w, max_w);
+    var VIEW_HEIGHT = VIEW_WIDTH / aspect;
+    }
+else
+    {
+    // landscape
+    var VIEW_HEIGHT = min(base_h, max_h);
+    var VIEW_WIDTH = VIEW_HEIGHT * aspect;
+    }
+camera_set_view_size(view_camera[0], floor(VIEW_WIDTH), floor(VIEW_HEIGHT))
+view_wport[0] = max_w;
+view_hport[0] = max_h;
+surface_resize(application_surface, view_wport[0], view_hport[0]);
+
+// Or
+var base_w = 640;
+var base_h = 480;
+var aspect = display_get_width() / display_get_height();
+if (aspect &gt; 1)
+    {
+    //landscape
+    ww = base_h * aspect;
+    hh = base_h;
+    display_set_gui_maximise((display_get_width() / ww), (display_get_height() / hh), 0, 0);
+    }
+else
+    {
+    //portrait
+    ww = base_w;
+    hh = base_w / aspect;
+    display_set_gui_maximise((display_get_width() / ww), (display_get_height() / hh), 0, 0);
+    }
+
+// An example of how you would then draw this to the GUI layer... 
+draw_sprite(sprite0, 0, 64, 64);
+draw_sprite(sprite0, 0, ww - 64, 64);
+draw_sprite(sprite0, 0, ww - 64, hh - 64);
+draw_sprite(sprite0, 0, 64, hh - 64);
+
+```
+
+```
+global.res_width = 1920;
+global.res_height = 1080;
+
+var _ratio = global.res_width / global.res_height;
+var _display_ratio = display_get_width() / display_get_height();
+
+if (_display_ratio < _ratio){
+    global.res_height = 1920; // Optional
+
+    global.res_width = global.res_height * _display_ratio;
+}
+```
+
+```
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #eee;
+  font: caption;
+}
+
+canvas {
+  /* And see postBoot() in JS */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* <https://caniuse.com/#feat=object-fit> */
+}
+
+#version {
+  position: absolute;
+  left: 5px;
+  top: 605px;
+}
+
+var config = {
+  type: Phaser.AUTO,
+  width: 800,
+  height: 600,
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: { y: 200 }
+    }
+  },
+  scene: {
+    preload: preload,
+    create: create
+  },
+  callbacks: {
+    postBoot: function (game) {
+      // In v3.15, you have to override Phaser's default styles
+      game.canvas.style.width = '100%';
+      game.canvas.style.height = '100%';
+    }
+  }
+};
+
+function update(){
+    (function() {
+        const gameId = document.getElementById("game"); // Target div that wraps the phaser game
+        gameId.style.width = '100%'; // set width to 100%
+        gameId.style.height = '100%'; // set height to 100%
+    })(); // run function
+}
+```
+
+
 ## Issues
 font-variation-settings does not work, see font samples
 
@@ -107,6 +249,9 @@ cd to C:\Program Files\Google\Chrome\Application
 disable web security
 chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
 ```
+
+## Resolution
+https://www.ios-resolution.com/
 
 # Resources
 https://developer.mozilla.org/en-US/docs/Web/SVG
@@ -121,6 +266,7 @@ https://www.justinmccandless.com/demos/viewbox/index.html
 
 ## Inkscape
 https://inkscape.org/
+https://inkscape-manuals.readthedocs.io/en/latest/text.html
 https://gamedev.stackexchange.com/questions/19832/tool-for-creating-complex-paths/19833#19833
 
 ### Fonts
