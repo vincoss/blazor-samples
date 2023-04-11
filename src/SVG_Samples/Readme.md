@@ -1,9 +1,10 @@
 ﻿
 ## Temp
-next 44page
+next 57 page
 
 
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
+https://css-tricks.com/mega-list-svg-information/
 
 ## Tasks
 
@@ -285,6 +286,7 @@ https://github.com/FortAwesome/Font-Awesome
 https://fontawesome.com/v5/cheatsheet
 
 ## Icons
+https://icomoon.io/app/#/select
 https://elements.envato.com/graphics/icons
 https://freesvg.org/
 https://www.svgrepo.com/
