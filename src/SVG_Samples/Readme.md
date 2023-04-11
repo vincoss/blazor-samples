@@ -8,7 +8,6 @@ https://css-tricks.com/mega-list-svg-information/
 
 ## Tasks
 
-
 text aling
 	progress
 	time
@@ -16,7 +15,7 @@ text aling
 box sample
 	Text
 	font icon
-	must scale any screen
+	must scale any screen viewBox
 	---
 	must have right and wrong
 	border
@@ -37,8 +36,10 @@ html add font as a style and refrence in svg
 pattern
 	https://css-tricks.com/optimizing-svg-patterns/
 	https://codepen.io/collection/DRMKdB?cursor=ZD0xJm89MSZwPTEmdj0yNw==
+
 read css book
 	where is the book???
+
 read blazor documentation whole
 read maui documentation whole
 reuse the styles and components
@@ -57,45 +58,13 @@ tools review and how to use
 	SVG VS Code
 convert otf to woff
 	wheter is required
+
+convert font text to svg
+
 review resources urls
 review all samples
 complete UI sample as one svg file
 
-## Done
-tspan with text format and colour
-These are not working with SVG
-	<style>
-	.material-symbols-outlined {
-	  font-variation-settings:
-	  'FILL' 0,
-	  'wght' 400,
-	  'GRAD' 0,
-	  'opsz' 48
-	}
-	</style>
-z index
-	basically items order is as they are added on the screen
-rewrite the svg performance with blazor
-	make that simple
-	just add child svg and change x,y on timer
-		when reach x,y max or min, random next x,y (min or max)
-		make is as ocean and use te fish fonts
-buttons 0-9
-	svg
-progress
-	0/0
-duration time
-rect radius
-see attribute fill="url
-find already created svg and review those
-see overflow="visible"
-see 'use', 'g', 'symbol' elements
-reuse components
-	with use, g and symbol elements
-see open-iconic
-Maui see GraphicsView
-font scale to fit parent
-font center
 
 ```
 var base_w = 1024;
@@ -237,6 +206,43 @@ function update(){
     })(); // run function
 }
 ```
+
+
+##------------------------------------------------- Done
+tspan with text format and colour
+These are not working with SVG
+	<style>
+	.material-symbols-outlined {
+	  font-variation-settings:
+	  'FILL' 0,
+	  'wght' 400,
+	  'GRAD' 0,
+	  'opsz' 48
+	}
+	</style>
+z index
+	basically items order is as they are added on the screen
+rewrite the svg performance with blazor
+	make that simple
+	just add child svg and change x,y on timer
+		when reach x,y max or min, random next x,y (min or max)
+		make is as ocean and use te fish fonts
+buttons 0-9
+	svg
+progress
+	0/0
+duration time
+rect radius
+see attribute fill="url
+find already created svg and review those
+see overflow="visible"
+see 'use', 'g', 'symbol' elements
+reuse components
+	with use, g and symbol elements
+see open-iconic
+Maui see GraphicsView
+font scale to fit parent
+font center
 
 
 ## Issues
