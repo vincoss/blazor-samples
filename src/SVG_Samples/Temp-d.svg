@@ -43,4 +43,36 @@
 		</svg>
 	</svg>
 
+	<!--Scale 10% Google Nest Hub Max-->
+	<svg x="910" width="128" height="80" viewBox="0 0 1280 800">
+		<svg width="1280" height="800">
+			<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+			<rect width="80" height="80" fill="black" />
+		</svg>
+	</svg>
+
+	<!--Scale 10% Generic square-->
+	<svg x="1050" width="100" height="100" viewBox="0 0 1000 1000">
+		<svg width="1000" height="1000">
+			<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+			<rect width="100" height="100" fill="black" />
+		</svg>
+	</svg>
+
+	<!--Scale 10% Generic Tall and Narrow-->
+	<svg x="1160" width="70" height="308.8" viewBox="0 0 700 3088">
+		<svg width="700" height="3088">
+			<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+			<rect width="70" height="70" fill="black" />
+		</svg>
+	</svg>
+
+	<!--Scale 10% Generic Wide and Low Height-->
+	<svg x="1240" width="308.8" height="70" viewBox="0 0 3088 700">
+		<svg width="3088" height="700">
+			<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+			<rect width="70" height="70" fill="black" />
+		</svg>
+	</svg>
+	
 </svg>
