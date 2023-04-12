@@ -1,10 +1,10 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 width="1440px"
-     height="3088px"
-     viewBox="0 0 1440 3088"
+	 width="1290px"
+     height="2796px"
+     viewBox="0 0 1290 2796"
 	 fill="none">
 	<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
 
-	<circle cx="6%" cy="4%" r="4%" fill="red" />
+	<rect width="129" height="129" fill="black" />
 
 </svg>
