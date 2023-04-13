@@ -65,21 +65,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyAppEmpty.Client.Shared", "src\Default_BlazorWebAssemblyAppEmpty.Client\Shared\Default_BlazorWebAssemblyAppEmpty.Client.Shared.csproj", "{33563F10-4586-4AA4-90B5-AEC2786B00D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyApp_ServerHosted_PWA.Server", "src\Default_BlazorWebAssemblyApp_ServerHosted_PWA\Server\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Server.csproj", "{8FB23728-37E4-41D0-93FD-2D5F539BA632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyApp_ServerHosted_PWA.Server", "src\Default_BlazorWebAssemblyApp_ServerHosted_PWA\Server\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Server.csproj", "{8FB23728-37E4-41D0-93FD-2D5F539BA632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyApp_ServerHosted_PWA.Client", "src\Default_BlazorWebAssemblyApp_ServerHosted_PWA\Client\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Client.csproj", "{D0D4DD61-B90A-4FFE-910C-1E4516FF9ABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyApp_ServerHosted_PWA.Client", "src\Default_BlazorWebAssemblyApp_ServerHosted_PWA\Client\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Client.csproj", "{D0D4DD61-B90A-4FFE-910C-1E4516FF9ABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyApp_ServerHosted_PWA.Shared", "src\Default_BlazorWebAssemblyApp_ServerHosted_PWA\Shared\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Shared.csproj", "{63795E07-2BBE-43DA-8547-8EE1FA180F45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyApp_ServerHosted_PWA.Shared", "src\Default_BlazorWebAssemblyApp_ServerHosted_PWA\Shared\Default_BlazorWebAssemblyApp_ServerHosted_PWA.Shared.csproj", "{63795E07-2BBE-43DA-8547-8EE1FA180F45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorServerAppEmpty", "src\Default_BlazorServerAppEmpty\Default_BlazorServerAppEmpty.csproj", "{8E022BA1-B103-4BB6-91E1-784496BB9477}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorServerAppEmpty", "src\Default_BlazorServerAppEmpty\Default_BlazorServerAppEmpty.csproj", "{8E022BA1-B103-4BB6-91E1-784496BB9477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorServerApp_NoAuth", "src\Default_BlazorServerApp_NoAuth\Default_BlazorServerApp_NoAuth.csproj", "{E23E8AF9-1C61-4538-9340-9E90C69573F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorServerApp_NoAuth", "src\Default_BlazorServerApp_NoAuth\Default_BlazorServerApp_NoAuth.csproj", "{E23E8AF9-1C61-4538-9340-9E90C69573F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_MudBlazorApp_WasmPWA", "src\Default_MudBlazorApp_WasmPWA\Default_MudBlazorApp_WasmPWA.csproj", "{AF9767AC-EA24-4CE1-984A-4E991C8F204C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_MudBlazorApp_WasmPWA", "src\Default_MudBlazorApp_WasmPWA\Default_MudBlazorApp_WasmPWA.csproj", "{AF9767AC-EA24-4CE1-984A-4E991C8F204C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_BlazorWebAssemblyApp_PWA", "src\Default_BlazorWebAssemblyApp_PWA\Default_BlazorWebAssemblyApp_PWA.csproj", "{25D70AD0-0F4A-40C0-A61A-D57AE8821126}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default_BlazorWebAssemblyApp_PWA", "src\Default_BlazorWebAssemblyApp_PWA\Default_BlazorWebAssemblyApp_PWA.csproj", "{25D70AD0-0F4A-40C0-A61A-D57AE8821126}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyAppPWA_Svg_Samples", "src\BlazorWebAssemblyAppPWA_Svg_Samples\BlazorWebAssemblyAppPWA_Svg_Samples.csproj", "{BE326F6A-F28A-4868-9CDF-03CA454D376A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyAppPWA_Svg_Samples", "src\BlazorWebAssemblyAppPWA_Svg_Samples\BlazorWebAssemblyAppPWA_Svg_Samples.csproj", "{BE326F6A-F28A-4868-9CDF-03CA454D376A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
