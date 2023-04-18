@@ -1,8 +1,12 @@
 ﻿
 ## Temp
-next 57 page
+next 102 page
 
 
+https://www.sarasoueidan.com/blog/svg-coordinate-systems/
+https://css-tricks.com/scale-svg/
+https://css-tricks.com/guide-svg-animations-smil/
+https://css-tricks.com/svg-line-animation-works/
 http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 https://css-tricks.com/mega-list-svg-information/
 
@@ -303,3 +307,4 @@ https://inkscape.org/
 https://github.com/Yqnn/svg-path-editor
 https://github.com/svg/svgo
 https://jakearchibald.github.io/svgomg/
+https://github.com/adobe-webplatform/Snap.svg
