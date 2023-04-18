@@ -301,3 +301,5 @@ https://visualpharm.com/
 ## Tools
 https://inkscape.org/
 https://github.com/Yqnn/svg-path-editor
+https://github.com/svg/svgo
+https://jakearchibald.github.io/svgomg/
