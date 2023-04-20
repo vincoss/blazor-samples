@@ -8,7 +8,7 @@
 	
 	<svg width="32" height="32" viewBox="0 0 32 32">
 		<g>
-			<use xlink:href="icons.svg#faq"/>
+			<use xlink:href="icons.svg#chat"/>
 		</g>
 	</svg>
 
