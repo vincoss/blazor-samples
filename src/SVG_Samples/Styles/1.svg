@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<svg x="10" y="10" width="40px" height="40px" viewBox="0 0 40 40">
+		<title>Inline Styles</title>
+		<desc>Inline Styles</desc>
+
+		<rect width="100%" height="100%" fill="pink" />
+		
+		<circle cx="20" cy="20" r="10" style="stroke: black; stroke-width: 1.5; fill: blue; fill-opacity: 0.6"/>
+	</svg>
+
+	<svg x="100" y="10" width="200px" height="200px" viewBox="0 0 200 200">
+		<title>Internal Stylesheets</title>
+		<desc>Internal Stylesheets</desc>
+
+		<rect width="100%" height="100%" fill="red" />
+
+		<defs>
+			<style type="text/css">
+				<![CDATA[
+					circle {
+					fill: #ffc;
+					stroke: blue;
+					stroke-width: 2;
+					stroke-dasharray: 5 3
+					}
+					]]>
+			</style>
+		</defs>
+		<circle cx="20" cy="20" r="10"/>
+		<circle cx="60" cy="20" r="15"/>
+		<circle cx="20" cy="60" r="10" style="fill: #cfc"/>
+		<circle cx="60" cy="60" r="15" style="stroke-width: 1; stroke-dasharray: none;"/>
+	</svg>
+</svg>
