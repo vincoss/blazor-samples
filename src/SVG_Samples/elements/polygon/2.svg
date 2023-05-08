@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<polygon points="48,16 16,96 96,48 0,48 80,96" style="stroke: black; fill: none;"/>
+
+	<polygon style="fill-rule: nonzero; fill: yellow; stroke: black;" points="148,16 116,96 196,48 100,48 180,96" />
+	
+	<polygon style="fill-rule: evenodd; fill: #00ff00; stroke: black;" points="248,16 216,96 296,48 200,48 280,96" />
+	>
+</svg>
