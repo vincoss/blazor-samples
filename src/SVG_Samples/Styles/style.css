@@ -1,4 +1,9 @@
-﻿* {
+﻿
+/* 
+This stylesheet uses a variety of selectors, including *, which sets a default for all elements that don’t have any other style
+*/
+
+* {
     fill: none;
     stroke: black;
 } /* default for all elements */
