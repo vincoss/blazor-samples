@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--
+	The rotate Transformation
+	-->
+	
+	<svg width="200px" height="200px" viewBox="0 0 200 200">
+		<!-- axes -->
+		<polyline points="100 0, 0 0, 0 100" style="stroke: black; fill: none;"/>
+		<!-- normal and rotated square -->
+		<rect x="70" y="30" width="20" height="20" style="fill: gray;"/>
+		<rect x="70" y="30" width="20" height="20" transform="rotate(45)" style="fill: black;"/>
+	</svg>
+
+	<!--
+	Rotation around a center point
+	-->
+	
+	<svg x="200" width="200px" height="200px" viewBox="0 0 200 200">
+		<!-- center of rotation -->
+		<circle cx="50" cy="50" r="3" style="fill: black;"/>
+		<!-- non-rotated arrow -->
+		<g id="arrow" style="stroke: black;">
+			<line x1="60" y1="50" x2="90" y2="50"/>
+			<polygon points="90 50, 85 45, 85 55"/>
+		</g>
+		<!-- rotated around center point -->
+		<use xlink:href="#arrow" transform="rotate(60, 50, 50)"/>
+		<use xlink:href="#arrow" transform="rotate(-90, 50, 50)"/>
+		<use xlink:href="#arrow" transform="rotate(-150, 50 50)"/>
+	</svg>
+</svg>

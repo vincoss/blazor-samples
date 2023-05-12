@@ -1,6 +1,6 @@
 ﻿
 ## Temp
-next 102 page
+next 85 page
 
 
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
@@ -11,19 +11,6 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 https://css-tricks.com/mega-list-svg-information/
 
 ## Tasks
-
-text aling
-	progress
-	time
-
-box sample
-	Text
-	font icon
-	must scale any screen viewBox
-	---
-	must have right and wrong
-	border
-	focus current item (backgground colour or shade)
 
 buttons
 	click and tap effect

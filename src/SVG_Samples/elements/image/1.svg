@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<svg width="310px" height="310px" viewBox="0 0 310 310">
+		<ellipse cx="154" cy="154" rx="150" ry="120" style="fill: #999999;"/>
+		<ellipse cx="152" cy="152" rx="150" ry="120" style="fill: #cceeff;"/>
+		<image xlink:href="svg.png" x="72" y="92" width="160" height="120"/>
+	</svg>
+
+</svg>
