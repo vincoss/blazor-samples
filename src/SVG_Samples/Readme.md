@@ -301,6 +301,7 @@ https://elements.envato.com/graphics/icons
 https://freesvg.org/
 https://www.svgrepo.com/
 https://visualpharm.com/
+https://elements.envato.com/graphics/icons/properties-vector?_ga=2.217397456.779593838.1681905736-589534885.1681905736
 
 ## Tools
 https://inkscape.org/

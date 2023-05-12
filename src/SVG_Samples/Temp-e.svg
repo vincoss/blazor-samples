@@ -1,19 +1,25 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 width="100%"
-	 height="100%"
-	 fill="none">
+     viewBox="0 0 1440 3088" fill="none"
+     width="360" height="800" preserveAspectRatio="xMidYMid meet">
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
 
-	<svg height="10%" viewBox="0 0 100 10" preserveAspectRatio="xMidYMin meet">
+	<!--<svg height="10%" viewBox="0 0 100 10" preserveAspectRatio="xMidYMin meet">
 		<svg width="100" height="10">
 			<rect width="100%" height="100%" fill="gold" />
 			<text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" font-weight="bold" fill="blue">WqpLeyjw 999999</text>
 		</svg>
+	</svg>-->
+
+	<svg y ="35" height="150" viewBox="0 0 100 10" preserveAspectRatio="xMidYMin meet">
+		<svg width="100" height="10">
+			<rect width="100%" height="100%" fill="gold" />
+			<text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" font-weight="bold" fill="blue">Уровень 99999</text>
+		</svg>
 	</svg>
 	
-	<svg x="90%" width="10%" height="10%" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet">
+	<svg x="85%" y="3" width="200" height="200" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet">
 		<rect width="100%" height="100%" fill="purple" />
 		<path
 			 d="M 15,9.00004 C 13,11.000027 11,13.000013 9,15 m 6,0 C 13,13.000013 11,11.000027 9,9.00004 M 12,21 c 3.841173,0.06038 7.506903,-2.639423 8.595381,-6.323661 C 21.744095,11.13638 20.406091,6.9733639 17.38486,4.787982 14.31053,2.4112357 9.6894866,2.4112335 6.6151576,4.787982 3.5939232,6.9733606 2.2558961,11.136377 3.4046224,14.676339 4.5085851,18.373236 8.1405699,21.050667 12,21 Z"

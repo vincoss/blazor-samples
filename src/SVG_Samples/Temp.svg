@@ -1,53 +1,12 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 width="1000px"
-     height="2000px"
-     viewBox="0 0 1000 2000"
+	 width="100%"
+     height="100%"
 	 fill="none">
 	<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
 
-	<g transform="matrix(6.25,0,0,6.25,600,0)">
-		<path
-     d="M 15,9.00004 C 13,11.000027 11,13.000013 9,15 m 6,0 C 13,13.000013 11,11.000027 9,9.00004 M 12,21 c 3.841173,0.06038 7.506903,-2.639423 8.595381,-6.323661 C 21.744095,11.13638 20.406091,6.9733639 17.38486,4.787982 14.31053,2.4112357 9.6894866,2.4112335 6.6151576,4.787982 3.5939232,6.9733606 2.2558961,11.136377 3.4046224,14.676339 4.5085851,18.373236 8.1405699,21.050667 12,21 Z"
-     stroke="#000000"
-     stroke-width="2"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     id="path14269" />
-
-	</g>
-
-	<g id="g14413" transform="matrix(1,0,0,1,225,200)">
-		<path
-	   style="fill:#bf392c"
-	   d="m 276.967,0 c -28.166,0 -56.332,0 -84.498,0 -40.68467,59.461667 -81.36933,118.92333 -122.054,178.385 28.166,0 56.332,0 84.498,0 C 195.59767,118.92333 236.28233,59.461667 276.967,0 Z"
-	   id="path14592" />
-		<path
-	   style="fill:#e2574c"
-	   d="m 23.472,0 c 28.166,0 56.332,0 84.498,0 40.68433,59.461667 81.36867,118.92333 122.053,178.385 -28.166,0 -56.332,0 -84.498,0 C 104.84067,118.92333 64.156333,59.461667 23.472,0 Z"
-	   id="path14589" />
-		<path
-	   style="fill:#efc75e"
-	   d="m 154.914,93.887 c 46.78035,-0.955512 90.97931,34.0915 100.64331,79.87977 10.87241,43.96069 -11.06073,93.32169 -51.31248,114.25435 C 163.13226,311.09379 107.01152,301.11661 76.743552,264.84428 44.041947,228.41703 43.342344,168.57665 75.145882,131.37301 94.402382,107.74396 124.43968,93.667685 154.914,93.887 Z"
-	   id="path14586" />
-		<path
-	   style="fill:#d7b354"
-	   d="m 154.914,122.053 c -37.9963,-0.82563 -72.758471,31.43193 -74.889905,69.35287 -3.680339,37.21167 24.789625,73.77889 61.638725,79.68852 36.07798,7.29268 74.67288,-16.43616 84.96972,-51.65951 11.51708,-34.33983 -6.42369,-74.86822 -39.23027,-89.94603 -10.08387,-4.89228 -21.28081,-7.45072 -32.48827,-7.43585 z m 0,131.442 c -32.16998,0.90414 -60.253465,-30.13958 -56.039744,-62.07031 2.416324,-32.03695 36.020494,-56.85906 67.355484,-49.44392 31.59475,5.63296 52.97447,41.44577 42.4726,71.88563 -6.94026,23.05147 -29.65791,39.95202 -53.78834,39.6286 z"
-	   id="path14583" />
-	</g>
-
-	<g transform="matrix(2,0,0,2,50,10)"
-	id="layer1">
-		<text
-		   xml:space="preserve"
-		   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.9277px;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:vertical-lr;direction:rtl;text-orientation:sideways;fill:#1a1a1a;stroke:#0c0808;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:10;stroke-opacity:1"
-		   x="-30.959379"
-		   y="174.60728"
-		   id="text4368"
-		   transform="rotate(-90)"><tspan
-         id="tspan4387"
-         x="-30.959379"
-         y="174.60728"
-         style="stroke-width:1">Level 54321</tspan></text>
-	</g>
-
+	<svg x="10" y="10" width="650" height="150">
+		<rect width="650" height="150" fill="#696969" rx="5" />
+		<rect x=".5" y=".5" width="649" height="149" fill="#dcdcdc" rx="5" />
+		<text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="100" font-weight="bold" fill="blue">Oпя́ть</text>
+	</svg>
 </svg>
