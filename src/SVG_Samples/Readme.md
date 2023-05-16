@@ -14,6 +14,8 @@ https://css-tricks.com/mega-list-svg-information/
 svg text trimming
 svg wrap text
 
+review https://stackoverflow.com/search?q=svg&s=b1237bc8-c565-47b1-8781-7a3c819e6c4a
+
 buttons
 	click and tap effect
 	this is possible with CSS styles
@@ -298,3 +300,7 @@ https://github.com/Yqnn/svg-path-editor
 https://github.com/svg/svgo
 https://jakearchibald.github.io/svgomg/
 https://github.com/adobe-webplatform/Snap.svg
+
+## Colors
+https://materialui.co/colors/
+https://m2.material.io/design/color/the-color-system.html#color-theme-creation
