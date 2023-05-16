@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<!--
+	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject
+	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/tspan
+	-->
+	<svg x="10" y="10" width="200" height="200" viewBox="0 0 200 200">
+		<rect width="100%" height="100%" fill="pink" />
+		<switch>
+			<foreignObject x="20" y="90" width="150" height="200">
+				<p xmlns="http://www.w3.org/1999/xhtml">How doth the little crocodile Improve his shining tail, And pour the waters of the Nile On every golden scale!</p>
+			</foreignObject>
+
+			<text x="20" y="20">Your SVG viewer cannot display html.</text>
+		</switch>
+	</svg>
+
+	<svg x="10" y="220" width="200" height="200" viewBox="0 0 200 200">
+		<rect width="100%" height="100%" fill="pink" />
+		<defs>
+			<!-- define lines for text lies on -->
+			<path id="path1" d="M10,30 H190 M10,60 H190 M10,90 H190 M10,120 H190"></path>
+		</defs>
+		<use xlink:href="#path1" x="0" y="35" stroke="blue" stroke-width="1" />
+		<text transform="translate(0,35)" fill="red" font-size="20">
+			<textPath xlink:href="#path1">How doth the little crocodile Improve his shining tail, And pour the waters of the Nile On every golden scale!</textPath>
+		</text>
+	</svg>
+	
+</svg>

@@ -300,6 +300,7 @@ https://github.com/Yqnn/svg-path-editor
 https://github.com/svg/svgo
 https://jakearchibald.github.io/svgomg/
 https://github.com/adobe-webplatform/Snap.svg
+https://caniuse.com/?search=svg
 
 ## Colors
 https://materialui.co/colors/
