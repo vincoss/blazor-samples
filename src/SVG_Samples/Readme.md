@@ -1,6 +1,6 @@
 ﻿
 ## Temp
-next 85 page
+next 107 page
 
 
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
@@ -14,6 +14,8 @@ https://css-tricks.com/mega-list-svg-information/
 stroke-width: 0.5;"  has warning
 svg text trimming
 svg wrap text
+
+review https://stackoverflow.com/search?q=svg&s=b1237bc8-c565-47b1-8781-7a3c819e6c4a
 
 buttons
 	click and tap effect
@@ -299,3 +301,9 @@ https://github.com/Yqnn/svg-path-editor
 https://github.com/svg/svgo
 https://jakearchibald.github.io/svgomg/
 https://github.com/adobe-webplatform/Snap.svg
+https://caniuse.com/?search=svg
+https://github.com/svg-net/SVG
+
+## Colors
+https://materialui.co/colors/
+https://m2.material.io/design/color/the-color-system.html#color-theme-creation

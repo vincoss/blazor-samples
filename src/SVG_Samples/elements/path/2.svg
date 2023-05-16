@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--
+	The Horizontal lineto and Vertical lineto Commands
+	-->
+	<svg width="150px" height="150px" viewBox="0 0 150 150">
+		<path d="M 12 24 h 15 v 25 h -15 z"/>
+	</svg>
+	
+	<!-- Notational Shortcuts for a Path -->
+	<svg x="320" width="150px" height="150px" viewBox="0 0 150 150">
+		<g style="fill:none; stroke: black">
+			<path d="M 30 30 L 55 5 L 80 30 L 55 55 Z"/>
+			<path d="M 30 30 L 55 5 80 30 55 55 Z"/>
+			<path d="M 30 30 55 5 80 30 55 55 Z"/>
+			<path d="m 30 30 l 25 -25 l 25 25 l -25 25 z"/>
+			<path d="m 30 30 l 25 -25 25 25 -25 25 z"/>
+			<path d="m 30 30 25 -25 25 25 -25 25 z"/>
+		</g>
+	</svg>
+	
+</svg>

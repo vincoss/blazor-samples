@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--
+	Paths and Filling
+	-->
+	<svg width="300px" height="300px" viewBox="0 0 300 300" style="stroke: black; fill: none;">
+		<!-- both paths clockwise -->
+		<path d="M 0 0, 60 0, 60 60, 0 60 Z M 15 15, 45 15, 45 45, 15 45Z"/>
+		<!-- outer path clockwise; inner path counterclockwise -->
+		<path d="M 0 0, 60 0, 60 60, 0 60 Z M 15 15, 15 45, 45 45, 45 15Z"/>
+		<path d="M 10 20 100 20 A 20 30 0 0 1 120 50 L 120 110" style="fill: none; stroke: black;"/>
+	</svg>
+
+	<svg x="310" width="300px" height="300px" viewBox="0 0 300 300" style="stroke: black; fill: none;">
+		<defs>
+			<marker id="mCircle" markerWidth="10" markerHeight="10" refX="8" refY="5">
+				<circle cx="5" cy="5" r="4" style="fill: none; stroke: black;"/>
+			</marker>
+			<marker id="mArrow" markerWidth="6" markerHeight="10" refX="0" refY="4" orient="auto">
+				<path d="M 0 0 4 4 0 8" style="fill: none; stroke: black;"/>
+			</marker>
+			<marker id="mTriangle" markerWidth="5" markerHeight="10" refX="5" refY="5" orient="auto">
+				<path d="M 0 0 5 5 0 10 Z" style="fill: black;"/>
+			</marker>
+		</defs>
+		<path d="M 10 20 100 20 A 20 30 0 0 1 120 50 L 120 110"
+			style="marker-start: url(#mCircle);
+			marker-mid: url(#mArrow);
+			marker-end: url(#mTriangle);
+			fill: none; stroke: black;"/>
+	</svg>
+	
+	<!-- Marker Miscellanea -->
+	<svg x="610" width="300px" height="300px" viewBox="0 0 300 300" style="stroke: black; fill: none;">
+		<defs>
+			<marker id="mCircle" markerWidth="10" markerHeight="10" refX="5" refY="5">
+				<circle cx="5" cy="5" r="4" style="fill: none; stroke: black;"/>
+			</marker>
+		</defs>
+		<path d="M 10 20 100 20 A 20 30 0 0 1 120 50 L 120 110" style="marker: url(#mCircle); fill: none; stroke: black;"/>
+	</svg>
+
+</svg>

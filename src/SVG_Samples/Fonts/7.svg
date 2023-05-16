@@ -2,6 +2,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
+	<!--
+	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath
+	-->
+	
 	<!-- to hide the path, it is usually wrapped in a <defs> element -->
 	<!-- <defs> -->
 	<path
@@ -14,5 +18,11 @@
 	<text>
 		<textPath href="#MyPath">Quick brown fox jumps over the lazy dog.</textPath>
 	</text>
+
+	<svg x="100">
+		<text>
+			<textPath href="#MyPath">You did not reach the target score!</textPath>
+		</text>
+	</svg>
 	
 </svg>

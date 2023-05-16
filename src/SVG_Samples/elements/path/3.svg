@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--
+	Elliptical Arc
+	-->
+	<svg width="500px" height="500px" viewBox="0 0 500 500" style="stroke: black; fill: none;">
+		<path d="M 125,75 A100,50 0 0,0 225,125"/>
+		<!-- b -->
+		<path d="M 125,75 A100,50 0 0,1 225,125"/>
+		<!-- c -->
+		<path d="M 125,75 A100,50 0 1,0 225,125"/>
+		<!-- d -->
+		<path d="M 125,75 A100,50 0 1,1 225,125"/>
+		<!-- e -->
+	</svg>
+	
+	<!-- Notational Shortcuts for a Path -->
+	<svg x="600" width="400px" height="300px" viewBox="0 0 400 300">
+		<!-- gray drop shadow -->
+		<ellipse cx="154" cy="154" rx="150" ry="120" style="fill: #999999;"/>
+		<!-- light blue ellipse -->
+		<ellipse cx="152" cy="152" rx="150" ry="120" style="fill: #cceeff;"/>
+		<!-- large light red semicircle fills upper half, followed by small light red semicircle that dips into lower-left half of symbol -->
+		<path d="M 302 152 A 150 120, 0, 1, 0, 2 152 A 75 60, 0, 1, 0, 152 152" style="fill: #ffcccc;"/>
+		<!-- light blue semicircle rises into upper-right half of symbol -->
+		<path d="M 152 152 A 75 60, 0, 1, 1, 302 152" style="fill: #cceeff;"/>
+	</svg>
+
+	<!-- Bézier Curves -->
+
+	<!-- Quadratic Bézier Curves -->
+	<svg y="500" width="500px" height="500px" viewBox="0 0 500 500">
+		<path d="M30 75 Q240 30, 300 120" style="stroke: black; fill: none;"/>
+		<path d="M30 100 Q 80 30, 100 100, 130 65, 200 80" style="stroke: red; fill: none;"/>
+		<path d="M30 100 Q 80 30, 100 100 T 200 80" style="stroke: red; fill: none;"/>
+
+	</svg>
+	
+	<!-- Cubic Bézier Curves -->
+	<svg x="500" y="500" width="500px" height="500px" viewBox="0 0 500 500">
+		<path d="M20 80 C 50 20, 150 60, 200 120" style="stroke: black; fill: none;"/>
+		<path d="M30 100 C 50 50, 70 20, 100 100, 110, 130, 45, 150, 65, 100" style="stroke: black; fill: none;"/>
+	</svg>
+
+</svg>
