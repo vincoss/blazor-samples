@@ -8,4 +8,14 @@
 		<text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="50" font-weight="bold" fill="#455A64">Button yW</text>
 	</svg>
 
+	<svg x="10" y="140" width="600" height="120" viewBox="0 0 300 60">
+		<rect width="300" height="60" rx="5" ry="5" style="stroke: black; stroke-width: .5; fill: #B3E5FC;" shape-rendering="geometricPrecision" />
+		<text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="50" font-weight="bold" fill="#455A64">Retry</text>
+	</svg>
+
+	<svg x="10" y="280" width="600" height="120" viewBox="0 0 300 60">
+		<rect width="300" height="60" rx="5" ry="5" style="stroke: black; stroke-width: .5; fill: #B3E5FC;" shape-rendering="geometricPrecision" />
+		<text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="50" font-weight="bold" fill="#455A64">Next</text>
+	</svg>
+	
 </svg>
