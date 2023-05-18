@@ -11,6 +11,8 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 https://css-tricks.com/mega-list-svg-information/
 
 ## Tasks
+https://learn.microsoft.com/en-us/typography/opentype/spec/svg
+
 svg text trimming
 svg wrap text
 
