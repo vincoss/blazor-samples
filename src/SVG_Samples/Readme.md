@@ -1,6 +1,7 @@
 ﻿
 ## Temp
 next 107 page
+static position then calc change based on screen change
 
 
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
