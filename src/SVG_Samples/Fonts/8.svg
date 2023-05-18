@@ -5,14 +5,17 @@
 	<!--
 	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject
 	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/tspan
+	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath
 	https://stackoverflow.com/questions/4991171/auto-line-wrapping-in-svg-text
 	https://www.balisage.net/Proceedings/vol26/html/Birnbaum01/BalisageVol26-Birnbaum01.html
+	https://observablehq.com/@jtrim-ons/svg-text-wrapping
+	https://gist.github.com/davelandry/a39f0c3fc52804ee859a
 	-->
 	<svg x="10" y="10" width="200" height="200" viewBox="0 0 200 200">
 		<rect width="100%" height="100%" fill="pink" />
 		<switch>
 			<foreignObject x="20" y="90" width="150" height="200">
-				<p xmlns="http://www.w3.org/1999/xhtml">How doth the little crocodile Improve his shining tail, And pour the waters of the Nile On every golden scale!</p>
+				<p xmlns="http://www.w3.org/1999/xhtml">How doth the little crocodile improve his shining tail, And pour the waters of the Nile On every golden scale!</p>
 			</foreignObject>
 
 			<text x="20" y="20">Your SVG viewer cannot display html.</text>
@@ -27,7 +30,9 @@
 		</defs>
 		<use xlink:href="#path1" x="0" y="35" stroke="blue" stroke-width="1" />
 		<text transform="translate(0,35)" fill="red" font-size="20">
-			<textPath xlink:href="#path1">How doth the little crocodile Improve his shining tail, And pour the waters of the Nile On every golden scale!</textPath>
+			<textPath xlink:href="#path1">
+				How doth the little crocodile improve his shining tail, And pour the waters of the Nile On every golden scale!
+			</textPath>
 		</text>
 	</svg>
 	
