@@ -1,0 +1,76 @@
+﻿@page "/content-scale"
+@layout BlankLayout
+@inject IJSRuntime JS;
+@implements IDisposable
+@inject BrowserResizeService BS;
+
+<h3>WindowSizePage</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     height="100%" width="100%" tabindex="0" fill="none">
+
+	<rect width="100%" height="100%" fill="blue" fill-opacity="20%"/>
+
+	<!-- Diagnostics temp only -->
+	<svg x="10" y="10" fill="black" height="80">
+		<rect width="100%" height="100%" fill="pink" />
+        <text x="0" y="20">@string.Format($"Width:  {InnerWidth}")</text>
+        <text x="0" y="40">@string.Format($"Height: {InnerHeight}")</text>
+	</svg>
+
+	<Close Width="@_itemWidth" Height="@_itemHeight"/>
+
+</svg>
+
+@code {
+
+    // TODO: remove project BlazorApp_Svg_Samples
+
+    private double _userScale = 1D;
+    private double _itemWidth = 0D;
+    private double _itemHeight = 0D;
+    private double _itemDefaultWidth = 100D;
+    private double _itemDefaultScale = 0.1D;
+
+    private int InnerHeight = 0;
+    private int InnerWidth = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        BS.OnResize += BrowserHasResized;
+        await BS.Initialize();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            InnerHeight = await BS.GetInnerHeight();
+            InnerWidth = await BS.GetInnerWidth();
+        }
+
+        Calculate(); // calculate object diff
+
+    }
+
+    private async Task BrowserHasResized()
+    {
+        InnerHeight = await BS.GetInnerHeight();
+        InnerWidth = await BS.GetInnerWidth();
+
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        BS.OnResize -= BrowserHasResized;
+    }
+
+    private void Calculate()
+    {
+        var min = Math.Min(InnerWidth, InnerHeight);
+        var scale = (min * _itemDefaultScale) / 100;
+        _itemWidth = _itemDefaultWidth * scale;
+        _itemHeight = _itemDefaultWidth * scale;
+    }
+}
