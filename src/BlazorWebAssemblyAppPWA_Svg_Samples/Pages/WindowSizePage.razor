@@ -1,0 +1,45 @@
+﻿@page "/window-size"
+@inject IJSRuntime JS;
+@implements IDisposable
+@inject BrowserResizeService BS;
+
+<h3>WindowSizePage</h3>
+
+<div>
+    <p><strong>Inner Height</strong> @InnerHeight</p>
+    <p><strong>Inner Width</strong> @InnerWidth</p>
+</div>
+
+@code {
+
+    private int InnerHeight = 0;
+    private int InnerWidth = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        BS.OnResize += BrowserHasResized;
+        await BS.Initialize();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            InnerHeight = await BS.GetInnerHeight();
+            InnerWidth = await BS.GetInnerWidth();
+        }
+    }
+
+    private async Task BrowserHasResized()
+    {
+        InnerHeight = await BS.GetInnerHeight();
+        InnerWidth = await BS.GetInnerWidth();
+
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        BS.OnResize -= BrowserHasResized;
+    }
+}
