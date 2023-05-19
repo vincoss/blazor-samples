@@ -5,6 +5,14 @@
 @code {
 	//transform="matrix(6.25,0,0,6.25,600,0)"
 
+	protected override Task OnAfterRenderAsync(bool firstRender)
+	{
+		X = Dx;
+		Y = Dy;
+
+		return base.OnAfterRenderAsync(firstRender);
+	}
+
 	[Parameter]
 	public double Width { get; set; } = 100;
 
@@ -16,4 +24,10 @@
 
 	[Parameter]
 	public double Y { get; set; } = 0;
+
+	[Parameter]
+	public double Dx { get; set; } = 0;
+
+	[Parameter]
+	public double Dy { get; set; } = 0;
 }
