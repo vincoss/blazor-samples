@@ -1,6 +1,6 @@
 ﻿
 ## Temp
-next 125 page Text
+next 145 page Clipping and Masking
 static position then calc change based on screen change
 
 
