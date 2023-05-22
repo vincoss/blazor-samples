@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!--Text placement and outlining-->
+	<svg x="10" y="10" width="300" height="150">
+		<path d="M 20 10, 20 120 M 10 30 100 30 M 10 70 100 70 M 10 110 100 110" style="stroke: gray;"/>
+		<text x="20" y="30">Simplest Text</text>
+		<text x="20" y="70" style="stroke: black;">Outlined/filled</text>
+		<text x="20" y="110" style="stroke: black; stroke-width: 0.5; fill: none;">Outlined only</text>
+	</svg>
+
+	<!--Text weight, style, decoration, and spacing attributes-->
+	<svg x="10" y="160" width="300" height="150">
+		<g style="font-size: 18pt">
+			<text x="20" y="20" style="font-weight:bold;">bold</text>
+			<text x="120" y="20" style="font-style:italic;">italic</text>
+			<text x="20" y="60" style="text-decoration:underline;">under</text>
+			<text x="120" y="60" style="text-decoration:overline;">over</text>
+			<text x="200" y="60" style="text-decoration:line-through;">through</text>
+			<text x="20" y="90" style="word-spacing: 10pt;">more word space</text>
+			<text x="20" y="120" style="word-spacing: -3pt;">less word space</text>
+			<text x="20" y="150" style="letter-spacing: 5pt;">wide letter space</text>
+			<text x="20" y="180" style="letter-spacing: -6pt;">narrow letter space</text>
+		</g>
+	</svg>
+
+	<!--Text Alignment-->
+	<svg x="10" y="320" width="300" height="150">
+		<g style="font-size: 14pt;">
+			<path d="M 100 10 100 100" style="stroke: gray; fill: none;"/>
+			<text x="100" y="30" style="text-anchor: start">Start</text>
+			<text x="100" y="60" style="text-anchor: middle">Middle</text>
+			<text x="100" y="90" style="text-anchor: end">End</text>
+		</g>
+	</svg>
+
+	<!--The <tspan> Element-->
+	<svg x="10" y="430" width="300" height="150">
+		<text x="10" y="30" style="font-size:12pt;">
+			Switch among
+			<tspan style="font-style:italic">italic</tspan>, normal,
+			and <tspan style="font-weight:bold">bold</tspan> text.
+		</text>
+	</svg>
+
+	<!--Using dy to change vertical positioning within text-->
+	<svg x="10" y="480" width="300" height="150">
+		<text x="10" y="30" style="font-size:12pt;">
+			F <tspan dy="4">a</tspan>
+			<tspan dy="8">l</tspan>
+			<tspan dy="12">l</tspan>
+		</text>
+	</svg>
+
+	<!--Using dy to change vertical positioning within text-->
+	<svg x="10" y="580" width="300" height="150">
+		<text x="10" y="30" style="font-size:12pt;">
+			They dined on mince, and slices of quince,
+			<tspan x="20" y="50">
+				Which they ate with a
+				runcible spoon;
+			</tspan>
+			<tspan x="10" y="70">
+				And hand in hand, on the edge
+				of the sand,
+			</tspan>
+			<tspan x="20" dy="20">They danced by the light of the moon.</tspan>
+		</text>
+	</svg>
+
+	<!--Use of multiple values for dx, dy, and rotate in a text span-->
+	<svg x="10" y="680" width="300" height="150">
+		<text x="30" y="30" style="font-size:14pt">
+			It’s
+			<tspan dx="0 4 -3 5 -4 6" dy="0 -3 7 3 -2 -8"
+			rotate="5 10 -5 -20 0 15">shaken</tspan>,
+			not stirred.
+		</text>
+	</svg>
+
+	<!--Use of baseline-shift-->
+	<svg x="10" y="780" width="300" height="150">
+		<text x="20" y="25" style="font-size: 12pt;">
+			C<tspan style="baseline-shift: sub;">12</tspan>
+			H<tspan style="baseline-shift: sub;">22</tspan>
+			O<tspan style="baseline-shift: sub;">11</tspan> (sugar)
+		</text>
+		<text x="20" y="70" style="font-size: 12pt;">
+			6.02 x 10<tspan baseline-shift="super">23</tspan>
+			(Avogadro's number)
+		</text>
+	</svg>
+
+	<!--Setting textLength-->
+	<svg x="350" y="10" width="300" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		<g style="font-size: 14pt;">
+			<path d="M 20 10 20 70 M 220 10 220 70" style="stroke: gray;"/>
+			<text x="20" y="30" textLength="200" lengthAdjust="spacing">Two words</text>
+			<text x="20" y="60"
+			textLength="200" lengthAdjust="spacingAndGlyphs">Two words</text>
+			<text x="20" y="90">
+				Two words
+				<tspan style="font-size: 10pt;">(normal length)</tspan>
+			</text>
+			<path d="M 20 100 20 170 M 100 100 100 170" style="stroke: gray;"/>
+			<text x="20" y="120"
+			textLength="80" lengthAdjust="spacing">Two words</text>
+			<text x="20" y="160" textLength="80" lengthAdjust="spacingAndGlyphs">Two words</text>
+			<text x="20" y="190" textLength="80" lengthAdjust="spacingAndGlyphs">Three words now</text>
+		</g>
+	</svg>
+
+	<!--Vertical Text-->
+	<svg x="350" y="220" width="300" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		<g>
+			<text x="10" y="20" transform="rotate(90,10,20)">Rotated 90</text>
+			<text x="50" y="20" style="writing-mode: tb;">Writing Mode tb</text>
+			<text x="90" y="20" style="writing-mode: tb; glyph-orientation-vertical: 0;">Vertical zero</text>
+		</g>
+	</svg>
+
+	<!--Unicode and Bidirectionality-->
+	<svg x="350" y="430" width="350" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		<g style="font-size: 14pt;">
+			<text x="10" y="30">Greek: </text>
+			<text x="100" y="30">
+				αβγδε
+			</text>
+			<text x="10" y="50">Russian:</text>
+			<text x="100" y="50">
+				абвгд
+			</text>
+			<text x="10" y="70">Hebrew:</text>
+			<text x="100" y="70">
+				אבגדה (written right to left)
+			</text>
+			<text x="10" y="90">Arabic:</text>
+			<text x="100" y="90">
+				ا ب ج د (written right to left)
+			</text>
+			<text x="10" y="130">
+				This is
+				<tspan style="direction: rtl; unicode-bidi: bidi-override; font-weight: bold;">right-to-left</tspan>
+				writing.
+			</text>
+		</g>
+	</svg>
+
+	<!--The <switch> Element-->
+	<svg x="350" y="640" width="350" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		<circle cx="40" cy="60" r="20" style="fill: none; stroke: black;"/>
+		<g font-size="12pt">
+			<switch>
+				<g systemLanguage="en-UK">
+					<text x="10" y="30">A circle</text>
+					<text x="10" y="100">without colour.</text>
+				</g>
+				<g systemLanguage="en">
+					<text x="10" y="30">A circle</text>
+					<text x="10" y="100">without color.</text>
+				</g>
+				<g systemLanguage="es">
+					<text x="10" y="30">Un círculo</text>
+					<text x="10" y="100">sin color.</text>
+				</g>
+				<g systemLanguage="ru">
+					<text x="10" y="30">Круг</text>
+					<text x="10" y="100">без света.</text>
+				</g>
+			</switch>
+		</g>
+	</svg>
+
+	<!--Using a Custom Font-->
+	<svg x="350" y="850" width="350" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		
+	</svg>
+
+</svg>

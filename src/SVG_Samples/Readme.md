@@ -305,6 +305,7 @@ https://jakearchibald.github.io/svgomg/
 https://github.com/adobe-webplatform/Snap.svg
 https://caniuse.com/?search=svg
 https://github.com/svg-net/SVG
+http://raphaeljs.com/
 
 ## Colors
 https://materialui.co/colors/

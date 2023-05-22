@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<defs>
+		<path id="curvepath" d="M30 40 C 50 10, 70 10, 120 40 S 150 0, 200 40" style="stroke: gray; fill: none;"/>
+		<path id="round-corner" d="M250 30 L 300 30 A 30 30 0 0 1 330 60 L 330 110" style="stroke: gray; fill: none;"/>
+		<path id="sharp-corner" d="M 30 110 100 110 100 160" style="stroke: gray; fill: none;"/>
+		<path id="discontinuous" d="M 150 110 A 40 30 0 1 0 230 110 M 250 110 270 140" style="stroke: gray; fill: none;"/>
+		<path id="short-corner" transform="translate(40,40)" d="M0 0 L 30 0 A 30 30 0 0 1 60 30 L 60 60" style="stroke: gray; fill: none;"/>
+		<path id="long-corner" transform="translate(140,40)" d="M0 0 L 50 0 A 30 30 0 0 1 80 30 L 80 80" style="stroke: gray; fill: none;"/>
+	</defs>
+
+	<!--Text on a Path-->
+	<svg x="10" y="10" width="400" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		<g style="font-family: 'Liberation Sans'; font-size: 10pt;">
+			<use xlink:href="#curvepath"/>
+			<text>
+				<textPath xlink:href="#curvepath">
+					Following a cubic Bézier curve.
+				</textPath>
+			</text>
+			<use xlink:href="#round-corner"/>
+			<text>
+				<textPath xlink:href="#round-corner">
+					Going 'round the bend
+				</textPath>
+			</text>
+			<use xlink:href="#sharp-corner"/>
+			<text>
+				<textPath xlink:href="#sharp-corner">
+					Making a quick turn
+				</textPath>
+			</text>
+			<use xlink:href="#discontinuous"/>
+			<text>
+				<textPath xlink:href="#discontinuous">
+					Text along a broken path
+				</textPath>
+			</text>
+		</g>
+	</svg>
+
+	<!--Text length and startOffset-->
+	<svg x="10" y="220" width="400" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		<g style="font-family: 'Liberation Sans'; font-size: 12pt">
+			<use xlink:href="#short-corner"/>
+			<text>
+				<textPath xlink:href="#short-corner">
+					This text is too long for the path.
+				</textPath>
+			</text>
+			<use xlink:href="#long-corner"/>
+			<text style="text-anchor: middle;">
+				<textPath xlink:href="#long-corner" startOffset="50%">
+					centered
+				</textPath>
+			</text>
+		</g>
+	</svg>
+	
+	<!--Whitespace and Text-->
+	<svg x="10" y="430" width="400" height="200">
+		<rect width="100%" height="100%" fill="pink" />
+		<text x="20" y="30">\n\n___abc_\t\t_def_\n\n__ghi</text>
+	</svg>
+
+</svg>
