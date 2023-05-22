@@ -7,28 +7,75 @@
 
 	<svg x="10" y="10">
 		<svg width="400" height="200" viewBox="0 0 400 200">
-			<pattern id="tileObject" x="0" y="0" width="20" height="20" patternUnits="objectBoundingBox">
-				<path d="M 0 0 Q 5 20 10 10 T 20 20" style="stroke: black; fill: none;"/>
-				<path d="M 0 0 h 20 v 20 h -20 z" style="stroke: gray; fill: none;"/>
-			</pattern>
+			<defs>
+				<pattern id="tile1" x="0" y="0" width="20%" height="20%" patternUnits="objectBoundingBox">
+					<path d="M 0 0 Q 5 20 10 10 T 20 20" style="stroke: black; fill: none;"/>
+					<path d="M 0 0 h 20 v 20 h -20 z" style="stroke: gray; fill: none;"/>
+				</pattern>
+			</defs>
 
-			<rect x="20" y="20" width="100" height="100" style="fill: url(#tileObject); stroke: black;"/>
-			<rect x="135" y="20" width="70" height="80" style="fill: url(#tileObject); stroke: black;"/>
-			<rect x="220" y="20" width="150" height="130" style="fill: url(#tileObject); stroke: black;"/>
+			<rect x="20" y="20" width="100" height="100" style="fill: url(#tile1); stroke: black;"/>
+			<rect x="135" y="20" width="70" height="80" style="fill: url(#tile1); stroke: black;"/>
+			<rect x="220" y="20" width="150" height="130" style="fill: url(#tile1); stroke: black;"/>
 		</svg>
 	</svg>
 
 	<svg x="10" y="150">
 		<svg width="400" height="200" viewBox="0 0 400 200">
-			<pattern id="tileUser" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+			<pattern id="tile2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
 				<path d="M 0 0 Q 5 20 10 10 T 20 20" style="stroke: black; fill: none;"/>
 				<path d="M 0 0 h 20 v 20 h -20 z" style="stroke: gray; fill: none;"/>
 			</pattern>
 
-			<rect x="20" y="20" width="100" height="100" style="fill: url(#tileUser); stroke: black;"/>
-			<rect x="135" y="20" width="70" height="80" style="fill: url(#tileUser); stroke: black;"/>
-			<rect x="220" y="20" width="150" height="130" style="fill: url(#tileUser); stroke: black;"/>
+			<rect x="20" y="20" width="100" height="100" style="fill: url(#tile2); stroke: black;"/>
+			<rect x="135" y="20" width="70" height="80" style="fill: url(#tile2); stroke: black;"/>
+			<rect x="220" y="20" width="150" height="130" style="fill: url(#tile2); stroke: black;"/>
 		</svg>
 	</svg>
 
+	<!-- patternContentUnits set to objectBoundingBox -->
+	<svg x="10" y="290">
+		<svg width="400" height="200" viewBox="0 0 400 200">
+			<pattern id="tile3" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" x="0" y="0" width=".2" height=".2">
+				<path d="M 0 0 Q .05 .20 .10 .10 T .20 .20" style="stroke: black; fill: none; stroke-width: 0.01;"/>
+				<path d="M 0 0 h 0.2 v 0.2 h-0.2z" style="stroke: black; fill: none; stroke-width: 0.01;"/>
+			</pattern>
+
+			<g transform="translate(20,20)">
+				<rect x="0" y="0" width="100" height="100" style="fill: url(#tile3); stroke: black;"/>
+			</g>
+			<g transform="translate(135,20)">
+				<rect x="0" y="0" width="70" height="80" style="fill: url(#tile3); stroke: black;"/>
+			</g>
+			<g transform="translate(220,20)">
+				<rect x="0" y="0" width="150" height="130" style="fill: url(#tile3); stroke: black;"/>
+			</g>
+		</svg>
+	</svg>
+
+	<!-- Using viewBox to scale a pattern -->
+	<svg x="10" y="430">
+		<svg width="400" height="200" viewBox="0 0 400 200">
+			<defs>
+				<pattern id="tile4" patternUnits="userSpaceOnUse" x="0" y="0" width="20" height="20" viewBox="0 0 150 150">
+					<path d="M30 100 C 50 50, 70 20, 100 100, 110, 130, 45, 150, 65, 100" style="stroke: black; stroke-width: 5; fill: none;"/>
+				</pattern>
+			</defs>
+			<rect x="20" y="20" width="100" height="100" style="fill: url(#tile4); stroke: black;"/>
+		</svg>
+	</svg>
+	
+	<!--Nested Patterns-->
+	<svg x="10" y="550">
+		<defs>
+			<pattern id="stripe" patternUnits="userSpaceOnUse" x="0" y="0" width="6" height="6">
+				<path d="M 0 0 6 0" style="stroke: black; fill: none;"/>
+			</pattern>
+			<pattern id="polkadot" patternUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+				<circle cx="8" cy="8" r="8" style="fill: url(#stripe); stroke: black;"/>
+			</pattern>
+		</defs>
+		<rect x="20" y="20" width="100" height="100" style="fill: url(#polkadot); stroke: black;"/>
+	</svg>
+	
 </svg>
