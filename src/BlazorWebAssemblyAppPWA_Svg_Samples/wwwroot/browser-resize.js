@@ -1,4 +1,8 @@
-﻿export function getInnerHeight() {
+﻿export function getElementDOMRect(element, param) {
+    return element.getBoundingClientRect();
+};
+
+export function getInnerHeight() {
     return window.innerHeight;
 };
 

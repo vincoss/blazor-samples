@@ -1,32 +1,44 @@
 ﻿@page "/window-size"
-@inject IJSRuntime JS;
 @implements IDisposable
-@inject BrowserResizeService BS;
+@inject HelperJsInterop BS;
+@inject ConsoleJsInterop Logger;
 
-<h3>WindowSizePage</h3>
+<h5>WindowSizePage, Element Height and window resize event </h5>
 
 <div>
-    <p><strong>Inner Height</strong> @InnerHeight</p>
-    <p><strong>Inner Width</strong> @InnerWidth</p>
+    <div @ref="mainDiv" style="background-color: pink">
+        <p><strong>Window Inner Width: </strong> @InnerWidth</p>
+        <p><strong>Window Inner Height: </strong> @InnerHeight</p>
+        <p><strong>Element Width: </strong>@_parentRectangle.Width</p>
+        <p><strong>Element Height: </strong>@_parentRectangle.Height</p>
+    </div>
 </div>
 
 @code {
 
+    private ElementReference mainDiv;
     private int InnerHeight = 0;
     private int InnerWidth = 0;
+    private BoundingClientRect _parentRectangle = new BoundingClientRect();
 
     protected override async Task OnInitializedAsync()
     {
+        await Logger.WriteLine($"{nameof(OnInitializedAsync)}");
+
         BS.OnResize += BrowserHasResized;
         await BS.Initialize();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        await Logger.WriteLine($"{nameof(OnAfterRenderAsync)} - firstRender: {firstRender}");
+
         if(firstRender)
         {
+            await mainDiv.FocusAsync();
             InnerHeight = await BS.GetInnerHeight();
             InnerWidth = await BS.GetInnerWidth();
+            _parentRectangle = await BS.GetElementDOMRect(mainDiv);
         }
     }
 
@@ -34,12 +46,14 @@
     {
         InnerHeight = await BS.GetInnerHeight();
         InnerWidth = await BS.GetInnerWidth();
+        _parentRectangle = await BS.GetElementDOMRect(mainDiv);
 
         StateHasChanged();
     }
 
-    public void Dispose()
+    public async void Dispose()
     {
         BS.OnResize -= BrowserHasResized;
+        await BS.DisposeAsync();
     }
 }
