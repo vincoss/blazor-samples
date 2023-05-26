@@ -1,0 +1,62 @@
+﻿@page "/orientation-change"
+@implements IDisposable
+@inject HelperJsInterop BS;
+@inject ConsoleJsInterop Logger;
+
+<h5>Orientation change sample</h5>
+
+<div style="background-color:lightblue;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="600" height="200">
+        <rect width="100%" height="100%" fill="gray" />
+        @if (_isPortrait)
+        {
+            <Portrait />
+        }
+        else
+        {
+            <Landscape />
+        }
+    </svg>
+</div>
+
+@code {
+
+    private int InnerHeight = 0;
+    private int InnerWidth = 0;
+    private bool _isPortrait = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Logger.WriteLine($"{nameof(OnInitializedAsync)}");
+
+        BS.OnResize += BrowserHasResized;
+        await BS.Initialize();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await Logger.WriteLine($"{nameof(OnAfterRenderAsync)} - firstRender: {firstRender}");
+
+        if (firstRender)
+        {
+            InnerHeight = await BS.GetInnerHeight();
+            InnerWidth = await BS.GetInnerWidth();
+        }
+
+        _isPortrait = InnerHeight > InnerWidth;
+    }
+
+    private async Task BrowserHasResized()
+    {
+        InnerHeight = await BS.GetInnerHeight();
+        InnerWidth = await BS.GetInnerWidth();
+
+        StateHasChanged();
+    }
+
+    public async void Dispose()
+    {
+        BS.OnResize -= BrowserHasResized;
+        await BS.DisposeAsync();
+    }
+}
