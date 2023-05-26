@@ -1,21 +1,20 @@
 ﻿@page "/content-scale"
-@layout BlankLayout
-@inject IJSRuntime JS;
 @implements IDisposable
-@inject BrowserResizeService BS;
+@inject HelperJsInterop BS;
+@inject ConsoleJsInterop Logger;
 
 <h3>WindowSizePage</h3>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+<svg xmlns="http://www.w3.org/2000/svg"
      height="100%" width="100%" tabindex="0" fill="none">
 
 	<rect width="100%" height="100%" fill="blue" fill-opacity="20%"/>
 
 	<!-- Diagnostics temp only -->
-	<svg x="10" y="10" fill="black" height="80">
+	<svg x="10" y="10" fill="black" height="80" width="90%">
 		<rect width="100%" height="100%" fill="pink" />
-        <text x="0" y="20">@string.Format($"Width:  {InnerWidth}")</text>
-        <text x="0" y="40">@string.Format($"Height: {InnerHeight}")</text>
+        <text x="0" y="20">@string.Format($"Window Width:  {WindowInnerWidth}")</text>
+        <text x="0" y="40">@string.Format($"Window Height: {WindowInnerHeight}")</text>
 	</svg>
 
 	<Close Dx="200" Dy="200" Width="@_itemWidth" Height="@_itemHeight"/>
@@ -32,21 +31,25 @@
     private double _itemDefaultWidth = 100D;
     private double _itemDefaultScale = 0.1D;
 
-    private int InnerHeight = 0;
-    private int InnerWidth = 0;
+    private int WindowInnerHeight = 0;
+    private int WindowInnerWidth = 0;
 
     protected override async Task OnInitializedAsync()
     {
+        await Logger.WriteLine($"{nameof(OnInitializedAsync)}");
+
         BS.OnResize += BrowserHasResized;
         await BS.Initialize();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        await Logger.WriteLine($"{nameof(OnAfterRenderAsync)} - firstRender: {firstRender}");
+
         if(firstRender)
         {
-            InnerHeight = await BS.GetInnerHeight();
-            InnerWidth = await BS.GetInnerWidth();
+            WindowInnerHeight = await BS.GetInnerHeight();
+            WindowInnerWidth = await BS.GetInnerWidth();
         }
 
         Calculate(); // calculate object diff
@@ -55,20 +58,21 @@
 
     private async Task BrowserHasResized()
     {
-        InnerHeight = await BS.GetInnerHeight();
-        InnerWidth = await BS.GetInnerWidth();
+        WindowInnerHeight = await BS.GetInnerHeight();
+        WindowInnerWidth = await BS.GetInnerWidth();
 
         StateHasChanged();
     }
 
-    public void Dispose()
+    public async void Dispose()
     {
         BS.OnResize -= BrowserHasResized;
+        await BS.DisposeAsync();
     }
 
     private void Calculate()
     {
-        var min = Math.Min(InnerWidth, InnerHeight);
+        var min = Math.Min(WindowInnerWidth, WindowInnerHeight);
         var scale = (min * _itemDefaultScale) / 100;
         _itemWidth = _itemDefaultWidth * scale;
         _itemHeight = _itemDefaultWidth * scale;
