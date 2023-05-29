@@ -260,6 +260,7 @@ https://www.ios-resolution.com/
 
 # Resources
 https://developer.mozilla.org/en-US/docs/Web/SVG
+https://www.svgbasics.com/colour.html
 https://css-tricks.com/scale-svg/
 https://webdesign.tutsplus.com/tutorials/svg-viewport-and-viewbox-for-beginners--cms-30844
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
