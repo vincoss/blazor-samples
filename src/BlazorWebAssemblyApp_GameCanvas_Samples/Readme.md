@@ -1,4 +1,11 @@
 ﻿
+#TODO: review
+https://www.youtube.com/watch?v=hqt08YOW6m4
+https://stackoverflow.com/questions/17411991/html5-canvas-rotate-image/43155027#43155027
+https://medium.com/@jgoz/game-on-on-your-browser-1e7e903dac16
+https://codepen.io/juliangarnier/pen/gmOwJX
+https://stackoverflow.com/questions/38901951/canvas-vs-svg-for-games
+
 ## Resources
 https://codeincomplete.com/articles/javascript-tetris/
 https://expediteapps.net/2020/01/20/blazor-and-svg/
