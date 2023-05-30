@@ -42,10 +42,10 @@
         }
     }
 
-    private async Task BrowserHasResized()
+    private async Task BrowserHasResized(int width, int height)
     {
-        InnerHeight = await BS.GetInnerHeight();
-        InnerWidth = await BS.GetInnerWidth();
+        InnerWidth = width;
+        InnerHeight = height;
         _parentRectangle = await BS.GetElementDOMRect(mainDiv);
 
         StateHasChanged();

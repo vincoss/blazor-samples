@@ -19,5 +19,8 @@ export function registerResizeCallback()
 
 export function resized()
 {
-    DotNet.invokeMethodAsync("BlazorWebAssemblyAppPWA_Svg_Samples", 'OnBrowserResizeHandler').then(data => data);
+    DotNet.invokeMethodAsync("BlazorWebAssemblyAppPWA_Svg_Samples", 'OnBrowserResizeHandler', window.innerWidth, window.innerHeight).then(data =>
+    {
+        console.log(data);
+    });
 };

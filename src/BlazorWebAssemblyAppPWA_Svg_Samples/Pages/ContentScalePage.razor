@@ -56,12 +56,14 @@
 
     }
 
-    private async Task BrowserHasResized()
+    private Task BrowserHasResized(int width, int height)
     {
-        WindowInnerHeight = await BS.GetInnerHeight();
-        WindowInnerWidth = await BS.GetInnerWidth();
+        WindowInnerWidth = width;
+        WindowInnerHeight = height;
 
         StateHasChanged();
+
+        return Task.CompletedTask;
     }
 
     public async void Dispose()

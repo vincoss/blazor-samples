@@ -1,10 +1,11 @@
-﻿using Microsoft.JSInterop;
+﻿using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.JSInterop;
 
 namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 {
 	public class HelperJsInterop : IAsyncDisposable
 	{
-		private static Func<Task>? _staticOnLogAsync;
+		private static Func<int, int, Task>? _staticOnLogAsync;
 		private readonly Lazy<Task<IJSObjectReference>> moduleTask;
 
 		public HelperJsInterop(IJSRuntime jsRuntime)
@@ -20,9 +21,9 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 		}
 
 		[JSInvokable("OnBrowserResizeHandler")]
-		public static async Task OnBrowserResizeee()
+		public static async Task OnBrowserResizeee(int width, int height)
 		{
-			await _staticOnLogAsync?.Invoke();
+			await _staticOnLogAsync?.Invoke(width, height);
 		}
 
 		public async Task<int> GetInnerHeight()
@@ -55,7 +56,7 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 			}
 		}
 
-		public event Func<Task> OnResize = () => { return Task.CompletedTask; };
+		public event Func<int, int, Task> OnResize = (w,h) => { return Task.CompletedTask; };
 	}
 
 	public class BoundingClientRect
@@ -69,4 +70,75 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 		public double Bottom { get; set; }
 		public double Left { get; set; }
 	}
+
+	//public class JSRuntimeService : IAsyncDisposable
+	//{
+	//	private readonly Lazy<Task<IJSObjectReference>> moduleTask;
+
+	//	public JSRuntimeService(IJSRuntime jsRuntime)
+	//	{
+	//		moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>("import", "./browser-resize.js").AsTask());
+	//	}
+
+	//	public async Task InitializeAync()
+	//	{
+	//		var module = await moduleTask.Value;
+	//		await module.InvokeVoidAsync("registerResizeCallback");
+	//		_isInitialized = true;
+	//	}
+
+ //       [JSInvokable("OnBrowserResizeHandler")]
+ //       public static async Task OnBrowserResizeee(int width, int height)
+ //       {
+	//	//	return Task.CompletedTask;
+ //       }
+
+ //       private EventHandler<EventArgs>? _windowSizeChanged;
+
+	//	/// <summary>
+	//	/// An event that fires when the window is resized.
+	//	/// </summary>
+	//	public event EventHandler<EventArgs> WindowResize
+	//	{
+	//		add {
+	//			AssertInitialized();
+	//			_windowSizeChanged += value;
+	//		}
+	//		remove {
+	//			AssertInitialized();
+	//			_windowSizeChanged -= value;
+	//		}
+	//	}
+	//	private bool _isInitialized;
+	//	private void AssertInitialized()
+	//	{
+	//		if (!_isInitialized)
+	//		{
+	//			EnsureInitialized();
+	//		}
+
+	//		if (!_isInitialized)
+	//		{
+	//			throw new InvalidOperationException($"'{GetType().Name}' has not been initialized.");
+	//		}
+	//	}
+
+	//	/// <summary>
+	//	/// Allows derived classes to lazily self-initialize. Implementations that support lazy-initialization should override
+	//	/// this method and call <see cref="Initialize(string, string)" />.
+	//	/// </summary>
+	//	protected virtual void EnsureInitialized()
+	//	{
+	//	}
+
+	//	public async ValueTask DisposeAsync()
+	//	{
+	//		if (moduleTask.IsValueCreated)
+	//		{
+	//			var module = await moduleTask.Value;
+	//			await module.DisposeAsync();
+	//		}
+	//	}
+	//}
+
 }
