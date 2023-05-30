@@ -1,4 +1,5 @@
 using Blazor_Samples;
+using Blazor_Samples.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -17,5 +18,10 @@ builder.Services.AddHttpClient("github", client =>
     // Github requires a user-agent
     client.DefaultRequestHeaders.Add("User-Agent", "Blazor_Samples");
 });
+
+var services = builder.Services;
+services.AddSingleton<ServiceA>();
+services.AddScoped<ServiceB>();
+services.AddTransient<ServiceC>();
 
 await builder.Build().RunAsync();

@@ -25,6 +25,11 @@
 </Router>
 
 @code {
+    protected override void OnInitialized()
+    {
+        Logger.LogDebug($"App.razor.{OnInitialized}");
+    }
+
     private List<Assembly> lazyLoadedAssemblies = new();
 
     private async Task OnNavigateAsync(NavigationContext args)

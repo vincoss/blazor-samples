@@ -1,0 +1,14 @@
+﻿<h5>ComponentB</h5>
+@inject ServiceA singletonA;
+@inject ServiceB scopedB;
+@inject ServiceC transientC;
+
+<div>
+    <p>Singleton: @singletonA.GetHashCode()</p>
+    <p>Scoped: @scopedB.GetHashCode()</p>
+    <p>Transient: @transientC.GetHashCode()</p>
+</div>
+
+@code {
+
+}

@@ -29,8 +29,4 @@
     <ProjectReference Include="..\Blazor_Samples_RazorClassLibrary\Blazor_Samples_RazorClassLibrary.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
-
 </Project>
