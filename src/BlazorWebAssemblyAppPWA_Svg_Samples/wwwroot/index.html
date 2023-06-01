@@ -31,6 +31,23 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        class WindowHelpers
+    {
+            static dotNetHelper;
+
+            static setDotNetHelper(value) {
+                WindowHelpers.dotNetHelper = value;
+        window.addEventListener("resize", WindowHelpers.resized);
+            }
+
+            static async resized() {
+        await WindowHelpers.dotNetHelper.invokeMethodAsync('OnBrowserResizeHandlerInstance', window.innerWidth, window.innerHeight);
+            }
+        }
+
+        window.WindowHelpers = WindowHelpers;
+    </script>
 </body>
 
 </html>

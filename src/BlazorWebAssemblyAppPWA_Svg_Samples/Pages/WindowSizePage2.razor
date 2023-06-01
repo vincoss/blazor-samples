@@ -1,0 +1,34 @@
+﻿@page "/window-size2"
+@inject JSRuntimeService BS;
+@inject ConsoleJsInterop Logger;
+@inject IJSRuntime JS
+
+<h5>WindowSizePage, Element Height and window resize event </h5>
+
+<div>
+    <div @ref="mainDiv" style="background-color: pink">
+        <p><strong>Window Inner Width: </strong> @InnerWidth</p>
+        <p><strong>Window Inner Height: </strong> @InnerHeight</p>
+        <p><strong>Element Width: </strong>@_parentRectangle.Width</p>
+        <p><strong>Element Height: </strong>@_parentRectangle.Height</p>
+    </div>
+</div>
+
+@code {
+
+    private ElementReference mainDiv;
+    private int InnerWidth = 0;
+    private int InnerHeight = 0;
+    private BoundingClientRect _parentRectangle = new BoundingClientRect();
+
+    protected override async Task OnInitializedAsync()
+    {
+        BS.WindowResize += (o, e) =>
+         {
+             InnerWidth = e.Width;
+             InnerHeight = e.Height;
+             StateHasChanged();
+         };
+        await BS.InitializeAync();
+    }
+}
