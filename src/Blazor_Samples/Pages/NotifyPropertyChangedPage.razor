@@ -1,0 +1,52 @@
+﻿@page "/NotifyPropertyChangedPage"
+@using System.Runtime.CompilerServices;
+
+<h3>NotifyPropertyChangedPage</h3>
+<p>@_model.Message</p>
+
+<button class="btn btn-primary" @onclick="UpdateMessage">Click me</button>
+
+@code {
+    private NotifyPropertyChangedPageViewModel _model = new NotifyPropertyChangedPageViewModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _model.PropertyChanged += async (sender, e) => { await InvokeAsync(StateHasChanged); };
+        await base.OnInitializedAsync();
+    }
+
+    private void UpdateMessage()
+    {
+        _model.Message = DateTime.Now.ToString();
+    }
+
+    public class NotifyPropertyChangedPageViewModel : INotifyPropertyChanged
+    {
+        private string? _message;
+
+        public string? Message
+        {
+            get => _message;
+            set => SetProperty(ref _message, value);
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (Equals(storage, value))
+            {
+                return false;
+            }
+
+            storage = value;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
+    }
+}

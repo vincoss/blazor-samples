@@ -46,12 +46,14 @@
         _isPortrait = InnerHeight > InnerWidth;
     }
 
-    private async Task BrowserHasResized()
+    private Task BrowserHasResized(int width, int height)
     {
-        InnerHeight = await BS.GetInnerHeight();
-        InnerWidth = await BS.GetInnerWidth();
+        InnerWidth = width;
+        InnerHeight = height;
 
         StateHasChanged();
+
+        return Task.CompletedTask;
     }
 
     public async void Dispose()

@@ -1,0 +1,21 @@
+﻿@page "/inject-page"
+@inject ServiceA singletonA;
+@inject ServiceB scopedB;
+@inject ServiceC transientC;
+
+<div>
+    <h5>Inject-Page</h5>
+    <p>Singleton: @singletonA.GetHashCode()</p>
+    <p>Scoped: @scopedB.GetHashCode()</p>
+    <p>Transient: @transientC.GetHashCode()</p>
+
+    <ComponentA />
+    <ComponentB />
+</div>
+
+@code{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}

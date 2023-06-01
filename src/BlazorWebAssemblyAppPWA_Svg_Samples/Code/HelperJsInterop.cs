@@ -1,10 +1,13 @@
-﻿using Microsoft.JSInterop;
+﻿using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.JSInterop;
+using System.ComponentModel;
+using System.Xml.Linq;
 
 namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 {
 	public class HelperJsInterop : IAsyncDisposable
 	{
-		private static Func<Task>? _staticOnLogAsync;
+		private static Func<int, int, Task>? _staticOnLogAsync;
 		private readonly Lazy<Task<IJSObjectReference>> moduleTask;
 
 		public HelperJsInterop(IJSRuntime jsRuntime)
@@ -20,9 +23,9 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 		}
 
 		[JSInvokable("OnBrowserResizeHandler")]
-		public static async Task OnBrowserResizeee()
+		public static async Task OnBrowserResizeee(int width, int height)
 		{
-			await _staticOnLogAsync?.Invoke();
+			await _staticOnLogAsync?.Invoke(width, height);
 		}
 
 		public async Task<int> GetInnerHeight()
@@ -55,7 +58,7 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 			}
 		}
 
-		public event Func<Task> OnResize = () => { return Task.CompletedTask; };
+		public event Func<int, int, Task> OnResize = (w,h) => { return Task.CompletedTask; };
 	}
 
 	public class BoundingClientRect
@@ -69,4 +72,66 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 		public double Bottom { get; set; }
 		public double Left { get; set; }
 	}
+
+	public class JSRuntimeService : IAsyncDisposable
+	{
+		private readonly Lazy<Task<IJSObjectReference>>? moduleTask;
+        private DotNetObjectReference<JSRuntimeService>? _dotNetHelper;
+		private readonly IJSRuntime _jSRuntime;
+
+        public JSRuntimeService(IJSRuntime jsRuntime)
+        {
+			_jSRuntime = jsRuntime ?? throw new ArgumentNullException(nameof(jsRuntime));
+            _dotNetHelper = DotNetObjectReference.Create(this);
+		}
+
+		public async Task InitializeAync()
+		{
+            await _jSRuntime.InvokeVoidAsync("WindowHelpers.setDotNetHelper", _dotNetHelper);
+		}
+
+		[JSInvokable("OnBrowserResizeHandlerInstance")]
+		public Task OnBrowserResize(int width, int height)
+		{
+			var handler = _windowSizeChanged;
+            if (handler != null)
+            {
+                handler(this, new WindowSizeChangedEventArgs(width, height));
+            }
+            return Task.CompletedTask;
+        }
+
+		private EventHandler<WindowSizeChangedEventArgs>? _windowSizeChanged;
+
+		/// <summary>
+		/// An event that fires when the window is resized.
+		/// </summary>
+		public event EventHandler<WindowSizeChangedEventArgs> WindowResize
+		{
+			add { _windowSizeChanged += value; }
+			remove { _windowSizeChanged -= value; }
+		}
+
+		public async ValueTask DisposeAsync()
+		{
+			if (moduleTask != null && moduleTask.IsValueCreated)
+			{
+				var module = await moduleTask.Value;
+				await module.DisposeAsync();
+			}
+		}
+	}
+
+    public class WindowSizeChangedEventArgs : EventArgs
+    {
+        public WindowSizeChangedEventArgs(int width, int height)
+        {
+            Width = width;
+            Height = height;
+        }
+
+		public int Width { get; }
+        public int Height { get; }
+    }
+
 }

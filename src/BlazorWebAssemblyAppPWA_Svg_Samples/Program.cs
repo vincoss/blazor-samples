@@ -13,5 +13,6 @@ var services = builder.Services;
 
 services.AddSingleton<ConsoleJsInterop>();
 services.AddTransient<HelperJsInterop>();
+services.AddSingleton<JSRuntimeService>();
 
 await builder.Build().RunAsync();
