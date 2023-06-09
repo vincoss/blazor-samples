@@ -1,6 +1,4 @@
 ﻿
-
-detact orientation in maui app, blazor
 list view template - sample
 	font Icon
 	Title
@@ -14,11 +12,6 @@ matrix font fain
 	canvas in maui
 	svg sample https://codepen.io/riazxrazor/pen/Gjomdp
 
-
-maui - blazor appear & dissapear page event pause, run sample
-		navigation from page shall stop timer, in blazor, navigate back shall start timer
-		see App.Current.MainPage.Loaded event
-maui - splash screen
 
 ## Resources
 https://docs.microsoft.com/en-gb/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-6.0
