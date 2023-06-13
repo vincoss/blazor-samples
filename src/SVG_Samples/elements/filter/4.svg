@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<defs>
+		<g id="petal">
+			<path d="M 10 0 Q 27 -15 40 0 27 15 10 0" />
+		</g>
+
+		<g id="flower" fill="pink">
+			<path  d="M 50 50 Q 40 70, 70 100 T 70 150" style="stroke: green; fill: none; stroke-width: 3;"/>
+			<path d="M 70 100 Q 80 70, 120 80, 90 75, 75 105" style="stroke: none; fill: green;"/>
+			<circle cx="40" cy="50" r="10" style="fill: gray;"/>
+			<g style="stroke: black; fill: yellow;">
+				<use xlink:href="#petal" transform="translate(40,50)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(40)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(80)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(120)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(160)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(200)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(240)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(280)"/>
+				<use xlink:href="#petal" transform="translate(40,50)  rotate(320)"/>
+			</g>
+		</g>
+
+		<!--Lighting Effects-->
+		<path id="curve" d="M 0 0 Q 5 20 10 10 T 20 20" style="stroke: black; fill: none;"/>
+		<filter id="diff-light" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+			<feImage xlink:href="#curve" result="tile" width="20" height="20"/>
+			<feTile in="tile" result="tile"/>
+			<feDiffuseLighting in="tile"
+			lighting-color="#ffffcc"
+			surfaceScale="1"
+			diffuseConstant="0.5"
+			result="diffuseOutput">
+				<fePointLight x="0" y="50" z="50"/>
+			</feDiffuseLighting>
+			<feComposite in="diffuseOutput" in2="SourceGraphic" operator="in" result="diffuseOutput"/>
+			<feBlend in="diffuseOutput" in2="SourceGraphic" mode="screen"/>
+		</filter>
+
+		<!--Specular Lighting-->
+		<filter id="spec-light" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+			<feImage xlink:href="#curve" result="tile"
+			width="20" height="20"/>
+			<feTile in="tile" result="tile"/>
+			<feSpecularLighting in="tile"
+			lighting-color="#ffffcc"
+			surfaceScale="1"
+			specularConstant="1"
+			specularExponent="4"
+			result="specularOutput">
+				<feDistantLight elevation="25" azimuth="0"/>
+			</feSpecularLighting>
+			<feComposite in="specularOutput" in2="SourceGraphic" operator="in" result="specularOutput"/>
+			<feComposite in="specularOutput" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+		</filter>
+
+		<!--Accessing the Background-->
+		<filter id="blur-background">
+			<feImage xlink:href="#background" result="bg"/>
+			<feGaussianBlur in="bg" stdDeviation="2" result="blur" />
+			<feComposite in="blur" in2="SourceGraphic" operator="in" />
+			<feOffset dx="4" dy="4" result="offsetBlur"/>
+		</filter>
+
+		<!--The <feMorphology> Element-->
+		<filter id="erode1">
+			<feMorphology operator="erode" radius="1"/>
+		</filter>
+		<filter id="dilate2">
+			<feMorphology operator="dilate" radius="2"/>
+		</filter>
+		
+		<!--The <feConvolveMatrix> Element-->
+		<filter id="emboss">
+			<feConvolveMatrix
+			preserveAlpha="true"
+			kernelMatrix="1 0 0 0 0 0 0 0 -1"
+			bias="0.5"/>
+		</filter>
+		
+		<!--The <feDisplacementMap> Element-->
+		<linearGradient id="gradient">
+			<stop offset="0" style="stop-color: #ff0000;" />
+			<stop offset="0.5" style="stop-color: #00ff00;"/>
+			<stop offset="1" style="stop-color: #000000;"/>
+		</linearGradient>
+		
+		<filter id="displace">
+			<feImage xlink:href="#rectangle" result="grad"/>
+			<feDisplacementMap
+			scale="10"
+			xChannelSelector="R"
+			yChannelSelector="G"
+			in="SourceGraphic" in2="grad"/>
+		</filter>
+		
+		<filter id="self-displace">
+			<feDisplacementMap
+			scale="10"
+			xChannelSelector="R"
+			yChannelSelector="G"
+			in="SourceGraphic" in2="SourceGraphic"/>
+		</filter>
+		
+		<!--The <feTurbulence> Element-->
+		<filter id="turbFilter">
+			<feTurbulence type="turbulence"
+			  baseFrequency="0.09" numOctaves=".5"
+			  in="SourceGraphic"/>
+		</filter>
+		
+	</defs>
+
+	<g id="background">
+		<rect x="0" y="0" width="60" height="60" style="fill: lightblue; stroke: blue; stroke-width:10" />
+	</g>
+
+	<circle cx="40" cy="40" r="30" style="fill: #fff; filter: url(#blur-background);" />
+
+	<circle id="green-light" cx="150" cy="50" r="50" style="fill: #060; filter: url(#diff-light)"/>
+	<circle id="green-light" cx="300" cy="50" r="50" style="fill: #060; filter: url(#spec-light)"/>
+
+	<svg y="200">
+		<use xlink:href="#flower"/>
+		<text x="75" y="170" style="text-anchor: middle;">Normal</text>
+		<use xlink:href="#flower" transform="translate(150,0)" style="filter: url(#erode1);"/>
+		<text x="225" y="170" style="text-anchor: middle;">Erode 1</text>
+		<use xlink:href="#flower" transform="translate(300,0)" style="filter: url(#dilate2);"/>
+		<text x="375" y="170" style="text-anchor: middle;">Dilate 2</text>
+	</svg>
+
+	<use y="400" xlink:href="#flower" style="filter: url(#emboss);"/>
+
+	<rect id="rectangle" x="150" y="600" width="100" height="200" style="fill: url(#gradient);"/>
+	<use y="600" xlink:href="#flower" style="filter: url(#displace);"/>
+	
+	<use x="300" y="600" xlink:href="#flower" style="filter: url(#self-displace);"/>
+
+	<svg x="500" y="600" style="font-family: sans-serif; font-size: 12pt">
+		<g transform="translate(10,20)">
+			<rect x="25" y="0" width="50" height="50"
+			  style="filter: url(#turbFilter);"/>
+			<text x="0" y="70">type="turbulence"</text>
+			<text x="0" y="85">baseFrequency="0.09"</text>
+			<text x="0" y="100">numOctaves=".5"</text>
+		</g>
+	</svg>
+	
+</svg>

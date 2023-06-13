@@ -59,11 +59,40 @@
 		
 		<!--The <feComposite> Filter-->
 
+		<filter id="sky-in" filterUnits="objectBoundingBox">
+			<feImage xlink:href="sky.jpg" result="sky" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none"/>
+			<feComposite in="sky" in2="SourceGraphic" operator="in"/>
+		</filter>
+		<filter id="sky-out" filterUnits="objectBoundingBox">
+			<feImage xlink:href="sky.jpg" result="sky" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none"/>
+			<feComposite in="sky" in2="SourceGraphic" operator="out"/>
+		</filter>
+		
+		<!--The <feBlend> Filter-->
+		<!--The <feFlood> and <feTile> Filters-->
+		<filter id="flood-filter" x="0" y="0" width="100%" height="100%">
+			<feFlood flood-color="#993300" flood-opacity="0.8" result="tint"/>
+			<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+		</filter>
+
+		<filter id="tile-filter" x="0" y="0" width="100%" height="100%">
+			<feImage xlink:href="cloth.jpg" width="32" height="32" result="cloth"/>
+			<feTile in="cloth" result="cloth"/>
+			<feComposite in="cloth" in2="SourceGraphic" operator="in"/>
+		</filter>
+		
+		<!--Lighting Effects-->
+		
 	</defs>
 
 	<use x="0" xlink:href="#flower" />
 	<use x="120" xlink:href="#flower" filter="url(#drop-shadow)" />
 	<use x="240" xlink:href="#flower" filter="url(#drop-shadow2)" />
-	<use x="360" xlink:href="#flower" filter="url(brightness-shadow)" />
+	<use x="400" xlink:href="#flower" filter="url(#brightness-shadow)" />
+	<use x="550" xlink:href="#flower" filter="url(#sky-in)" />
+	<use x="680" xlink:href="#flower" filter="url(#sky-out)" />
+	<use x="800" xlink:href="#flower" filter="url(#flood-filter)" />
+	<use x="920" xlink:href="#flower" filter="url(#tile-filter)" />
+	<image xlink:href="cloth.jpg" x="1020" y="20" width="32" height="32"/>
 
 </svg>
