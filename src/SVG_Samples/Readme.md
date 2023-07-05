@@ -1,6 +1,6 @@
 ﻿
 ## Temp
-next 145 page Clipping and Masking
+next 191 Animating SVG
 static position then calc change based on screen change
 
 

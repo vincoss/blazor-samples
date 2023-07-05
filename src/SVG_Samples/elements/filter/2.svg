@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<rect width="100%" height="100%" fill="#dcdcdc" />
+
+	<defs>
+		<g id="petal">
+			<path d="M 10 0 Q 27 -15 40 0 27 15 10 0" />
+		</g>
+
+		<g id="flower" fill="pink">
+			<path  d="M 50 50 Q 40 70, 70 100 T 70 150" style="stroke: green; fill: none; stroke-width: 3;"/>
+			<path d="M 70 100 Q 80 70, 120 80, 90 75, 75 105" style="stroke: none; fill: green;"/>
+			<circle cx="40" cy="50" r="10" style="fill: gray;"/>
+			<g style="stroke: black; fill: yellow;">
+				<use xlink:href="#petal" transform="translate(40,50)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(40)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(80)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(120)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(160)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(200)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(240)"/>
+				<use xlink:href="#petal" transform="translate(40,50) rotate(280)"/>
+				<use xlink:href="#petal" transform="translate(40,50)  rotate(320)"/>
+			</g>
+		</g>
+
+		<!--Using <feGaussianBlur> for a Drop Shadow-->
+		<filter id="drop-shadow">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+		</filter>
+
+		<!--Storing, Chaining, and Merging Filter Results-->
+		<filter id="drop-shadow2">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+			<feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+			<feMerge>
+				<feMergeNode in="offsetBlur"/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+
+		<!--The <feComponentTransfer> Filter-->
+		<filter id="brightness-shadow" filterUnits="objectBoundingBox">
+			<feImage xlink:href="sky.jpg" result="sky"/>
+			<feComponentTransfer in="sky" result="sky">
+				<feFuncB type="linear" slope="3" intercept="0"/>
+				<feFuncR type="linear" slope="1.5" intercept="0.2"/>
+				<feFuncG type="linear" slope="1.5" intercept="0.2"/>
+			</feComponentTransfer>
+			<feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+			<feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+			<feMerge>
+				<feMergeNode in="sky"/>
+				<feMergeNode in="offsetBlur"/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+		
+		<!--The <feComposite> Filter-->
+
+		<filter id="sky-in" filterUnits="objectBoundingBox">
+			<feImage xlink:href="sky.jpg" result="sky" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none"/>
+			<feComposite in="sky" in2="SourceGraphic" operator="in"/>
+		</filter>
+		<filter id="sky-out" filterUnits="objectBoundingBox">
+			<feImage xlink:href="sky.jpg" result="sky" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none"/>
+			<feComposite in="sky" in2="SourceGraphic" operator="out"/>
+		</filter>
+		
+		<!--The <feBlend> Filter-->
+		<!--The <feFlood> and <feTile> Filters-->
+		<filter id="flood-filter" x="0" y="0" width="100%" height="100%">
+			<feFlood flood-color="#993300" flood-opacity="0.8" result="tint"/>
+			<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+		</filter>
+
+		<filter id="tile-filter" x="0" y="0" width="100%" height="100%">
+			<feImage xlink:href="cloth.jpg" width="32" height="32" result="cloth"/>
+			<feTile in="cloth" result="cloth"/>
+			<feComposite in="cloth" in2="SourceGraphic" operator="in"/>
+		</filter>
+		
+		<!--Lighting Effects-->
+		
+	</defs>
+
+	<use x="0" xlink:href="#flower" />
+	<use x="120" xlink:href="#flower" filter="url(#drop-shadow)" />
+	<use x="240" xlink:href="#flower" filter="url(#drop-shadow2)" />
+	<use x="400" xlink:href="#flower" filter="url(#brightness-shadow)" />
+	<use x="550" xlink:href="#flower" filter="url(#sky-in)" />
+	<use x="680" xlink:href="#flower" filter="url(#sky-out)" />
+	<use x="800" xlink:href="#flower" filter="url(#flood-filter)" />
+	<use x="920" xlink:href="#flower" filter="url(#tile-filter)" />
+	<image xlink:href="cloth.jpg" x="1020" y="20" width="32" height="32"/>
+
+</svg>
