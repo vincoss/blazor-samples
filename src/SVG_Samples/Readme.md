@@ -307,6 +307,8 @@ https://github.com/adobe-webplatform/Snap.svg
 https://caniuse.com/?search=svg
 https://github.com/svg-net/SVG
 http://raphaeljs.com/
+http://snapsvg.io/
+https://d3js.org/
 
 ## Colors
 https://materialui.co/colors/
