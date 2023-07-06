@@ -9,11 +9,18 @@ This stylesheet uses a variety of selectors, including *, which sets a default f
 } /* default for all elements */
 
 rect {
+    fill: pink;
     stroke-dasharray: 7 3;
 }
 
 circle.yellow {
     fill: yellow;
+}
+
+circle.special {
+    stroke: red;
+    stroke-width: 3px;
+    fill: #ccccff;
 }
 
 .thick {
@@ -23,4 +30,14 @@ circle.yellow {
 .semiblue {
     fill: blue;
     fill-opacity: 0.5;
+}
+
+.warning {
+    fill: yellow;
+    stroke: red;
+}
+
+.seeThrough {
+    fill-opacity: 0.25;
+    stroke-opacity: 0.5;
 }

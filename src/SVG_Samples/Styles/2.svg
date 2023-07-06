@@ -13,6 +13,12 @@
 		<circle class="yellow" cx="70" cy="20" r="10"/>
 		<polygon class="thick" points="60 50, 60 80, 90 80"/>
 		<polygon class="thick semiblue" points="100 30, 150 30, 150 50, 130 50"/>
+		<circle class="special" cx="170" cy="20" r="10"/>
+	</svg>
+
+	<svg x="300">
+		<rect class="warning" x="5" y="10" width="20" height="30"/>
+		<polygon class="warning seeThrough" points="40 40, 40 60, 60 50"/>
 	</svg>
 	
 </svg>
