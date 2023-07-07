@@ -1,9 +1,59 @@
 ﻿<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+  <!--
+    https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform
+  -->
+  
 	<svg width="100" height="100" viewBox="0 0 100 100">
 		<rect width="100%" height="100%" fill="gold" />
 		<rect width="30" height="30" x="50%" y="50%" transform="translate(-15,-15)" fill="green" />
 	</svg>
-	
+
+  <svg y="110" width="100" height="100" viewBox="0 0 100 100">
+    <rect width="100%" height="100%" fill="pink" />
+    <rect x="10" y="10" width="10" height="10" fill="gray" />
+    <rect x="10" y="10" width="10" height="10" fill="green" transform="translate(20,20)"/>
+  </svg>
+
+  <svg y="220" width="200" height="200" viewBox="0 0 200 200">
+    <rect width="100%" height="100%" fill="pink" />
+    <rect x="10" y="10" width="30" height="20" fill="green" />
+    <rect
+    x="10"
+    y="10"
+    width="30"
+    height="20"
+    fill="red"
+    transform="matrix(3 1 -1 3 30 40)" />
+  </svg>
+
+  <svg y="430" width="200" height="200">
+    <rect width="100%" height="100%" fill="pink" />
+    <rect x="20" y="20" width="50" height="50" style="fill: #cc3333"/>
+    <rect x="20" y="20" width="50" height="50" style="fill: #3333cc" transform="matrix(1,0,0,1,100,20)" />
+  </svg>
+
+  <svg x="210" width="200" height="200">
+    <rect width="100%" height="100%" fill="pink" />
+
+    <svg x="10" y="10" width="48" height="48">
+      <g>
+        <path fill="none" viewBox="0 0 24 24" d="M15 9.00004L9 15M15 15L9 9.00004M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </svg>
+    
+    <g x="10" y="10" width="48" height="48" viewBox="0 0 24 24" fill="none" transform="matrix(1.3,0,0,1.3,100,20)">
+      <path d="M15 9.00004L9 15M15 15L9 9.00004M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <svg x="50" y="10" width="48" height="48">
+      <g>
+        <path fill="none" viewBox="0 0 24 24" d="M15 9.00004L9 15M15 15L9 9.00004M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </svg>
+    
+  </svg>
+
+
 </svg>
