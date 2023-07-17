@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init(evt)">
+  
+  <title>OnLoad method sample</title>
+  
+  <!--
+    https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNS
+  -->
+  
+  <script>
+    var info,infoElem;
+
+    function init(e) {
+    if ( window.svgDocument == null )
+    svgDocument = e.target.ownerDocument;
+
+    infoElem = svgDocument.getElementById("info");
+    infoElem.setAttributeNS(null,"fill", "fuchsia");
+    }
+
+    function changeColor(c){
+    infoElem.setAttributeNS(null,"fill", c);
+    }
+  </script>
+  <text id="info" x="20"  y="20" onclick="changeColor('lightgreen')" onmouseout="changeColor('black')">Load me</text>
+</svg>

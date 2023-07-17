@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init()">
+
+  <title>Wrap text</title>
+
+  <!--
+    https://stackoverflow.com/questions/4991171/auto-line-wrapping-in-svg-text
+    https://www.balisage.net/Proceedings/vol26/html/Birnbaum01/BalisageVol26-Birnbaum01.html
+    https://observablehq.com/@jtrim-ons/svg-text-wrapping
+  -->
+
+  <script type="application/ecmascript">
+    <![CDATA[
+
+    function init()
+    {
+        svg_textMultiline();
+    }
+
+    function svg_textMultiline() 
+    {
+          var x = 0;
+          var y = 20;
+          var width = 360;
+          var lineHeight = 10;
+  
+          /* get the text */
+          var element = document.getElementById('multiline-text');
+          var text = element.innerHTML;
+
+          /* split the words into array */
+          var words = text.split(' ');
+          var line = '';
+
+          /* Make a tspan for testing */
+          element.innerHTML = '<tspan id="PROCESSING">busy</tspan >';
+
+          for (var n = 0; n < words.length; n++) {
+            var testLine = line + words[n] + ' ';
+            var testElem = document.getElementById('PROCESSING');
+            /*  Add line in testElement */
+            testElem.innerHTML = testLine;
+            /* Messure textElement */
+            var metrics = testElem.getBoundingClientRect();
+            testWidth = metrics.width;
+
+            if (testWidth > width && n > 0) {
+              element.innerHTML += '<tspan x="0" dy="' + y + '">' + line + '</tspan>';
+              line = words[n] + ' ';
+            } else {
+              line = testLine;
+            }
+          }
+  
+          element.innerHTML += '<tspan x="0" dy="' + y + '">' + line + '</tspan>';
+          document.getElementById("PROCESSING").remove();
+    }
+  ]]>
+  </script>
+
+  <svg x="10" y="10" height="300" width="500">
+    <rect width="100%" height="100%" fill="#dcdcdc" />
+
+    <text id="multiline-text" dominant-baseline="auto" text-anchor="center">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </text>
+  </svg>
+
+</svg>
