@@ -27,7 +27,7 @@
           /* get the text */
           var element = document.getElementById('multiline-text');
           var text = element.innerHTML;
-
+          
           /* split the words into array */
           var words = text.split(' ');
           var line = '';
@@ -62,7 +62,7 @@
     <rect width="100%" height="100%" fill="#dcdcdc" />
 
     <text id="multiline-text" dominant-baseline="auto" text-anchor="center">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, conse-ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </text>
   </svg>
 

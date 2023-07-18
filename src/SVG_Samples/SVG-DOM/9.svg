@@ -1,18 +1,31 @@
 ﻿<?xml version="1.0" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init()">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init(evt)">
 
   <title>Wrap text</title>
 
-  <!--
-xlink:href="https://d3js.org/d3.v4.min.js"
-  -->
-
-  <script type="application/ecmascript" xlink:href="https://d3js.org/d3.v4.min.js">
+  <script type="application/ecmascript">
     <![CDATA[
 
-    function init()
+    const svgNS = "http://www.w3.org/2000/svg";
+
+    function init(evt)
     {
-        svg_textMultiline();
+        if (window.svgDocument == null ) 
+        {
+            svgDocument = evt.target.ownerDocument;
+        }
+        
+        var text_element = svgDocument.getElementById('multiline-text');
+    
+        const message = text_element.innerHTML; 
+        const width = 150;
+        const dyAdjust = .35;
+        const lineHeightEms = 1.05;
+        const lineHeightSquishFactor = 1;
+        const splitOnHyphen = true;
+        const centreVertically = true;
+      
+        wrap(message, width, dyAdjust, lineHeightEms, lineHeightSquishFactor, splitOnHyphen, centreVertically);
     }
 
    function wrap(
@@ -24,85 +37,100 @@ xlink:href="https://d3js.org/d3.v4.min.js"
   splitOnHyphen,
   centreVertically
 ) {
-  // Use default values for the last three parameters if values are not provided.
-  if (!lineHeightEms) lineHeightEms = 1.05;
-  if (!lineHeightSquishFactor) lineHeightSquishFactor = 1;
-  if (splitOnHyphen == null) splitOnHyphen = true;
-  if (centreVertically == null) centreVertically = true;
+      // Use default values for the last three parameters if values are not provided.
+      if (!lineHeightEms) lineHeightEms = 1.05;
+      if (!lineHeightSquishFactor) lineHeightSquishFactor = 1;
+      if (splitOnHyphen == null) splitOnHyphen = true;
+      if (centreVertically == null) centreVertically = true;
 
-  text.each(function () {
-    var text = d3.select(this),
-      x = text.attr("x"),
-      y = text.attr("y");
-
-    var words = [];
-    text
-      .text()
-      .split(/\s+/)
-      .forEach(function (w) {
+      var words = [];
+      text.split(/\s+/).forEach(function (w) {
         if (splitOnHyphen) {
-          var subWords = w.split("-");
+          var subWords = w.split('-');
           for (var i = 0; i < subWords.length - 1; i++)
-            words.push(subWords[i] + "-");
+            words.push(subWords[i] + '-');
           words.push(subWords[subWords.length - 1] + " ");
         } else {
           words.push(w + " ");
         }
       });
+      
+      // Empty text
+      if(words.length <= 0) return;
+      
+      var text_element = svgDocument.getElementById('multiline-text');
+      var tspan_element = document.createElementNS(svgNS, "tspan");   // Create first tspan element
+      var text_node = svgDocument.createTextNode(null);               // Create text in tspan element
 
-    text.text(null); // Empty the text element
-
-    // `tspan` is the tspan element that is currently being added to
-    var tspan = text.append("tspan");
-
-    var line = ""; // The current value of the line
-    var prevLine = ""; // The value of the line before the last word (or sub-word) was added
-    var nWordsInLine = 0; // Number of words in the line
-    for (var i = 0; i < words.length; i++) {
-      var word = words[i];
-      prevLine = line;
-      line = line + word;
-      ++nWordsInLine;
-      tspan.text(line.trim());
-      if (tspan.node().getComputedTextLength() > width && nWordsInLine > 1) {
-        // The tspan is too long, and it contains more than one word.
-        // Remove the last word and add it to a new tspan.
-        tspan.text(prevLine.trim());
-        prevLine = "";
-        line = word;
-        nWordsInLine = 1;
-        tspan = text.append("tspan").text(word.trim());
-      }
+      text_element.innerHTML = ""; // Empty the text element
+      
+      var x = text_element.getAttribute("x");
+      var y = text_element.getAttribute("y");
+      
+      tspan_element.appendChild(text_node);                           // Add tspan element to DOM
+      text_element.appendChild(tspan_element);                        // Add text to tspan element
+      
+        var line = ""; // The current value of the line
+        var prevLine = ""; // The value of the line before the last word (or sub-word) was added
+        var nWordsInLine = 0; // Number of words in the line
+        for (var i = 0; i < words.length; i++) 
+        {
+            var word = words[i];
+            prevLine = line;
+            line = line + word;
+            ++nWordsInLine;
+        
+            tspan_element.firstChild.data = line.trim();
+          
+            if (tspan_element.getComputedTextLength() > width && nWordsInLine > 1) 
+            {
+                // The tspan is too long, and it contains more than one word.
+                // Remove the last word and add it to a new tspan.
+                tspan_element.firstChild.data = prevLine.trim();
+                prevLine = "";
+                line = word;
+                nWordsInLine = 1;
+              
+               var tspan_element = document.createElementNS(svgNS, "tspan");       // Create new tspan element
+               text_element.appendChild(tspan_element);
+               text_node = svgDocument.createTextNode(line.trim());
+               tspan_element.appendChild(text_node);
+               text_element.appendChild(tspan_element);
+            }
+        }
+      
+        var tspans = text_element.getElementsByTagName("tspan");
+       
+        var h = lineHeightEms;
+        
+        // Reduce the line height a bit if there are more than 2 lines.
+        if (tspans.length > 2)
+        {
+            for (var i = 0; i < tspans.length; i++) h *= lineHeightSquishFactor;
+        }
+       
+        for (let i = 0; i < tspans.length; i++) 
+        {
+            // Calculate the y offset (dy) for each tspan so that the vertical centre
+            // of the tspans roughly aligns with the text element's y position.
+            var dy = i * h + dyAdjust;
+            if (centreVertically) dy -= ((tspans.length - 1) * h) / 2;
+          
+            var tspan = tspans[i];
+            tspan.setAttributeNS(null, "y", y);
+            tspan.setAttributeNS(null, "x", x);
+            tspan.setAttributeNS(null, "dy", dy + "em");
+        };
+       
+        //console.error(text_element);
     }
-
-    var tspans = text.selectAll("tspan");
-
-    var h = lineHeightEms;
-    // Reduce the line height a bit if there are more than 2 lines.
-    if (tspans.size() > 2)
-      for (var i = 0; i < tspans.size(); i++) h *= lineHeightSquishFactor;
-
-    tspans.each(function (d, i) {
-      // Calculate the y offset (dy) for each tspan so that the vertical centre
-      // of the tspans roughly aligns with the text element's y position.
-      var dy = i * h + dyAdjust;
-      if (centreVertically) dy -= ((tspans.size() - 1) * h) / 2;
-      d3.select(this)
-        .attr("y", y)
-        .attr("x", x)
-        .attr("dy", dy + "em");
-    });
-  });
-}
   ]]>
   </script>
 
-  <svg x="10" y="10" height="300" width="500">
+  <svg x="10" y="10" height="500" width="500">
     <rect width="100%" height="100%" fill="#dcdcdc" />
 
-    <text id="multiline-text" dominant-baseline="auto" text-anchor="center">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </text>
+    <text x="0" y="200" id="multiline-text">Lorem ipsum dolor sit amet, consec-tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</text>
   </svg>
 
 </svg>
