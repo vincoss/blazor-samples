@@ -2,7 +2,8 @@
 ## Temp
 next 327
 static position then calc change based on screen change
-
+https://www.veryicon.com/
+https://learn.microsoft.com/en-us/typography/opentype/spec/svg
 
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
 https://css-tricks.com/scale-svg/
