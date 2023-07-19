@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init(evt)">
+
+  <title>Wrap text</title>
+  
+  <!--
+    https://stackoverflow.com/questions/7046986/svg-using-getcomputedtextlength-to-wrap-text
+  -->
+
+  <script type="application/ecmascript">
+    <![CDATA[
+
+    var svgNS = "http://www.w3.org/2000/svg";
+    var width = 200;
+
+    function init(evt)
+    {
+        if (window.svgDocument == null ) 
+        {
+            svgDocument = evt.target.ownerDocument;
+        }
+        create_multiline("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+    }
+
+    function create_multiline(text) 
+    {
+        var words = text.split(' ');                        
+        var text_element = svgDocument.getElementById('multiline-text');
+        var tspan_element = document.createElementNS(svgNS, "tspan");   // Create first tspan element
+        var text_node = svgDocument.createTextNode(words[0]);           // Create text in tspan element
+
+        tspan_element.appendChild(text_node);                           // Add tspan element to DOM
+        text_element.appendChild(tspan_element);                        // Add text to tspan element
+
+        for(var i=1; i<words.length; i++)
+        {
+            var len = tspan_element.firstChild.data.length;             // Find number of letters in string
+            tspan_element.firstChild.data += " " + words[i];            // Add next word
+
+            if (tspan_element.getComputedTextLength() > width)
+            {
+                tspan_element.firstChild.data = tspan_element.firstChild.data.slice(0, len);    // Remove added word
+
+                var tspan_element = document.createElementNS(svgNS, "tspan");       // Create new tspan element
+                tspan_element.setAttributeNS(null, "x", 10);
+                tspan_element.setAttributeNS(null, "dy", 18);
+                text_node = svgDocument.createTextNode(words[i]);
+                tspan_element.appendChild(text_node);
+                text_element.appendChild(tspan_element);
+            }
+        }
+    }
+  ]]>
+  </script>
+
+  <svg x="10" y="10" width="210" height="290">
+    <rect width="100%" height="100%" fill="#dcdcdc" />
+    
+    <text x="10" y="10" id="multiline-text" dominant-baseline="middle" text-anchor="start"></text>
+  </svg>
+  
+</svg>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init()">
+
+  <title>Text ellipsis</title>
+
+  <script type="application/ecmascript">
+    <![CDATA[
+
+    function init()
+    {
+         /* get the text */
+         var element = document.getElementById('multiline-text');
+         var text = element.innerHTML;
+          
+         textEllipsis(element, text, 200);
+    }
+    
+    function textEllipsis(el, text, width) 
+    {
+      if (typeof el.getSubStringLength !== "undefined") {
+        el.textContent = text;
+        var len = text.length;
+        while (el.getSubStringLength(0, len--) > width) {
+            el.textContent = text.slice(0, len) + "...";
+        }
+      } else if (typeof el.getComputedTextLength !== "undefined") {
+        while (el.getComputedTextLength() > width) {
+          text = text.slice(0,-1);
+          el.textContent = text + "...";
+        }
+      } else {
+        // the last fallback
+        while (el.getBBox().width > width) {
+          text = text.slice(0,-1);
+          // we need to update the textContent to update the boundary width
+          el.textContent = text + "...";
+        }
+      }
+  }
+
+  ]]>
+  </script>
+
+  <svg x="10" y="10" height="300" width="500">
+    <rect width="100%" height="100%" fill="#dcdcdc" />
+
+    <text id="multiline-text" dominant-baseline="hanging" text-anchor="center">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </text>
+  </svg>
+
+</svg>
