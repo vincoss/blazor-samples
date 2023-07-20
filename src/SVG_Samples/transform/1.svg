@@ -5,9 +5,11 @@
     https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform
   -->
   
+  <!--Translate-->
 	<svg width="100" height="100" viewBox="0 0 100 100">
 		<rect width="100%" height="100%" fill="gold" />
-		<rect width="30" height="30" x="50%" y="50%" transform="translate(-15,-15)" fill="green" />
+    <rect width="30" height="30" x="20" y="20" fill="pink" />
+		<rect width="30" height="30" x="20" y="20" transform="translate(-15,-15)" fill="green" />
 	</svg>
 
   <svg y="110" width="100" height="100" viewBox="0 0 100 100">
@@ -31,7 +33,7 @@
   <svg y="430" width="200" height="200">
     <rect width="100%" height="100%" fill="pink" />
     <rect x="20" y="20" width="50" height="50" style="fill: #cc3333"/>
-    <rect x="20" y="20" width="50" height="50" style="fill: #3333cc" transform="matrix(1,0,0,1,100,20)" />
+    <rect x="20" y="20" width="50" height="50" style="fill: #3333cc" transform="matrix(1,0,0,1,50,20)" />
   </svg>
 
   <svg x="210" width="200" height="200">
@@ -55,5 +57,54 @@
     
   </svg>
 
+  <!--Rotate-->
+  <svg x="210" y="220" width="200" height="200">
+    <rect width="100%" height="100%" fill="pink" />
+
+    <rect x="20" y="20" width="40" height="40" style="stroke: #3333cc; fill:none;" />
+
+    <rect x="20" y="20" width="40" height="40" style="fill: #3333cc" transform="rotate(15)" />
+
+    <rect x="100" y="20" width="40" height="40" style="stroke: #3333cc; fill:none;" />
+
+    <rect x="100" y="20" width="40" height="40" style="fill: #3333cc" transform="rotate(45, 120, 40)" />
+
+  </svg>
+
+  <!--Scale-->
+  <svg x="210" y="430" width="200" height="200">
+    <rect width="100%" height="100%" fill="pink" />
+
+    <rect x="10" y="10" width="20" height="30" style="stroke: #3333cc; fill:none;" />
+    <rect x="10" y="10" width="20" height="30" style="stroke: #000000; fill:none;" transform="scale(2)" />
+
+    <rect x="70" y="10" width="20" height="30" style="stroke: #3333cc; fill:none;" />
+    <rect x="70" y="10" width="20" height="30" style="stroke: #000000; fill:none;" transform="scale(2,3)" />
+    
+  </svg>
+
+  <!--Scale Mirror-->
+  <svg x="0" y="640" width="200" height="200">
+    <rect width="100%" height="100%" fill="pink" />
+
+    <path d="M20,20 l20,20 l0,20 l-20,20 Z" style="stroke: #3333cc; fill:none;" />
+    <path d="M20,20 l20,20 l0,20 l-20,20 Z" style="stroke: #000000; fill:none;" transform="translate(100, 0) scale(-1, 1) " />
+  </svg>
+
+  <!--Skew-->
+  <svg x="210" y="640" width="200" height="200">
+    <rect width="100%" height="100%" fill="pink" />
+
+    <rect x="10" y="10" width="20" height="30" style="stroke: #3333cc; fill:none;" />
+    <rect x="40" y="10" width="20" height="30" style="stroke: #000000; fill:none;" transform="skewX(10)" />
+    <rect x="70" y="10" width="20" height="30" style="stroke: #000000; fill:none;" transform="skewX(45)" />
+    <rect x="100" y="10" width="20" height="30" style="stroke: #000000; fill:none;" transform="skewX(60)" />
+
+    <rect x="10" y="45" width="20" height="30" style="stroke: #3333cc; fill:none;" />
+    <rect x="50" y="45" width="20" height="30" style="stroke: #000000; fill:none;" transform="skewY(60)" />
+    <rect x="100" y="45" width="20" height="30" style="stroke: #000000; fill:none;" transform="skewY(45)" />
+    <rect x="150" y="45" width="20" height="30" style="stroke: #000000; fill:none;" transform="skewY(10)" />
+    
+  </svg>
 
 </svg>
