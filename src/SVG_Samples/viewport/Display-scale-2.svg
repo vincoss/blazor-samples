@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+
+	 fill="none">
+
+	
+
+	<!--Scale -->
+
+	<svg width="100" height="200">
+		<svg width="1440" height="3088" viewBox="0 0 1440 3088">
+			<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+			<rect width="129" height="129" fill="black" />
+		</svg>
+	</svg>
+	
+</svg>
