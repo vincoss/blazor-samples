@@ -1,16 +1,43 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="5000" height="5000" viewBox="0 0 5000 5000"
+	  fill="none">
 
-	 fill="none">
+  <rect width="100%" height="100%" fill="gray" fill-opacity="20%" />
 
-	
+  <!--Scale 10% -->
+  <svg width="117" height="253.2">
+    <rect width="100%" height="100%" fill="green" fill-opacity="20%" />
+    <!-- Design-->
+    <svg viewBox="0 0 1440 3088">
+      <svg width="1440" height="3088">
+        <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+        <rect width="129" height="129" fill="black" />
+      </svg>
+    </svg>
+  </svg>
 
-	<!--Scale -->
+  <!--Scale 10% -->
+  <svg x="120" width="500" height="600">
+    <rect width="100%" height="100%" fill="green" fill-opacity="20%" />
+    <!-- Design-->
+    <svg viewBox="0 0 1440 3088">
+      <svg width="1440" height="3088">
+        <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+        <rect width="129" height="129" fill="black" />
+      </svg>
+    </svg>
+  </svg>
+  
+  <!--Scale 10% -->
+  <svg x="625" width="184.8" height="296">
+    <rect width="100%" height="100%" fill="green" fill-opacity="20%" />
+    <!-- Design-->
+    <svg viewBox="0 0 1440 3088">
+      <svg width="1440" height="3088">
+        <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+        <rect width="129" height="129" fill="black" />
+      </svg>
+    </svg>
+  </svg>
 
-	<svg width="100" height="200">
-		<svg width="1440" height="3088" viewBox="0 0 1440 3088">
-			<rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
-			<rect width="129" height="129" fill="black" />
-		</svg>
-	</svg>
-	
 </svg>
