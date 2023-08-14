@@ -1,24 +1,18 @@
 ﻿
 ## Temp
-next 327
-static position then calc change based on screen change
-https://www.veryicon.com/
-https://learn.microsoft.com/en-us/typography/opentype/spec/svg
+static position (design) then calc change based on screen change
+
 
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
 https://css-tricks.com/scale-svg/
 https://css-tricks.com/guide-svg-animations-smil/
 https://css-tricks.com/svg-line-animation-works/
-http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 https://css-tricks.com/mega-list-svg-information/
 
+http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
+
+
 ## Tasks
-https://learn.microsoft.com/en-us/typography/opentype/spec/svg
-
-svg text trimming
-svg wrap text
-
-review https://stackoverflow.com/search?q=svg&s=b1237bc8-c565-47b1-8781-7a3c819e6c4a
 
 buttons
 	click and tap effect
@@ -299,6 +293,7 @@ https://freesvg.org/
 https://www.svgrepo.com/
 https://visualpharm.com/
 https://elements.envato.com/graphics/icons/properties-vector?_ga=2.217397456.779593838.1681905736-589534885.1681905736
+https://www.veryicon.com/
 
 ## Tools
 https://inkscape.org/
@@ -315,3 +310,6 @@ https://d3js.org/
 ## Colors
 https://materialui.co/colors/
 https://m2.material.io/design/color/the-color-system.html#color-theme-creation
+
+## Resources
+https://github.com/DmitryBaranovskiy/raphael
