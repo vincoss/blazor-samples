@@ -1,11 +1,67 @@
-﻿using Microsoft.AspNetCore.Components.Routing;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.JSInterop;
 using System.ComponentModel;
 using System.Xml.Linq;
 
 namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 {
-	public class HelperJsInterop : IAsyncDisposable
+    /// <summary>
+    /// NOTE: This shall be singleton instance.
+    /// </summary>
+    public class BlazorJsInterop : IAsyncDisposable
+    {
+        private static Func<int, int, Task>? _staticOnLogAsync;
+        private readonly Lazy<Task<IJSObjectReference>> _moduleTask;
+
+        public BlazorJsInterop(IJSRuntime jsRuntime)
+        {
+            _moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>("import", "./blazorhelpers.js").AsTask());
+        }
+
+        public async Task InitializeAsync()
+        {
+            _staticOnLogAsync = this.OnResize;
+            var module = await _moduleTask.Value;
+            await module.InvokeVoidAsync("registerResizeCallback");
+        }
+
+        public async Task<BoundingClientRect> GetBoundingClientRectAsync(ElementReference element)
+        {
+            var module = await _moduleTask.Value;
+            return await module.InvokeAsync<BoundingClientRect>("getElementDOMRect", element);
+        }
+
+        public async Task<int> GetInnerHeight()
+        {
+            var module = await _moduleTask.Value;
+            return await module.InvokeAsync<int>("getInnerHeight");
+        }
+
+        public async Task<int> GetInnerWidth()
+        {
+            var module = await _moduleTask.Value;
+            return await module.InvokeAsync<int>("getInnerWidth");
+        }
+
+        [JSInvokable("OnBrowserResizeHandler")]
+        public static async Task OnBrowserResize(int width, int height)
+        {
+            await _staticOnLogAsync?.Invoke(width, height);
+        }
+
+        public event Func<int, int, Task> OnResize = (w, h) => { return Task.CompletedTask; };
+        public async ValueTask DisposeAsync()
+        {
+            if (_moduleTask.IsValueCreated)
+            {
+                var module = await _moduleTask.Value;
+                await module.DisposeAsync();
+            }
+        }
+    }
+
+    public class HelperJsInterop : IAsyncDisposable
 	{
 		private static Func<int, int, Task>? _staticOnLogAsync;
 		private readonly Lazy<Task<IJSObjectReference>> moduleTask;

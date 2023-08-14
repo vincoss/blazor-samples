@@ -10,3 +10,32 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+
+@inject BlazorJsInterop JSBlazor;
+@inject IWindowSize WindowSizeSingleton;
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // NOTE: These must be called once
+            JSBlazor.OnResize += OnWindowResize;
+            await JSBlazor.InitializeAsync();
+
+            // Set initial size and store it
+            var w = await JSBlazor.GetInnerWidth();
+            var h = await JSBlazor.GetInnerHeight();
+            WindowSizeSingleton.Resize(w, h);
+        }
+    }
+
+    protected Task OnWindowResize(int width, int height)
+    {
+        WindowSizeSingleton.Resize(width, height);
+
+        return Task.CompletedTask;
+    }
+}
