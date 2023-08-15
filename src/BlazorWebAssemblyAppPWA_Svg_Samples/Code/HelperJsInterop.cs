@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 {
     /// <summary>
-    /// NOTE: This shall be singleton instance.
+    /// NOTE: If Singleton then throws. 'System.InvalidOperationException: 'Cannot invoke JavaScript outside of a WebView context.''
     /// </summary>
     public class BlazorJsInterop : IAsyncDisposable
     {
@@ -44,7 +44,7 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
             return await module.InvokeAsync<int>("getInnerWidth");
         }
 
-        [JSInvokable("OnBrowserResizeHandler")]
+        [JSInvokable("OnBrowserResizeHandlerNew")]
         public static async Task OnBrowserResize(int width, int height)
         {
             await _staticOnLogAsync?.Invoke(width, height);

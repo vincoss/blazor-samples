@@ -20,5 +20,5 @@ export function registerResizeCallback()
 
 export function resized()
 {
-    DotNet.invokeMethodAsync("Maabot.FillNumber.RazorLibrary", 'OnBrowserResizeHandler', window.innerWidth, window.innerHeight).then(data => data);
+    DotNet.invokeMethodAsync("BlazorWebAssemblyAppPWA_Svg_Samples", 'OnBrowserResizeHandlerNew', window.innerWidth, window.innerHeight).then(data => data);
 };
