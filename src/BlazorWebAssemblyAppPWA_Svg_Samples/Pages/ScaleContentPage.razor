@@ -25,7 +25,7 @@
                     <rect width="640" height="480" fill="red" />
 
                     <use xlink:href="#close" />
-                    <use xlink:href="#close" transform="scale(0.75)" fill="gray" />
+                    <use xlink:href="#close" transform="scale(@ScaleX)" fill="gray" />
                     <use xlink:href="#close" transform="translate(-396 0) scale(0.75)" fill="green" />
 
                     <svg width="40" height="40" x="989.333333333" y="40" viewBox="0 0 32 32" fill="brown">
@@ -46,16 +46,17 @@
 
     <!-- Diagnostics -->
 
-    <svg x="10" y="10" fill="black" height="50" width="280" @onclick="ToggleNavMenu">
+    <svg x="10" y="10" fill="black" height="75" width="180" @onclick="OnForceRedraw">
         <rect width="100%" height="100%" fill="#dcdcdc" />
         <text x="0" y="20">@string.Format($"Window Width:  {WindowSizeSingleton.Width}")</text>
-        <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height} - {ScaleX}")</text>
+        <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height}")</text>
+        <text x="0" y="40">@string.Format($"Scale X: {ScaleX}")</text>
     </svg>
 
 </svg>
 
-
 @layout BlankLayout
+@implements IDisposable
 @inject IWindowSize WindowSizeSingleton
 
 @code
@@ -69,6 +70,18 @@
         base.OnInitialized();
         WindowSizeSingleton.PropertyChanged += OnWindowSizeSingleton; // TODO: can we move this into the Layout page? Window resize and orientaion change
 
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+
+        if(firstRender)
+        {
+            return;
+        }
+
+        ScaleX = 0.75D;
     }
 
     private async void OnWindowSizeSingleton(object? sender, EventArgs e)
@@ -99,7 +112,7 @@
 
     }
 
-    private void ToggleNavMenu()
+    private void OnForceRedraw()
     {
         StateHasChanged();
     }

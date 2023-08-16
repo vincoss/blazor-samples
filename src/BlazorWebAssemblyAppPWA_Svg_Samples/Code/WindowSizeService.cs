@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
+
 namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 {
     public interface IWindowSize : INotifyPropertyChanged
