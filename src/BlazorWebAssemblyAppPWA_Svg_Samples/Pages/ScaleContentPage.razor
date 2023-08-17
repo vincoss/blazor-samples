@@ -50,7 +50,7 @@
         <rect width="100%" height="100%" fill="#dcdcdc" />
         <text x="0" y="20">@string.Format($"Window Width:  {WindowSizeSingleton.Width}")</text>
         <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height}")</text>
-        <text x="0" y="40">@string.Format($"Scale X: {ScaleX}")</text>
+        <text x="0" y="60">@string.Format($"Scale X: {ScaleX}")</text>
     </svg>
 
 </svg>
@@ -80,13 +80,11 @@
         {
             return;
         }
-
-        ScaleX = 0.75D;
     }
 
     private async void OnWindowSizeSingleton(object? sender, EventArgs e)
     {
-        //  ScaleX = CalculateScale();
+         ScaleX = CalculateScale();
 
         await InvokeAsync(StateHasChanged);
     }
@@ -106,9 +104,9 @@
 
         if (minD < minN)
         {
-            return 0.75F;
+            return a;
         }
-        return 0.75F;
+        return b;
 
     }
 
