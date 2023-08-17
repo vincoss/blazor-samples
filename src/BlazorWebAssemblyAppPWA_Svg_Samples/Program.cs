@@ -16,7 +16,7 @@ services.AddTransient<HelperJsInterop>();
 services.AddSingleton<JSRuntimeService>();
 services.AddSingleton<IWindowSize, WindowSizeService>();
 
-// NOTE: If Singleton then throws. 'System.InvalidOperationException: 'Cannot invoke JavaScript outside of a WebView context.''
+// NOTE: If Singleton then throws. 'System.InvalidOperationException: 'Cannot invoke JavaScript outside of a WebView context.'' Maui.Blazor project
 services.AddScoped<BlazorJsInterop>();
 
 await builder.Build().RunAsync();

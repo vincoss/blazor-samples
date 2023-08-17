@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
 {
     /// <summary>
-    /// NOTE: If Singleton then throws. 'System.InvalidOperationException: 'Cannot invoke JavaScript outside of a WebView context.''
+    /// NOTE: If Singleton then throws. 'System.InvalidOperationException: 'Cannot invoke JavaScript outside of a WebView context.'' Maui.Blazor project
     /// </summary>
     public class BlazorJsInterop : IAsyncDisposable
     {
