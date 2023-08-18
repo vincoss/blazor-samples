@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!--
+    https://docs.aspose.com/svg/net/drawing-basics/transformation-matrix/
+  -->
+  
+  <svg viewBox="0 0 400 300">
+    <!-- uniform scale is shown in fig.a -->
+    <g fill="none">
+      <rect x="10" y="10" width="20" height="20" stroke="blue" />
+      <rect x="10" y="10" width="20" height="20" stroke="red" transform="matrix(1.5, 0, 0, 1.5, 0, 0)" />
+      <rect x="10" y="10" width="20" height="20" stroke="orange" transform="matrix(2, 0, 0, 2, 0, 0)" />
+      <rect x="10" y="10" width="20" height="20" stroke="green" transform="matrix(0.7, 0, 0, 0.7, 0, 0)" />
+    </g>
+    <!-- non-uniform scale is shown in fig.b -->
+    <g transform="translate(70)">
+      <rect x="10" y="10" width="20" height="20" fill="blue" />
+      <rect x="10" y="10" width="20" height="20" fill="red" transform="matrix(1.5, 0, 0, 2, 0, 0)" />
+      <rect x="10" y="10" width="20" height="20" fill="orange" transform="matrix(3, 0, 0, 2.5, 0, 0)" />
+      <rect x="10" y="10" width="20" height="20" fill="green" transform="matrix(0.7, 0, 0, 0.5, 0, 0)" />
+    </g>
+    <!-- uniform scale relative to point (10, 10) is shown in fig.c -->
+    <g fill="none" transform="translate(170)">
+      <rect x="10" y="10" width="20" height="20" stroke="blue" />
+      <rect x="10" y="10" width="20" height="20" stroke="red" transform="matrix(1.5, 0, 0, 1.5, -5, -5)" />
+      <rect x="10" y="10" width="20" height="20" stroke="orange" transform="matrix(5, 0, 0, 5, -40, -40)" />
+      <rect x="10" y="10" width="20" height="20" stroke="green" transform="matrix(0.7, 0, 0, 0.7, 3, 3)" />
+    </g>
+  </svg>
+
+</svg>
