@@ -1,53 +1,64 @@
 ﻿@page "/scale-page"
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="@WindowSizeSingleton.Width" height="@WindowSizeSingleton.Height">
     <rect width="100%" height="100%" fill="pink" fill-opacity="20%" />
 
     @if (WindowSizeSingleton.IsPortrait)
     {
-        <svg viewBox="0 0 1440 3088" preserveAspectRatio="xMinYMin meet">
-            <rect width="100%" height="100%" fill="pink" />
-
-            <g transform="translate(@TranslateX, 0)">
-                <svg width="120" height="120" x="1320" y="0" viewBox="0 0 32 32">
-                    <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
-                </svg>
-            </g>
-
+        <!--Close-->
+        <svg width="@closeWidth" height="@closeHeight" x="@closeX" y="@closeY" viewBox="0 0 32 32" fill="gray">
+            <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
         </svg>
 
-       @*  
-       
-        design-width-height=1440,3088
-        actual-width-height=640,480
+        @*
+    <svg viewBox="0 0 1440 3088" preserveAspectRatio="xMinYMin meet">
+    <rect width="100%" height="100%" fill="pink" />
+
+    <g transform="translate(@TranslateX, 0)">
+    <svg width="120" height="120" x="1320" y="0" viewBox="0 0 32 32">
+    <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
+    </svg>
+    </g>
+
+    </svg> *@
+
+        @*
+
+    design-width-height=1440,3088
+    actual-width-height=640,480
 
 
-       
-       <svg width="288" height="617.6" viewBox="0 0 1440 3088">
-            <rect width="100%" height="100%" fill="pink" />
 
-            <g transform="translate(30)">
-                <svg width="120" height="120" x="1320" y="0" viewBox="0 0 32 32">
-                    <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
-                </svg>
-            </g>
+    <svg width="288" height="617.6" viewBox="0 0 1440 3088">
+    <rect width="100%" height="100%" fill="pink" />
 
-        </svg> *@
+    <g transform="translate(30)">
+    <svg width="120" height="120" x="1320" y="0" viewBox="0 0 32 32">
+    <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
+    </svg>
+    </g>
+
+    </svg> *@
 
     }
     else
     {
-        <svg width="617.6" height="288" viewBox="0 0 3088 1440">
+          <!--Close-->
+        <svg width="@closeWidth" height="@closeHeight" x="@closeX" y="@closeY" viewBox="0 0 32 32" fill="gray">
+            <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
+        </svg>
+
+        @* <svg width="617.6" height="288" viewBox="0 0 3088 1440">
             <rect width="100%" height="100%" fill="green" />
 
             <g transform="scale(@ScaleX)">
                 <svg width="120" height="120" x="2968" y="0" viewBox="0 0 32 32">
                     <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
                 </svg>
-           </g>
+            </g>
 
-        </svg>
+        </svg> *@
     }
 
     <rect width="419.6891192" height="5" fill="green" fill-opacity="20%" />
@@ -58,8 +69,7 @@
         <rect width="100%" height="100%" fill="#dcdcdc" />
         <text x="0" y="20">@string.Format($"Window Width:  {WindowSizeSingleton.Width}")</text>
         <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height}")</text>
-        <text x="0" y="60">@string.Format($"Scale X: {ScaleX}")</text>
-        <text x="0" y="80">@string.Format($"Translate X: {TranslateX}")</text>
+        <text x="0" y="60">@string.Format($"Scale X: {Ratio}")</text>
     </svg>
 
 </svg>
@@ -70,14 +80,30 @@
 
 @code
 {
-    private double ScaleX = 0.75D;
-    private double TranslateX;
-    private string Colour = "red";
+    private double closeXDesign = 2918;
+    private double closeYDesign = 0;
+    private double closeWidthDesign = 170;
+    private double closeHeightDesign = 170;
+
+    private double closeX = 2918;
+    private double closeY = 0;
+    private double closeWidth = 170;
+    private double closeHeight = 170;
+
+    private double Ratio = 1;
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
         WindowSizeSingleton.PropertyChanged += OnWindowSizeSingleton; // TODO: can we move this into the Layout page? Window resize and orientaion change
+
+        EnsureRightDesingValues();
+
+        // set defaults (move into method)
+        closeX = closeXDesign;
+        closeY = closeYDesign;
+        closeWidth = closeWidthDesign;
+        closeHeight = closeHeightDesign;
 
     }
 
@@ -85,7 +111,7 @@
     {
         base.OnAfterRender(firstRender);
 
-        if(firstRender)
+        if (firstRender)
         {
             return;
         }
@@ -93,10 +119,7 @@
 
     private async void OnWindowSizeSingleton(object? sender, EventArgs e)
     {
-        ScaleX = CalculateScale();
-        var s = (double)1440 * ScaleX;
-        TranslateX = 720;
-        //(((double)1320 / s) * (double)WindowSizeSingleton.Width);
+        Ratio = CalculateRatio();
 
         await InvokeAsync(StateHasChanged);
     }
@@ -106,20 +129,29 @@
         WindowSizeSingleton.PropertyChanged -= OnWindowSizeSingleton;
     }
 
-    private float CalculateScale()
+    private void EnsureRightDesingValues()
     {
-        var minD = (float)Math.Min(3088, 1440);
-        var minN = (float)Math.Min(WindowSizeSingleton.Width, WindowSizeSingleton.Height);
-
-        var a = minD / minN;
-        var b = minN / minD;
-
-        if (minD < minN)
+        if (WindowSizeSingleton.IsPortrait)
         {
-            return a;
+            closeXDesign = 1270;
+            closeYDesign = 0;
+            closeWidthDesign = 1440;
+            closeHeightDesign = 3088;
         }
-        return b;
+        else
+        {
+            closeXDesign = 2918;
+            closeYDesign = 0;
+            closeWidthDesign = 3088;
+            closeHeightDesign = 1440;
+        }
+    }
 
+    private double CalculateRatio()
+    {
+        var designWidth = 1440D;
+        var ratio = WindowSizeSingleton.Width / designWidth;
+        return ratio;
     }
 
     private void OnForceRedraw()
