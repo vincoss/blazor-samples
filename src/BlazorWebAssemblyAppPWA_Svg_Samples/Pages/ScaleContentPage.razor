@@ -24,7 +24,7 @@
         <rect width="100%" height="100%" fill="#dcdcdc" />
         <text x="0" y="20">@string.Format($"Window Width:  {WindowSizeSingleton.Width}")</text>
         <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height}")</text>
-        <text x="0" y="60">@string.Format($"Scale X: {Ratio}")</text>
+        <text x="0" y="60">@string.Format($"Ratio: {Ratio}")</text>
         <text x="0" y="80">@string.Format($"Is Portrait: {WindowSizeSingleton.IsPortrait}")</text>
         <text x="0" y="100">@string.Format($"Close Width: {closeWidth}")</text>
         <text x="0" y="120">@string.Format($"Close Height: {closeHeight}")</text>
@@ -84,25 +84,30 @@
 
     private void EnsureRightDesingValues()
     {
-        if (WindowSizeSingleton.IsPortrait)
-        {
-            closeXDesign = 1270;
-            closeYDesign = 0;
-            closeWidthDesign = 170;
-            closeHeightDesign = 170;
-        }
-        else
-        {
-            closeXDesign = 2918;
-            closeYDesign = 0;
-            closeWidthDesign = 170;
-            closeHeightDesign = 170;
-        }
+        closeWidthDesign = 170;
+        closeHeightDesign = 170;
+
+        // if (WindowSizeSingleton.IsPortrait)
+        // {
+        //     closeXDesign = 1270;
+        //     closeYDesign = 0;
+        // }
+        // else
+        // {
+        //     closeXDesign = 2918;
+        //     closeYDesign = 0;
+        // }
+
+        closeXDesign = 2918;
+        closeYDesign = 0;
     }
+
+    const double portraitDesignWidth = 1440D;
+    const double portraitDesignHeight = 3088D;
 
     private double CalculateRatio()
     {
-        var designWidth = WindowSizeSingleton.IsPortrait ? 1440D : 3088D;
+        var designWidth = portraitDesignHeight;// WindowSizeSingleton.IsPortrait ? portraitDesignWidth : portraitDesignHeight;
         var ratio = WindowSizeSingleton.Width / designWidth;
         return ratio;
     }
@@ -111,7 +116,14 @@
     {
         closeX = Ratio * closeXDesign;
         closeY = Ratio * closeYDesign;
+
+        var x = closeWidthDesign / portraitDesignWidth;
+        var y = closeHeightDesign / portraitDesignHeight;
+
         closeWidth = Ratio * closeWidthDesign;
         closeHeight = Ratio * closeHeightDesign;
+
+        // closeWidth = (x * portraitDesignWidth) * Ratio;
+        // closeHeight = (y * portraitDesignHeight) * Ratio;
     }
 }
