@@ -118,7 +118,7 @@
     private double CalculateRatio()
     {
         var designWidth = portraitDesignHeight;// WindowSizeSingleton.IsPortrait ? portraitDesignWidth : portraitDesignHeight;
-        var ratio = WindowSizeSingleton.Width / designWidth;
+        var ratio = WindowSizeSingleton.Width / Math.Max(portraitDesignWidth, portraitDesignHeight);
         return ratio;
     }
 
@@ -127,11 +127,13 @@
         closeX = Ratio * closeXDesign;
         closeY = Ratio * closeYDesign;
 
-         closeWidth = Ratio * closeWidthDesign;
-         closeHeight = Ratio * closeHeightDesign;
+        var scale = 1;
 
-        var x = closeWidthDesign / portraitDesignWidth;
-        var y = closeHeightDesign / portraitDesignHeight;
+        closeWidth = (Ratio * closeWidthDesign) * scale;
+        closeHeight = (Ratio * closeHeightDesign) * scale;
+
+        var x = (closeWidthDesign / portraitDesignWidth) / scale;
+        var y = (closeHeightDesign / portraitDesignHeight) / scale;
 
        // closeWidth = 79.451;//(x * portraitDesignWidth) * Ratio;
        // closeHeight = 79.451;//(y * portraitDesignHeight) * Ratio;
