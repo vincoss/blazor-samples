@@ -1,0 +1,39 @@
+﻿<Router AppAssembly="@typeof(Main).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@inject BlazorJsInterop JSBlazor;
+@inject IWindowSize WindowSizeSingleton;
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // NOTE: These must be called once
+            JSBlazor.OnResize += OnWindowResize;
+            await JSBlazor.InitializeAsync();
+
+            // Set initial size and store it
+            var w = await JSBlazor.GetInnerWidth();
+            var h = await JSBlazor.GetInnerHeight();
+            WindowSizeSingleton.Resize(w, h);
+        }
+    }
+
+    protected Task OnWindowResize(int width, int height)
+    {
+        WindowSizeSingleton.Resize(width, height);
+
+        return Task.CompletedTask;
+    }
+}
