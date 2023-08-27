@@ -19,6 +19,52 @@
         </svg>
     }
 
+     <!-- Retry
+            <Button X="395" Y="2200" Width="650" Height="150" Text="Retry" />
+
+           <Button Dx="395" Dy="2200" 
+                   DWidth="650" DHeight="150" 
+                   X="@X" Y="@Y" Width="@Width" Height="@Height"
+                   Text="Retry" />
+
+
+    @* Orientation & ratio
+
+    scale = newWidth / oldWidth
+
+
+    1440 / 288 = 5
+    288 / 1440 = 0.2
+        if current is greather than new one use new one
+
+    1440 / 2880 = .5
+    2880 / 1440 = 2
+        if a current is smaller than new on use new one
+
+    need to know currnet window size (viewport)
+    *@
+
+    @* Scale & transform
+
+        wiewport width="300" height="700"
+
+        design size width=1440 height=3088
+        close button x=10 y=10 widht=100 height=100
+
+        #attributes dx dy dwidth dheight
+            xd=10 yd=10 widthd=100 heightd=100
+
+        calculate ratio scale and transform
+        x = x * ratio
+        y = y * ratio
+        use transform="translate(100,100)" and Scale to position the items
+            this can just build into control and will work
+                depends on window size
+
+    *@
+
+
+     -->
     <!-- Diagnostics -->
     <svg x="10" y="10" fill="black" height="170" width="250">
         <rect width="100%" height="100%" fill="#dcdcdc" />
