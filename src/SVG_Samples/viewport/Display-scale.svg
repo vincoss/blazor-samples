@@ -1,6 +1,6 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 width="100%"
-	 height="100%"
+	 width="5000"
+	 height="5000"
 	 fill="none">
 
 	<rect width="100%" height="100%" fill="gray" fill-opacity="20%" />
@@ -76,5 +76,27 @@
 			<rect width="70" height="70" fill="black" />
 		</svg>
 	</svg>
+
+  <!--Scale 10% Generic Wide and Low Height-->
+  <svg x="1550" width="75.4" height="75.5" viewBox="0 0 754 755">
+    <svg width="754" height="755">
+      <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+      <rect width="75.4" height="75.4" fill="black" />
+    </svg>
+  </svg>
+
+  <svg y="350" width="1440" height="3088" viewBox="0 0 1440 3088">
+    <svg width="1440" height="3088">
+      <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+      <rect width="144" height="144" fill="black" />
+    </svg>
+  </svg>
+
+  <svg y="350" x="1460" width="3088" height="1440" viewBox="0 0 3088 v">
+    <svg width="3088" height="1440">
+      <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+      <rect width="144" height="144" fill="black" />
+    </svg>
+  </svg>
 	
 </svg>
