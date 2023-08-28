@@ -77,6 +77,14 @@
 		</svg>
 	</svg>
 
+  <!--Scale 10% Generic Wide and Low Height-->
+  <svg x="1550" width="75.4" height="75.5" viewBox="0 0 754 755">
+    <svg width="754" height="755">
+      <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
+      <rect width="75.4" height="75.4" fill="black" />
+    </svg>
+  </svg>
+
   <svg y="350" width="1440" height="3088" viewBox="0 0 1440 3088">
     <svg width="1440" height="3088">
       <rect width="100%" height="100%" fill="pink" fill-opacity="70%" />
