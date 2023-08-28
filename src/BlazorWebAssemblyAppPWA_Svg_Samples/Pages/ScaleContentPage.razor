@@ -107,7 +107,7 @@
 
     private double CalculateRatio()
     {
-        var designWidth = portraitDesignHeight;// WindowSizeSingleton.IsPortrait ? portraitDesignWidth : portraitDesignHeight;
+        var designWidth = Math.Min(portraitDesignWidth, portraitDesignHeight); //portraitDesignHeight;// WindowSizeSingleton.IsPortrait ? portraitDesignWidth : portraitDesignHeight;
         var ratio = WindowSizeSingleton.Width / designWidth;
         return ratio;
     }
@@ -126,4 +126,36 @@
         // closeWidth = (x * portraitDesignWidth) * Ratio;
         // closeHeight = (y * portraitDesignHeight) * Ratio;
     }
+
+
+    /*
+     *
+     public class UiElementScaleManager : MonoBehaviour
+    {
+
+    private RectTransform rectTransform = null;
+    [SerializeField] [Range(-200, 200)] private float offsetX = 85f;
+    [SerializeField] [Range(-200, 200)] private float offsetY = 5f;
+    [SerializeField] [Range(0, 200)] private float width = 10f;
+    [SerializeField] [Range(0, 200)] private float height = 10f;
+    [Tooltip("If checked then height variable will not be used.")]
+    [SerializeField] private bool preserveAspect = false;
+
+    private void Start()
+        {
+        rectTransform = GetComponent<RectTransform>();
+        rectTransform.pivot = Vector2.zero;
+        rectTransform.anchorMax = Vector2.zero;
+        rectTransform.anchorMin = Vector2.zero;
+    }
+
+    private void Update()
+        {
+        rectTransform.sizeDelta = new Vector2(Screen.width * width / 100, ((preserveAspect) ? Screen.width * width : Screen.height * height) / 100);
+        rectTransform.anchoredPosition = new Vector2(Screen.width * offsetX / 100, Screen.height * offsetY / 100);
+     }
+
+     }*
+    *
+    */
 }
