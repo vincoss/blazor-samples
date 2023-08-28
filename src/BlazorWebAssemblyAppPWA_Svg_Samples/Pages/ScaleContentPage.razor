@@ -1,4 +1,5 @@
 ﻿@page "/scale-page"
+@using System.Numerics;
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="@WindowSizeSingleton.Width" height="@WindowSizeSingleton.Height">
@@ -66,7 +67,7 @@
 
      -->
     <!-- Diagnostics -->
-    <svg x="10" y="10" fill="black" height="170" width="250">
+    <svg x="10" y="10" fill="black" height="300" width="250">
         <rect width="100%" height="100%" fill="#dcdcdc" />
         <text x="0" y="20">@string.Format($"Window Width:  {WindowSizeSingleton.Width}")</text>
         <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height}")</text>
@@ -76,6 +77,10 @@
         <text x="0" y="120">@string.Format($"Close Height: {closeHeight}")</text>
         <text x="0" y="140">@string.Format($"Close X: {closeX}")</text>
         <text x="0" y="160">@string.Format($"Close Y: {closeY}")</text>
+        <text x="0" y="180">@string.Format($"VectorS X: {sizeDelta.X}")</text>
+        <text x="0" y="200">@string.Format($"VectorS Y: {sizeDelta.Y}")</text>
+        <text x="0" y="220">@string.Format($"VectorP X: {anchorPosition.X}")</text>
+        <text x="0" y="240">@string.Format($"VectorP Y: {anchorPosition.Y}")</text>
     </svg>
 
 </svg>
@@ -119,6 +124,7 @@
         EnsureRightDesingValues();
         Ratio = CalculateRatio();
         EnsureDefaults();
+        Update();
 
         await InvokeAsync(StateHasChanged);
     }
@@ -174,34 +180,56 @@
     }
 
 
-    /*
-     *
-     public class UiElementScaleManager : MonoBehaviour
-    {
+        /*
+        *
+        public class UiElementScaleManager : MonoBehaviour
+        {
 
-    private RectTransform rectTransform = null;
-    [SerializeField] [Range(-200, 200)] private float offsetX = 85f;
-    [SerializeField] [Range(-200, 200)] private float offsetY = 5f;
-    [SerializeField] [Range(0, 200)] private float width = 10f;
-    [SerializeField] [Range(0, 200)] private float height = 10f;
-    [Tooltip("If checked then height variable will not be used.")]
-    [SerializeField] private bool preserveAspect = false;
+        private RectTransform rectTransform = null;
+        [SerializeField] [Range(-200, 200)] private float offsetX = 85f;
+        [SerializeField] [Range(-200, 200)] private float offsetY = 5f;
+        [SerializeField] [Range(0, 200)] private float width = 10f;
+        [SerializeField] [Range(0, 200)] private float height = 10f;
+        [Tooltip("If checked then height variable will not be used.")]
+        [SerializeField] private bool preserveAspect = false;
 
-    private void Start()
+        private void Start()
         {
         rectTransform = GetComponent<RectTransform>();
         rectTransform.pivot = Vector2.zero;
         rectTransform.anchorMax = Vector2.zero;
         rectTransform.anchorMin = Vector2.zero;
-    }
+        }
 
-    private void Update()
+        private void Update()
         {
         rectTransform.sizeDelta = new Vector2(Screen.width * width / 100, ((preserveAspect) ? Screen.width * width : Screen.height * height) / 100);
         rectTransform.anchoredPosition = new Vector2(Screen.width * offsetX / 100, Screen.height * offsetY / 100);
      }
 
      }*
-    *
+
+     // newWidth * itemWidth / 100
+
     */
+
+    private Vector2 sizeDelta;
+    private Vector2 anchorPosition;
+
+    public  void Update()
+    {
+        float screenWidth = (float)WindowSizeSingleton.Width;
+        float screenHeight = (float)WindowSizeSingleton.Height;
+        float itemWidth = 10;
+        float itemHeight = 10;
+        bool preserveAspect = false;
+
+        float offsetX = 85F;
+        float offsetY = 5F;
+
+        sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((preserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
+        anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
+
+    }
 }
+
