@@ -128,7 +128,7 @@
         EnsureRightDesingValues();
         Ratio = CalculateRatio();
         EnsureDefaults();
-        Update();
+        UiElementScale();
 
         await InvokeAsync(StateHasChanged);
     }
@@ -183,44 +183,10 @@
         // closeHeight = (y * portraitDesignHeight) * Ratio;
     }
 
-
-    /*
-    *
-    public class UiElementScaleManager : MonoBehaviour
-    {
-
-    private RectTransform rectTransform = null;
-    [SerializeField] [Range(-200, 200)] private float offsetX = 85f;
-    [SerializeField] [Range(-200, 200)] private float offsetY = 5f;
-    [SerializeField] [Range(0, 200)] private float width = 10f;
-    [SerializeField] [Range(0, 200)] private float height = 10f;
-    [Tooltip("If checked then height variable will not be used.")]
-    [SerializeField] private bool preserveAspect = false;
-
-    private void Start()
-    {
-    rectTransform = GetComponent<RectTransform>();
-    rectTransform.pivot = Vector2.zero;
-    rectTransform.anchorMax = Vector2.zero;
-    rectTransform.anchorMin = Vector2.zero;
-    }
-
-    private void Update()
-    {
-    rectTransform.sizeDelta = new Vector2(Screen.width * width / 100, ((preserveAspect) ? Screen.width * width : Screen.height * height) / 100);
-    rectTransform.anchoredPosition = new Vector2(Screen.width * offsetX / 100, Screen.height * offsetY / 100);
-     }
-
-     }*
-
-     // newWidth * itemWidth / 100
-
-    */
-
     private Vector2 sizeDelta;
     private Vector2 anchorPosition;
 
-    public void Update()
+    public void UiElementScale()
     {
         float screenWidth = (float)WindowSizeSingleton.Width;
         float screenHeight = (float)WindowSizeSingleton.Height;
@@ -237,3 +203,11 @@
     }
 }
 
+/*
+Resources
+https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/HOWTO-UIMultiResolution.html
+https://stackoverflow.com/questions/54477121/what-is-a-vector2-and-vector3-in-unity
+https://stackoverflow.com/questions/61639855/scale-and-position-according-size-screen
+https://forum.unity.com/threads/canvas-scaler-scale-with-screen-size-same-as-setting-ui-objects-to-stretch.512005/#post-3442785
+https://numerics.mathdotnet.com/Matrix
+*/
