@@ -10,18 +10,18 @@
 	protected override void OnInitialized()
 	{
 		base.OnInitialized();
-		WindowSizeSingleton.PropertyChanged += OnWindowSizeSingleton; // TODO: can we move this into the Layout page? Window resize and orientaion change
+		WindowSizeSingleton.PropertyChanged += OnWindowSizeSingleton; // TODO: can we move this into the Layout page or componentBase? Window resize and orientaion change
 	}
 
 	protected override void OnAfterRender(bool firstRender)
 	{
 		base.OnAfterRender(firstRender);
-		Update();
+		CalculateScale();
 	}
 
 	private async void OnWindowSizeSingleton(object? sender, EventArgs e)
 	{
-		Update();
+		CalculateScale();
 		await InvokeAsync(StateHasChanged);
 	}
 
@@ -30,55 +30,35 @@
 		WindowSizeSingleton.PropertyChanged -= OnWindowSizeSingleton;
 	}
 
-	//transform="matrix(6.25,0,0,6.25,600,0)"
-
-	// protected override Task OnAfterRenderAsync(bool firstRender)
-	// {
-	// 	X = Dx;
-	// 	Y = Dy;
-
-	// 	return base.OnAfterRenderAsync(firstRender);
-	// }
-
-	// [Parameter]
-	// public double Width { get; set; } = 100;
-
-	// [Parameter]
-	// public double Height { get; set; } = 100;
-
-	// [Parameter]
-	// public double X { get; set; } = 0;
-
-	// [Parameter]
-	// public double Y { get; set; } = 0;
+	[Parameter]
+	public float X { get; set; } = 0;
 
 	[Parameter]
-	public float Dx { get; set; } = 0;
+	public float Y { get; set; } = 0;
 
 	[Parameter]
-	public float Dy { get; set; } = 0;
+	public float Width { get; set; } = 0;
 
 	[Parameter]
-	public float DWidth { get; set; } = 0;
+	public float Height { get; set; } = 0;
 
 	[Parameter]
-	public float DHeight { get; set; } = 0;
+	public bool PreserveAspect { get; set; } = true;
 
 	private Vector2 sizeDelta;
 	private Vector2 anchorPosition;
 
-	public void Update()
+	public void CalculateScale()
 	{
 		float screenWidth = (float)WindowSizeSingleton.Width;
 		float screenHeight = (float)WindowSizeSingleton.Height;
-		float itemWidth = DWidth;
-		float itemHeight = DHeight;
-		bool preserveAspect = false;
+		float itemWidth = Width;
+		float itemHeight = Height;
 
-		float offsetX = Dx;
-		float offsetY = Dy;
+		float offsetX = X;
+		float offsetY = Y;
 
-		sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((preserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
+		sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((PreserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
 		anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
 
 	}
