@@ -1,6 +1,4 @@
-﻿https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0
-
-
+﻿
 Design for Portrait, landscape, square, and Ultra wide (this should be similar to phone)
 	each shall have fixed dimensions to calculate percent ratio
 
