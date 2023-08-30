@@ -1,5 +1,4 @@
-﻿using Blazor_Maui_Svg_Samples.Data;
-using Blazor_Maui_Svg_Samples.Code;
+﻿using Blazor_Maui_Svg_Samples.Code;
 using Microsoft.Extensions.Logging;
 
 namespace Blazor_Maui_Svg_Samples

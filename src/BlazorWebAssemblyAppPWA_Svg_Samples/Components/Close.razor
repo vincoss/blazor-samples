@@ -1,5 +1,5 @@
-﻿<svg width="@sizeDelta.X" height="@sizeDelta.Y" x="@anchorPosition.X" y="@anchorPosition.Y" viewBox="0 0 24 24" fill="gold">
-	<path d="M15 9.00004L9 15M15 15L9 9.00004M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+﻿<svg width="@_sizeDelta.X" height="@_sizeDelta.Y" x="@_anchorPosition.X" y="@_anchorPosition.Y" viewBox="0 0 32 32" fill="gold">
+	<path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
 </svg>
 
 @implements IDisposable
@@ -11,17 +11,16 @@
 	{
 		base.OnInitialized();
 		WindowSizeSingleton.PropertyChanged += OnWindowSizeSingleton; // TODO: can we move this into the Layout page or componentBase? Window resize and orientaion change
-	}
 
-	protected override void OnAfterRender(bool firstRender)
-	{
-		base.OnAfterRender(firstRender);
-		CalculateScale();
+		_sizeDelta = new Vector2(Width, Height);
+		_anchorPosition = new Vector2(X, Y);
+
+		AdaptToDifferentAspectRatio();
 	}
 
 	private async void OnWindowSizeSingleton(object? sender, EventArgs e)
 	{
-		CalculateScale();
+		AdaptToDifferentAspectRatio();
 		await InvokeAsync(StateHasChanged);
 	}
 
@@ -43,12 +42,12 @@
 	public float Height { get; set; } = 0;
 
 	[Parameter]
-	public bool PreserveAspect { get; set; } = true;
+	public bool PreserveAspect { get; set; } = false;
 
-	private Vector2 sizeDelta;
-	private Vector2 anchorPosition;
+	private Vector2 _sizeDelta;
+	private Vector2 _anchorPosition;
 
-	public void CalculateScale()
+	public void AdaptToDifferentAspectRatio()
 	{
 		float screenWidth = (float)WindowSizeSingleton.Width;
 		float screenHeight = (float)WindowSizeSingleton.Height;
@@ -58,8 +57,7 @@
 		float offsetX = X;
 		float offsetY = Y;
 
-		sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((PreserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
-		anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
-
+		_sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((PreserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
+		_anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
 	}
 }

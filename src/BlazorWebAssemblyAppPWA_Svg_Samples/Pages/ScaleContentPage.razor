@@ -1,92 +1,27 @@
 ﻿@page "/scale-page"
 @using System.Numerics;
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="@WindowSizeSingleton.Width" height="@WindowSizeSingleton.Height">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="@WindowSizeSingleton.Width"
+     height="@WindowSizeSingleton.Height">
     <rect width="100%" height="100%" fill="pink" fill-opacity="20%" />
 
     <svg width="@sizeDelta.X" height="@sizeDelta.Y" x="@anchorPosition.X" y="@anchorPosition.Y" viewBox="0 0 32 32" fill="gray">
         <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
     </svg>
 
-    <Close X="50" Y="5" Width="10" Height="10"/>
+    <Close X="85" Y="35" Width="10" Height="10"/>
 
-  @*   @if (WindowSizeSingleton.IsPortrait)
-    {
-        <!--Close-->
-        <svg width="@closeWidth" height="@closeHeight" x="@closeX" y="@closeY" viewBox="0 0 32 32" fill="gray">
-            <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
-        </svg>
-    }
-    else
-    {
-        <!--Close-->
-        <svg width="@closeWidth" height="@closeHeight" x="@closeX" y="@closeY" viewBox="0 0 32 32" fill="red">
-            <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
-        </svg>
-    } *@
-
-     <!-- Retry
-            <Button X="395" Y="2200" Width="650" Height="150" Text="Retry" />
-
-           <Button Dx="395" Dy="2200" 
-                   DWidth="650" DHeight="150" 
-                   X="@X" Y="@Y" Width="@Width" Height="@Height"
-                   Text="Retry" />
-
-
-    @* Orientation & ratio
-
-    scale = newWidth / oldWidth
-
-
-    1440 / 288 = 5
-    288 / 1440 = 0.2
-        if current is greather than new one use new one
-
-    1440 / 2880 = .5
-    2880 / 1440 = 2
-        if a current is smaller than new on use new one
-
-    need to know currnet window size (viewport)
-    *@
-
-    @* Scale & transform
-
-        wiewport width="300" height="700"
-
-        design size width=1440 height=3088
-        close button x=10 y=10 widht=100 height=100
-
-        #attributes dx dy dwidth dheight
-            xd=10 yd=10 widthd=100 heightd=100
-
-        calculate ratio scale and transform
-        x = x * ratio
-        y = y * ratio
-        use transform="translate(100,100)" and Scale to position the items
-            this can just build into control and will work
-                depends on window size
-
-    *@
-
-
-     -->
     <!-- Diagnostics -->
-    <svg x="10" y="10" fill="black" height="300" width="250">
+    <svg x="10" y="10" fill="black" height="150" width="250">
         <rect width="100%" height="100%" fill="#dcdcdc" />
         <text x="0" y="20">@string.Format($"Window Width:  {WindowSizeSingleton.Width}")</text>
         <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height}")</text>
-        <text x="0" y="60">@string.Format($"Ratio: {Ratio}")</text>
-        <text x="0" y="80">@string.Format($"Is Portrait: {WindowSizeSingleton.IsPortrait}")</text>
-        <text x="0" y="100">@string.Format($"Close Width: {closeWidth}")</text>
-        <text x="0" y="120">@string.Format($"Close Height: {closeHeight}")</text>
-        <text x="0" y="140">@string.Format($"Close X: {closeX}")</text>
-        <text x="0" y="160">@string.Format($"Close Y: {closeY}")</text>
-        <text x="0" y="180">@string.Format($"VectorS X: {sizeDelta.X}")</text>
-        <text x="0" y="200">@string.Format($"VectorS Y: {sizeDelta.Y}")</text>
-        <text x="0" y="220">@string.Format($"VectorP X: {anchorPosition.X}")</text>
-        <text x="0" y="240">@string.Format($"VectorP Y: {anchorPosition.Y}")</text>
+        <text x="0" y="60">@string.Format($"Is Portrait: {WindowSizeSingleton.IsPortrait}")</text>
+        <text x="0" y="80">@string.Format($"VectorS X: {sizeDelta.X}")</text>
+        <text x="0" y="100">@string.Format($"VectorS Y: {sizeDelta.Y}")</text>
+        <text x="0" y="120">@string.Format($"VectorP X: {anchorPosition.X}")</text>
+        <text x="0" y="140">@string.Format($"VectorP Y: {anchorPosition.Y}")</text>
     </svg>
 
 </svg>
@@ -97,40 +32,17 @@
 
 @code
 {
-    private double closeXDesign = 2918;
-    private double closeYDesign = 0;
-    private double closeWidthDesign = 170;
-    private double closeHeightDesign = 170;
-
-    private double closeX;
-    private double closeY;
-    private double closeWidth;
-    private double closeHeight;
-
-    private double Ratio = 1;
-
     protected override void OnInitialized()
     {
         base.OnInitialized();
         WindowSizeSingleton.PropertyChanged += OnWindowSizeSingleton; // TODO: can we move this into the Layout page? Window resize and orientaion change
-    }
+        AdaptToDifferentAspectRatio();
 
-    protected override void OnAfterRender(bool firstRender)
-    {
-        base.OnAfterRender(firstRender);
-
-        if (firstRender)
-        {
-            return;
-        }
     }
 
     private async void OnWindowSizeSingleton(object? sender, EventArgs e)
     {
-        EnsureRightDesingValues();
-        Ratio = CalculateRatio();
-        EnsureDefaults();
-        Update();
+        AdaptToDifferentAspectRatio();
 
         await InvokeAsync(StateHasChanged);
     }
@@ -140,89 +52,10 @@
         WindowSizeSingleton.PropertyChanged -= OnWindowSizeSingleton;
     }
 
-    private void EnsureRightDesingValues()
-    {
-        closeWidthDesign = 170;
-        closeHeightDesign = 170;
-
-        // if (WindowSizeSingleton.IsPortrait)
-        // {
-        //     closeXDesign = 1270;
-        //     closeYDesign = 0;
-        // }
-        // else
-        // {
-        //     closeXDesign = 2918;
-        //     closeYDesign = 0;
-        // }
-
-        closeXDesign = 2918;
-        closeYDesign = 0;
-    }
-
-    const double portraitDesignWidth = 1440D;
-    const double portraitDesignHeight = 3088D;
-
-    private double CalculateRatio()
-    {
-        var designWidth = Math.Min(portraitDesignWidth, portraitDesignHeight); //portraitDesignHeight;// WindowSizeSingleton.IsPortrait ? portraitDesignWidth : portraitDesignHeight;
-        var ratio = WindowSizeSingleton.Width / designWidth;
-        return ratio;
-    }
-
-    private void EnsureDefaults()
-    {
-        closeX = Ratio * closeXDesign;
-        closeY = Ratio * closeYDesign;
-
-        var x = closeWidthDesign / portraitDesignWidth;
-        var y = closeHeightDesign / portraitDesignHeight;
-
-        closeWidth = Ratio * closeWidthDesign;
-        closeHeight = Ratio * closeHeightDesign;
-
-        // closeWidth = (x * portraitDesignWidth) * Ratio;
-        // closeHeight = (y * portraitDesignHeight) * Ratio;
-    }
-
-
-        /*
-        *
-        public class UiElementScaleManager : MonoBehaviour
-        {
-
-        private RectTransform rectTransform = null;
-        [SerializeField] [Range(-200, 200)] private float offsetX = 85f;
-        [SerializeField] [Range(-200, 200)] private float offsetY = 5f;
-        [SerializeField] [Range(0, 200)] private float width = 10f;
-        [SerializeField] [Range(0, 200)] private float height = 10f;
-        [Tooltip("If checked then height variable will not be used.")]
-        [SerializeField] private bool preserveAspect = false;
-
-        private void Start()
-        {
-        rectTransform = GetComponent<RectTransform>();
-        rectTransform.pivot = Vector2.zero;
-        rectTransform.anchorMax = Vector2.zero;
-        rectTransform.anchorMin = Vector2.zero;
-        }
-
-        private void Update()
-        {
-        rectTransform.sizeDelta = new Vector2(Screen.width * width / 100, ((preserveAspect) ? Screen.width * width : Screen.height * height) / 100);
-        rectTransform.anchoredPosition = new Vector2(Screen.width * offsetX / 100, Screen.height * offsetY / 100);
-     }
-
-     }*
-
-     // newWidth * itemWidth / 100
-
-    */
-
     private Vector2 sizeDelta;
     private Vector2 anchorPosition;
 
-    public  void Update()
+    public void AdaptToDifferentAspectRatio()
     {
         float screenWidth = (float)WindowSizeSingleton.Width;
         float screenHeight = (float)WindowSizeSingleton.Height;
@@ -235,7 +68,13 @@
 
         sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((preserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
         anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
-
     }
 }
 
+@* #Resources
+https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/HOWTO-UIMultiResolution.html
+https://stackoverflow.com/questions/54477121/what-is-a-vector2-and-vector3-in-unity
+https://stackoverflow.com/questions/61639855/scale-and-position-according-size-screen
+https://forum.unity.com/threads/canvas-scaler-scale-with-screen-size-same-as-setting-ui-objects-to-stretch.512005/#post-3442785
+https://numerics.mathdotnet.com/Matrix
+*@
