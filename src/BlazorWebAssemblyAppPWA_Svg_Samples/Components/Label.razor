@@ -1,0 +1,38 @@
+﻿<svg width="@_sizeDelta.X" height="@_sizeDelta.Y" x="@_anchorPosition.X" y="@_anchorPosition.Y"
+@attributes="Attributes" preserveAspectRatio="xMinYMin meet" viewBox="0 0 110 16">
+    <rect width="100%" height="100%" fill="gold" fill-opacity="50%" />
+    <svg x="0" y="0" viewBox="0 0 110 16" fill="transparent">
+        <rect width="100%" height="100%" fill="red" fill-opacity="50%" />
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="11" font-weight="bold" fill="black">
+            @Text
+        </text>
+    </svg>
+</svg>
+
+@* /*
+
+             <Label X="25" Y="0"  Width="50" Height="1" Text="@DataContex.CurrentLevelName" />
+
+            <Close X="87.5F" Y="0" Width="12.5F" Height="12.5F" onclick="@DataContex.OnClose" />
+
+			<Right X="190" Y="52" Width="48" Height="48" fill="green" />
+
+    Font size
+    TODO:
+    rename to Text
+    style
+        fill,fontsize,font-weight ....
+    align
+        left,right,top,bottom
+    fit what?
+    wrapping (TextMultiline)
+
+*/ *@
+
+@inherits SvgComponentBase
+
+@code
+{
+    [Parameter]
+    public string? Text { get; set; } = "Label";
+}
