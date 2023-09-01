@@ -101,8 +101,8 @@ namespace BlazorWebAssemblyAppPWA_Svg_Samples.Code
             var preserveAspect = PreserveAspect;
 
             _sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((preserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
-            //_anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
-            _anchorPosition = new Vector2(screenWidth * offsetX / 100, ((preserveAspect) ? screenWidth * offsetX : screenHeight * offsetY) / 100);
+            _anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
+            //_anchorPosition = new Vector2(screenWidth * offsetX / 100, ((preserveAspect) ? screenWidth * offsetX : screenHeight * offsetY) / 100);
         }
     }
 }
