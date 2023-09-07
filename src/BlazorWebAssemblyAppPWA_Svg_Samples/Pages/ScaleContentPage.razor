@@ -3,14 +3,17 @@
 
 <svg xmlns="http://www.w3.org/2000/svg"
      width="@WindowSizeSingleton.Width"
-     height="@WindowSizeSingleton.Height">
+     height="@WindowSizeSingleton.Height" viewBox="0 0 @WindowSizeSingleton.Width @WindowSizeSingleton.Height">
     <rect width="100%" height="100%" fill="pink" fill-opacity="20%" />
+
+
+    <rect width="100" height="100" fill="blacl" fill-opacity="20%" />
 
     <svg width="@sizeDelta.X" height="@sizeDelta.Y" x="@anchorPosition.X" y="@anchorPosition.Y" viewBox="0 0 32 32" fill="gray">
         <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
     </svg>
 
-    <Close X="85" Y="35" Width="10" Height="10"/>
+    <Close X="90" Y="0" Width="10" Height="10"/>
 
     <!-- Diagnostics -->
     <svg x="10" y="10" fill="black" height="150" width="250">
@@ -64,7 +67,7 @@
         bool preserveAspect = false;
 
         float offsetX = 85F;
-        float offsetY = 5F;
+        float offsetY = 0F;
 
         sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((preserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
         anchorPosition = new Vector2(screenWidth * offsetX / 100, screenHeight * offsetY / 100);
