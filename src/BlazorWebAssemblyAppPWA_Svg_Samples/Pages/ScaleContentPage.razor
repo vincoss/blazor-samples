@@ -12,11 +12,11 @@ width="@WindowSizeSingleton.Width" height="@WindowSizeSingleton.Height">
         <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM21.657 10.344c-0.39-0.39-1.023-0.39-1.414 0l-4.242 4.242-4.242-4.242c-0.39-0.39-1.024-0.39-1.415 0s-0.39 1.024 0 1.414l4.242 4.242-4.242 4.242c-0.39 0.39-0.39 1.024 0 1.414s1.024 0.39 1.415 0l4.242-4.242 4.242 4.242c0.39 0.39 1.023 0.39 1.414 0s0.39-1.024 0-1.414l-4.242-4.242 4.242-4.242c0.391-0.391 0.391-1.024 0-1.414z"></path>
     </svg>
 
-    <Close X="90" Y="0" Width="10" Height="10" />
+    @* <Close X="90" Y="0" Width="10" Height="10" /> *@
     @* <Label X="25" Y="35" Width="50" Height="10" Text="Label Wy" /> *@
 
     <!-- Diagnostics -->
-    <svg x="10" y="10" fill="black" height="150" width="250">
+    <svg x="10" y="10" fill="black" height="250" width="250">
         <rect width="100%" height="100%" fill="#dcdcdc" />
         <text x="0" y="20">@string.Format($"Window Width:  {WindowSizeSingleton.Width}")</text>
         <text x="0" y="40">@string.Format($"Window Height: {WindowSizeSingleton.Height}")</text>
@@ -25,6 +25,9 @@ width="@WindowSizeSingleton.Width" height="@WindowSizeSingleton.Height">
         <text x="0" y="100">@string.Format($"VectorSize Y: {_sizeDelta.Y}")</text>
         <text x="0" y="120">@string.Format($"VectorPosition X: {_anchorPosition.X}")</text>
         <text x="0" y="140">@string.Format($"VectorPosition Y: {_anchorPosition.Y}")</text>
+        <text x="0" y="160">@string.Format($"Scale Y: {_scale}")</text>
+        <text x="0" y="180">@string.Format($"X: {_x}")</text>
+        <text x="0" y="200">@string.Format($"Y: {_y}")</text>
     </svg>
 
 </svg>
@@ -72,9 +75,37 @@ width="@WindowSizeSingleton.Width" height="@WindowSizeSingleton.Height">
         var w = screenWidth;
         var h = screenHeight;
 
+        // screenHeight * itemHeigh
+        /*
+        68
+        68
+
+    49.2
+     65
+     */
+
+        var x = screenWidth * offsetX / 100;
+        var y = screenHeight * offsetY / 100;
+
+        _scale = ((preserveAspect) ? itemWidth / screenWidth : itemHeight / screenHeight);
+
+
+        var o = new Vector2(screenWidth * itemWidth / 100, screenWidth * itemWidth / 100);
+
         _sizeDelta = new Vector2(screenWidth * itemWidth / 100, ((preserveAspect) ? screenWidth * itemWidth : screenHeight * itemHeight) / 100);
-        _anchorPosition = new Vector2(w * offsetX / 100, h * offsetY / 100);
+
+        _x = o.X - _sizeDelta.X;
+        _y = o.Y - _sizeDelta.Y;
+
+        var bx = x + _x;
+        var by = y + _y;
+
+        _anchorPosition = new Vector2(x, y);
     }
+
+    private float _scale = 0;
+    private float _x = 0;
+    private float _y = 0;
 }
 
 @* #Resources
