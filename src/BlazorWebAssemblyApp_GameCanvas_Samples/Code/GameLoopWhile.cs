@@ -24,19 +24,19 @@ namespace BlazorWebAssemblyApp_GameCanvas_Samples.Code
 
         private void Loop()
         {
-            int fps = 60; // TODO: find optimal value for this
+            int desiredFps = 60; // TODO: find optimal value for this
             int fpsTicNum = 0;
             int _framesRendered = 0;
-            long delayTicks = (1000 / fps) * TimeSpan.TicksPerMillisecond;
-            var previous = DateTime.Now.Ticks; // TODO: see other loop wheter this is right or use,  Environment.TickCount64
-			var seconds = previous;
+            long delayTicks = (1000 / desiredFps) * TimeSpan.TicksPerMillisecond;
+            var previousTicks = DateTime.Now.Ticks; // TODO: see other loop wheter this is right or use,  Environment.TickCount64
+			var seconds = previousTicks;
 
 			while (_isRunning)
             {
                 var current = DateTime.Now.Ticks;
-                var elapsedTicks = current - previous;
+                var elapsedTicks = current - previousTicks;
                 var elapsedSeconds = (current - seconds) / TimeSpan.TicksPerSecond;
-                previous = current;
+                previousTicks = current;
 
                 // Fps seconds
                 if (elapsedSeconds >= 1)
