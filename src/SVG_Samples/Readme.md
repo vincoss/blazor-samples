@@ -309,7 +309,9 @@ https://d3js.org/
 
 ## Colors
 https://materialui.co/colors/
+https://m3.material.io/
 https://m2.material.io/design/color/the-color-system.html#color-theme-creation
 
 ## Resources
 https://github.com/DmitryBaranovskiy/raphael
+https://github.com/KristofferStrube/Blazor.SVGEditor
