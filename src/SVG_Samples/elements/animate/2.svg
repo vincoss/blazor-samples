@@ -3,177 +3,33 @@
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
-	<!--Animating Complex Attributes-->
-	<svg y="10">
-		<circle cx="60" cy="60" r="30" style="fill: #ff9; stroke: gray; stroke-width: 10;">
-			<animate attributeName="fill" begin="2s" dur="4s" from="#ff9" to="red" fill="freeze"/>
-			<animate attributeName="stroke" begin="2s" dur="4s" from="gray" to="blue" fill="freeze"/>
-		</circle>
-	</svg>
-	
-	<!--Example of animating path and polygon-->
-	<svg y="100">
-		<polygon points="30 30 70 30 90 70 10 70" style="fill:#fcc; stroke:black">
-			<animate id="animation"
-			attributeName="points"
-			attributeType="XML"
-			to="50 30 70 50 50 90 30 50"
-			begin="0s" dur="5s" fill="freeze" />
-		</polygon>
-		<path d="M15 50 Q 40 15, 50 50, 65 32, 100 40" style="fill:none; stroke: black" transform="translate(0,50)">
-			<animate attributeName="d"
-			attributeType="XML"
-			to="M50 15 Q 15 40, 50 50, 32 65, 40 100"
-			begin="0s" dur="5s" fill="freeze"/>
-		</path>
-	</svg>
-	
-	<!--Specifying Multiple Values
-		Animating color by specific values
-	-->
-	<svg y="200">
-		<circle cx="50" cy="50" r="30" style="fill: #ff9; stroke:black;">
-			<animate attributeName="fill" begin="2s" dur="4s" values="#ff9;#99f;#f99;#9f9" fill="freeze"/>
-		</circle>
-	</svg>
-	
-	<!--Timing of Multistage Animations-->
-	<!--The <set> Element-->
-	<svg y="300">
-		<circle cx="60" cy="60" r="30" style="fill: #ff9; stroke: gray;">
-			<animate id="c1" attributeName="r" attributeType="XML"
-			begin="0s" dur="4s" from="30" to="0" fill="freeze"/>
-		</circle>
-		<text text-anchor="middle" x="60" y="60" style="visibility: hidden;">
-			<set attributeName="visibility" attributeType="CSS"
-			to="visible" begin="4.5s" dur="1s" fill="freeze"/>
-			All gone!
-		</text>
-	</svg>
-	
-	<!--The <animateTransform> Element-->
-	<svg y="400">
-		<g transform="translate(100,60)">
-			<rect x="-10" y="-10" width="20" height="20"
-			style="fill: #ff9; stroke: black;">
-				<animateTransform attributeType="XML"
-				attributeName="transform" type="scale"
-				from="1" to="4 2"
-				begin="0s" dur="4s" fill="freeze"/>
-			</rect>
-		</g>
-	</svg>
-	
-	<!--Example of multiple animateTransform elements-->
-	<svg y="600">
-		<svg width="200" height="100">
-			<g transform="translate(100, 60)">
-				<rect x="-10" y="-10" width="20" height="20"
-				  style="fill: #ff9; stroke: black;">
-					<animateTransform attributeName="transform" attributeType="XML"
-					  type="scale" from="1" to="4 2"
-					  additive="sum" begin="0s" dur="4s" fill="freeze"/>
-					<animateTransform attributeName="transform" attributeType="XML"
-					  type="rotate" from="0" to="45"
-					  additive="sum" begin="0s" dur="4s" fill="freeze"/>
-				</rect>
-			</g>
+	<svg width="20" height="20" viewbox="0 0 600 600">
+
+		<rect width="100%" height="100%" fill="blue" />
+		<svg width="100" height="100">
+
+			<!-- the path to be animated along -->
+			<path
+			  id="theMotionPath"
+			  fill="none"
+			  stroke="lightgrey"
+			  stroke-width="0.25"
+			  d="
+      M 5 5
+      m -4, 0
+      a 4,4 0 1,0 8,0
+      a 4,4 0 1,0 -8,0
+      "
+  />
+
+			<!-- the mover [doesn't need cx or cy] -->
+			<circle r="10" fill="red">
+				<!-- Define the motion path animation -->
+				<animateMotion dur="5s" repeatCount="indefinite">
+					<mpath xlink:href="#theMotionPath" />
+				</animateMotion>
+			</circle>
+
 		</svg>
 	</svg>
-	
-	<!--The <animateMotion> Element-->
-	<!--Animation along a linear path-->
-	<svg y="700">
-		<g>
-			<rect x="0" y="0" width="30" height="30" style="fill: #ccc;"/>
-			<circle cx="30" cy="30" r="15" style="fill: #cfc; stroke: green;"/>
-			<animateMotion from="0,0" to="60,30" dur="4s" fill="freeze"/>
-		</g>
-	</svg>
-	
-	<!--Animation along a complex path-->
-	<svg y="800">
-		<!-- show the path along which the triangle will move -->
-		<path d="M50,125 C 100,25 150,225, 200, 125" style="fill: none; stroke: blue;"/>
-		<!-- Triangle to be moved along the motion path. 
-		It is defined with an upright orientation with the base of
-		the triangle centered horizontally just above the origin. -->
-		<path d="M-10,-3 L10,-3 L0,-25z" style="fill: yellow; stroke: red;">
-			<animateMotion
-			path="M50,125 C 100,25 150,225, 200, 125"
-			dur="6s" fill="freeze"/>
-		</path>
-	</svg>
-	
-	<!--Animation along a complex path with auto-rotation-->
-	<svg x="400">
-		<!-- show the path along which the triangle will move -->
-		<path d="M50,125 C 100,25 150,225, 200, 125"
-		style="fill: none; stroke: blue;"/>
-		<!-- Triangle to be moved along the motion path.
-It is defined with an upright orientation with the base of
-the triangle centered horizontally just above the origin. -->
-		<path d="M-10,-3 L10,-3 L0,-25z" style="fill: yellow; stroke: red;" >
-			<animateMotion
-			path="M50,125 C 100,25 150,225, 200, 125"
-			rotate="auto"
-			dur="6s" fill="freeze"/>
-		</path>
-	</svg>
-	
-	<!--Motion along a complex path using mpath-->
-	<svg x="400" y ="200">
-		<path id="cubicCurve" d="M50,125 C 100,25 150,225, 200, 125"
-	style="fill: none; stroke: blue;"/>
-		<path d="M-10,-3 L10,-3 L0,-25z" style="fill: yellow; stroke: red;" >
-			<animateMotion dur="6s" rotate="auto" fill="freeze">
-				<mpath xlink:href="#cubicCurve"/>
-			</animateMotion>
-		</path>
-	</svg>
-	
-	<!--Specifying Key Points and Times for Motion-->
-	<svg x="400" y ="400">
-		<path id="cubicCurve" d="M50,125 C 100,25 150,225, 200, 125"
-	style="fill: none; stroke: blue;"/>
-		<path d="M-10,-3 L10,-3 L0,-25z" style="fill: yellow; stroke: red;" >
-			<animateMotion dur="6s" rotate="auto" fill="freeze">
-				<mpath xlink:href="#cubicCurve"/>
-			</animateMotion>
-		</path>
-	</svg>
-	
-	<!--Variable speed motion along a path using keyPoints and keyTimes-->
-	<svg x="400" y ="600">
-		<path id="cubicCurve" d="M50,125 C 100,25 150,225, 200, 125" style="fill: none; stroke: blue;"/>
-		<path d="M-10,-3 L10,-3 L0,-25z" style="fill: yellow; stroke: red;" >
-			<animateMotion
-			path="M50,125 C 100,25 150,225, 200, 125"
-			rotate="auto"
-			keyPoints="0;0.2;0.8;1"
-			keyTimes="0;0.33;0.66;1"
-			calcMode="linear"
-			dur="6s" fill="freeze"/>
-		</path>
-	</svg>
-	
-	<!--Animating SVG with CSS-->
-	<!--Animation Properties-->
-	<svg x="400" y ="700">
-		<svg width="200" height="200" viewBox="0 0 200 200">
-			<defs>
-				<g id="starDef">
-					<path d="M 38.042 -12.361 9.405 -12.944 -0.000 -40.000
--9.405 -12.944 -38.042 -12.361 -15.217 4.944
--23.511 32.361 0.000 16.000 23.511 32.361 15.217 4.944 Z"/>
-				</g>
-			</defs>
-			<use id="star" class="starStyle" xlink:href="#starDef"
-transform="translate(100, 100)"
-style="fill: #008000; stroke: #008000"/>
-		</svg>
-	</svg>
-	
-	<!--Setting Animation Key Frames-->
-	
 </svg>
