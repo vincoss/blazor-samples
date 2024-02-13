@@ -3,14 +3,12 @@
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
-  <rect y="75" width="50" height="50" fill="green"/>
-  
-  <svg x="10" y="10" width="300" height="60" >
-    <rect width="100%" height="100%" fill="transparent"/>
-    <svg viewBox="0 0 300 60" preserveAspectRatio="xMinYMin meet">
-      <rect width="100%" height="100%" fill="pink"/>
-      <text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="50" font-weight="bold" fill="#455A64">Label yW</text>
-    </svg>
-  </svg>
+	<svg x="10" y="10" width="300" height="60" >
+		<rect width="100%" height="100%" fill="transparent"/>
+		<svg viewBox="0 0 300 60" preserveAspectRatio="xMinYMin meet">
+			<rect width="100%" height="100%" fill="pink"/>
+			<text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="50" font-weight="bold" fill="#455A64">Label yW</text>
+		</svg>
+	</svg>
 
 </svg>
