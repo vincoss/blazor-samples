@@ -11,5 +11,6 @@
 
 	<!-- Rectangle with location -->
 	<rect x="10" y="10" width="100" height="100" rx="15" fill="orange" />
+	<use xlink:href="#location-1" x="70" y="40"/>
 
 </svg>

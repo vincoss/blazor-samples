@@ -3,6 +3,10 @@
 
 	<rect width="100%" height="100%" fill="#dcdcdc" />
 
+	<!--
+	https://developer.mozilla.org/en-US/docs/Web/SVG/Element/mask
+	-->
+	
 	<!--Masking with opaque colors-->
 	
 	<defs>
@@ -24,8 +28,8 @@
 	<rect x="10" y="10" width="50" height="50" style="fill: #f00;"/>
 	<rect x="70" y="10" width="50" height="50" style="fill: #0f0;"/>
 	<rect x="130" y="10" width="50" height="50" style="fill: #00f;"/>
-	<rect x="190" y="10" width="50" height="50"
-	style="fill: #fff; stroke: black;"/>
+	<rect x="190" y="10" width="50" height="50" style="fill: #fff; stroke: black;"/>
+	
 	<!-- background content to show transparency -->
 	<rect x="10" y="72" width="250" height="5" style="fill: yellow"/>
 	<rect x="10" y="112" width="250" height="5" style="fill: yellow"/>
@@ -38,6 +42,7 @@
 		<circle cx="95" cy="115" r="25" style="fill: black;"/>
 		<text x="95" y="80">Green</text>
 	</g>
+	
 	<g style="mask: url(#bluemask);font-size: 14pt; text-anchor: middle;">
 		<circle cx="155" cy="115" r="25" style="fill: black;"/>
 		<text x="155" y="80">Blue</text>
