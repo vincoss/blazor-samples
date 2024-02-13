@@ -103,9 +103,9 @@
 	<text x="120" y="200" class="material-symbols-outlined dark-inactive size-48">search</text>
 
 	<!--SeaLife-->
-	<text x="10" y="300" font-family="SeaLife" font-size="200%" fill="red">A</text>
-	<text x="40" y="300" font-family="SeaLife" font-size="200%" fill="red">Y</text>
-	<text x="80" y="300" font-family="SeaLife" font-size="200%" fill="red">F</text>
+	<text x="0" y="300" font-family="SeaLife" font-size="500%" fill="red">A</text>
+	<text x="100" y="300" font-family="SeaLife" font-size="500%" fill="red">Y</text>
+	<text x="200" y="300" font-family="SeaLife" font-size="500%" fill="red">F</text>
 
 	<!-- FontAwesome-->
 	<text x="10" y="350" font-family="FontAwesome" fill="red">Home</text>
