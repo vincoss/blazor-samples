@@ -3,6 +3,9 @@
 
 	<!--
 	https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/patternUnits
+	https://css-tricks.com/optimizing-svg-patterns/
+	https://codepen.io/collection/DRMKdB?cursor=ZD0xJm89MSZwPTEmdj0yNw==
+	
 	-->
 
 	<svg x="10" y="10">

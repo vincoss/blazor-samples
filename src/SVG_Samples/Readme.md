@@ -14,31 +14,9 @@ http://spgrade71110.blogspot.com/2010/11/order-of-operations_09.html
 
 ## Tasks
 
-buttons
-	click and tap effect
-	this is possible with CSS styles
+text wrapping to blazor component
 
-layout, button, progress, duration and other
-	use rectangles
 
-add all sample icons into blazor app to review on devices
-
-html add font as a style and refrence in svg
-	use that in css fontface
-		then use the .css file to attach that to the whole .svg
-pattern
-	https://css-tricks.com/optimizing-svg-patterns/
-	https://codepen.io/collection/DRMKdB?cursor=ZD0xJm89MSZwPTEmdj0yNw==
-
-read css book
-	where is the book???
-
-read blazor documentation whole
-read maui documentation whole
-reuse the styles and components
-	must create a sample
-		styles
-		svg elements
 svg samples integrate with html
 	test on multiple screens
 		size
@@ -46,17 +24,10 @@ svg samples integrate with html
 		use the larger value: height > width 
 		must resize based on screen change
 		test on windws app window resize UI must update according to screen changes
+
 tools review and how to use
 	incscape
 	SVG VS Code
-convert otf to woff
-	wheter is required
-
-convert font text to svg
-
-review resources urls
-review all samples
-complete UI sample as one svg file
 
 
 ```
@@ -237,18 +208,6 @@ Maui see GraphicsView
 font scale to fit parent
 font center
 
-
-## Issues
-font-variation-settings does not work, see font samples
-
-## Running Issue 1
-```
-chrome Referrer Policy: strict-origin-when-cross-origin
-Open command line
-cd to C:\Program Files\Google\Chrome\Application
-disable web security
-chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
-```
 
 ## Resolution
 https://www.ios-resolution.com/
