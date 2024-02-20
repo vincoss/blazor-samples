@@ -30,7 +30,12 @@ tools review and how to use
 	SVG VS Code
 
 
+## Scaling (to review)
 ```
+https://gamemaker.io/en/tutorials/the-basics-of-scaling-the-game-camera
+https://gamemaker.io/en/tutorials/the-basics-of-scaling-the-gui-layer
+https://www.reddit.com/r/gamemaker/comments/cvpxfh/best_practice_for_supporting_different_aspect/
+
 var base_w = 1024;
 var base_h = 768;
 var aspect = base_w / base_h ; // get the GAME aspect ratio
@@ -207,6 +212,7 @@ see open-iconic
 Maui see GraphicsView
 font scale to fit parent
 font center
+    x="50%" y="50%"
 
 
 ## Resolution
