@@ -35,6 +35,7 @@ tools review and how to use
 https://gamemaker.io/en/tutorials/the-basics-of-scaling-the-game-camera
 https://gamemaker.io/en/tutorials/the-basics-of-scaling-the-gui-layer
 https://www.reddit.com/r/gamemaker/comments/cvpxfh/best_practice_for_supporting_different_aspect/
+    https://marketplace.gamemaker.io/assets/10585/camera-initialization-script
 
 var base_w = 1024;
 var base_h = 768;
