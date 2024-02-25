@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<svg>
+		<linearGradient id="gradient" y2=".4">
+			<stop/>
+			<stop offset="1" stop-color="#503"/>
+		</linearGradient>
+		<filter id="filter">
+			<feTurbulence type="fractalNoise" baseFrequency=".2" numOctaves="2"/>
+			<feColorMatrix values="0 0 0 0 1
+                               0 0 0 0 0
+                               0 0 0 0 0
+                               0 0 0 9 -7"/>
+			<feMorphology operator="dilate" radius="5 0"/>
+			<feBlend in2="SourceGraphic"/>
+		</filter>
+		<circle id="c" r="71%" transform="rotate(67)" fill="url(#gradient)" filter="url(#filter)"/>
+		<use href="#c" x="50%" y="50%"/>
+	</svg>
+	
+</svg>

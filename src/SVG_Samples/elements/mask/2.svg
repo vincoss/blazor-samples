@@ -6,28 +6,25 @@
 	<!--Mask alpha using opacity only-->
 
 	<defs>
-		<mask id="fullmask" x="0" y="0" width="1" height="1"
-		maskContentUnits="objectBoundingBox">
+		<mask id="fullmask" x="0" y="0" width="1" height="1" maskContentUnits="objectBoundingBox">
 			<rect x="0" y="0" width="1" height="1"
 			style="fill-opacity: 1.0; fill: white;"/>
 		</mask>
-		<mask id="three-fourths" x="0" y="0" width="1" height="1"
-		maskContentUnits="objectBoundingBox">
+		<mask id="three-fourths" x="0" y="0" width="1" height="1" maskContentUnits="objectBoundingBox">
 			<rect x="0" y="0" width="1" height="1"
 			style="fill-opacity: 0.75; fill: white;"/>
 
 		</mask>
-		<mask id="one-half" x="0" y="0" width="1" height="1"
-		maskContentUnits="objectBoundingBox">
+		<mask id="one-half" x="0" y="0" width="1" height="1" maskContentUnits="objectBoundingBox">
 			<rect x="0" y="0" width="1" height="1"
 			style="fill-opacity: 0.5; fill: white;"/>
 		</mask>
-		<mask id="one-fourth" x="0" y="0" width="1" height="1"
-		maskContentUnits="objectBoundingBox">
+		<mask id="one-fourth" x="0" y="0" width="1" height="1" maskContentUnits="objectBoundingBox">
 			<rect x="0" y="0" width="1" height="1"
 			style="fill-opacity: 0.25; fill: white;"/>
 		</mask>
 	</defs>
+	
 	<g style="font-size: 14pt; text-anchor:middle; fill:black;">
 		<g style="mask: url(#fullmask);">
 			<circle cx="35" cy="35" r="25"/>
