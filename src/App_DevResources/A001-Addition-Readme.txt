@@ -235,3 +235,24 @@ Triple digit doubling
         /// 4.10 + 19
         /// 25.10 + 45.24
         /// </example>
+
+
+
+## Tasks
+think how to include previous levels test if has mix
+    here we should have some group to see what levels shall be used
+
+    Root Grup
+        Parent (group)
+            Level 1
+            Level 2
+            Level n
+
+    Well that might work but desing not friendly. Tags?
+        Possible
+
+     Level 1
+        Addition, Basic,
+     Level 2
+         Addition, Basic,
+     Level n
