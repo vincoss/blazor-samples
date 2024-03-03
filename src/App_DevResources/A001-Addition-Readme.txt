@@ -7,6 +7,8 @@ fill level 50% from previous level (not all previous)
 English Aplhabet 26 Letters
 A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
 
+F(0,20)  => 0,20 - 0,20
+
 # Addition campaign (place value)
 
 ## Level
