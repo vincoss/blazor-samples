@@ -9,42 +9,44 @@ A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
 
 F(0,20)  => 0,20 - 0,20
 
-# Addition campaign (place value)
+# Tags
+Addition, Place-Value
 
-## Level
+## Level 1
 10+
 0,1,2
 0+10, 10+0, 10+1, 1+10, 10+2, 2+10
 
-## Level
+## Level 2
 10+
 3,4
+3+10, 10+3, 4+10, 10+4
 
-
-## Level
+## Level 3
 10+
-4,5
+5,6
+5+10, 10+5, 6+10, 10+6
 
-
-## Level
+## Level 4
 10+
-6,7
+7,9
+7+10, 10+7, 8+10, 10+8
 
 
-## Level
+## Level 5
 10+
-8,9
+9
+9+10, 9+10
 
-
-## Level
+## Level 6
 +10
 10,20,30,40,50,60,70,80,90
+10+10, 10+20, 20+10
 
-## Level
+## Level 7
 +20
 10,20,30,40,50,60,70,80,90
-
-
+10+20, 20+10, 20+20
 
 
 Addition basic 0-9

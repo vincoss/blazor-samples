@@ -2,6 +2,9 @@
 # Tasks
 As user progress then 50% percent of the level are from previous levels
 	fill level 50% from previous level (not all previous) witin same group
+Tags
+	each level shall have font-icon-tag unique
+	we need a tag for a group too
 
 English Aplhabet 26 Letters
 A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
@@ -217,3 +220,5 @@ Addition, Basic
 
 ## Level 37
 All previous combinations
+ok that is then 0-9+0-9 level 36 covers that
+	or for this group few from each level
