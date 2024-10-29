@@ -4,19 +4,24 @@
 @*To escape an @ symbol in Razor markup, use a second @ symbol:*@
 <p>@@Username</p>
 
+<a href="mailto:Support@contoso.com">support@lala.com</a>
+
 @*Scalable Vector Graphics (SVG)*@
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
     <rect x="0" y="0" rx="10" ry="10" width="200" height="200" stroke="black" 
-        fill="none" />
+    fill="none" />
     <foreignObject x="20" y="20" width="160" height="160">
         <p>@Message</p>
     </foreignObject>
 </svg>
 
+
 @*Implicit Razor expressions*@
 <p>@DateTime.Now</p>
 <p>@DateTime.IsLeapYear(2016)</p>
 
+@* Note this does work in Blazor *@
+@* <p>@await HelloWorld()</p> *@
 
 @*Explicit Razor expressions*@
 <p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
@@ -167,7 +172,29 @@ else
     </div>
 }*@
 
+@*@try, catch, finally*@
+@try
+{
+    throw new InvalidOperationException("You did something invalid.");
+}
+catch (Exception ex)
+{
+    <p>The exception message: @ex.Message</p>
+}
+finally
+{
+    <p>The finally statement.</p>
+}
+
 @*@lock*@
+
+@{
+    object SomeLock = new object();
+}
+@lock (SomeLock)
+{
+    // Do critical section work
+}
 
 @*Comments*@
 @{
@@ -187,6 +214,9 @@ else
 @*@attribute [Authorize]*@
 
 @*@code*@
+@code {
+    // C# members (fields, properties, and methods)
+}
 
 @*@functions*@
 @functions {
@@ -196,18 +226,75 @@ else
     }
     public void RenderString(string name)
     {
-     //  <p>Name: <strong>@name</strong></p>
+        //  <p>Name: <strong>@name</strong></p>
     }
+}
+<div>From method: @GetHello()</div>
 
+@{
+    RenderString("C#");
+    RenderString("Maui .NET");
+}
+
+@* @implements - see top of page *@
+
+
+<h1>Example</h1>
+
+@functions {
     private bool _isDisposed;
 
     public void Dispose() => _isDisposed = true;
 }
-<div>From method: @GetHello()</div>
+
+@* @inherits *@
+
+@inherits BlazorRocksBase
+
+@* @implements *@
+@* @inherits *@
+@* @inject *@
+@* @layout *@
+@* @model *@
+@* @namespace *@
+@* @page *@
+@* @preservewhitespace *@
+@* @rendermode *@
+@* @section *@
+@* @typeparam *@
+
+@using System.IO
 @{
-    //RenderName("C#");
-    //RenderName("Maui .NET");
+    var dir = Directory.GetCurrentDirectory();
 }
+<p>@dir</p>
+
+@* @attributes *@
+@* @bind *@
+@* @bind:culture *@
+@* @formname *@
+@* @on{EVENT} *@
+@* @on{EVENT}:preventDefault *@
+@* @on{EVENT}:stopPropagation *@
+@* @key *@
+@* @ref *@
+
+@* Templated Razor delegates razor pages only *@
+@* @{
+    Func<dynamic, object> petTemplate = @<p>You have a pet named <strong>@item.Name</strong>.</p>;
+
+    var pets = new List<Pet>
+    {
+        new Pet { Name = "Rin Tin Tin" },
+        new Pet { Name = "Mr. Bigglesworth" },
+        new Pet { Name = "K-9" }
+    };
+}
+
+@foreach (var pet in pets)
+{
+    @petTemplate(pet)
+} *@
 
 @code {
     private string Username = "Test User";
@@ -230,4 +317,13 @@ else
         return 10;
     }
 
+    public async Task<string> HelloWorld()
+    {
+        return "Hello World!";
+    }
+
+    public class Pet
+    {
+        public string Name { get; set; }
+    }
 }
