@@ -51,8 +51,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Html_Css_Samples", "src\Htm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples", "src\Blazor_Samples\Blazor_Samples.csproj", "{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Samples_RazorClassLibrary", "src\Blazor_Samples_RazorClassLibrary\Blazor_Samples_RazorClassLibrary.csproj", "{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyAppPWA_Svg_Samples", "src\BlazorWebAssemblyAppPWA_Svg_Samples\BlazorWebAssemblyAppPWA_Svg_Samples.csproj", "{BE326F6A-F28A-4868-9CDF-03CA454D376A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor_Maui_Svg_Samples", "src\Blazor_Maui_Svg_Samples\Blazor_Maui_Svg_Samples.csproj", "{3B867D3F-2F93-4A3F-9A4F-5BA2D81CE589}"
@@ -62,6 +60,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_RazorClassLibrary", "src\Default_RazorClassLibrary\Default_RazorClassLibrary.csproj", "{C4144B00-F655-4D21-BBF2-63481F6BC337}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_RazorClassLibrary_PagesAndViews", "src\Default_RazorClassLibrary_PagesAndViews\Default_RazorClassLibrary_PagesAndViews.csproj", "{254BA027-BA67-4B8E-A048-09DE9B23A56D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_Samples_RazorClassLibrary", "src\Blazor_Samples_RazorClassLibrary\Blazor_Samples_RazorClassLibrary.csproj", "{331D3106-AA47-4961-AD8A-B8E51DDA4DA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,10 +153,6 @@ Global
 		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FBDFAF4-5B7E-48D6-9780-BE6B1DF54257}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AE46BF2-3D64-4647-BB48-4E88BAB3A554}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BE326F6A-F28A-4868-9CDF-03CA454D376A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BE326F6A-F28A-4868-9CDF-03CA454D376A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE326F6A-F28A-4868-9CDF-03CA454D376A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -179,6 +175,10 @@ Global
 		{254BA027-BA67-4B8E-A048-09DE9B23A56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{254BA027-BA67-4B8E-A048-09DE9B23A56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{254BA027-BA67-4B8E-A048-09DE9B23A56D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{331D3106-AA47-4961-AD8A-B8E51DDA4DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331D3106-AA47-4961-AD8A-B8E51DDA4DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331D3106-AA47-4961-AD8A-B8E51DDA4DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331D3106-AA47-4961-AD8A-B8E51DDA4DA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

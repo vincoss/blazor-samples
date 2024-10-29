@@ -1,17 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-	  <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Pages\**" />
-    <Content Remove="Pages\**" />
-    <EmbeddedResource Remove="Pages\**" />
-    <None Remove="Pages\**" />
-  </ItemGroup>
 
 
   <ItemGroup>
@@ -19,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0-rc.2.24474.3" />
   </ItemGroup>
 
 </Project>
