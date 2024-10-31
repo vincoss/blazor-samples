@@ -2,6 +2,10 @@
 
 ## Next
 
+sample app that can run
+	blazor hybrid (iOS, Android, Windows, other)
+	static site hosting (above code base)
+
 
 ## Current
 https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-7.0
