@@ -1,5 +1,4 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+
 using Tutorial_TodoListServer.Data;
 
 var builder = WebApplication.CreateBuilder(args);
