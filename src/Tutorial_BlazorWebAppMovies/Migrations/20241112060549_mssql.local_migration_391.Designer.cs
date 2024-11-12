@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tutorial_BlazorWebAppMovies.Data;
 
@@ -11,9 +12,11 @@ using Tutorial_BlazorWebAppMovies.Data;
 namespace Tutorial_BlazorWebAppMovies.Migrations
 {
     [DbContext(typeof(Tutorial_BlazorWebAppMoviesContext))]
-    partial class Tutorial_BlazorWebAppMoviesContextModelSnapshot : ModelSnapshot
+    [Migration("20241112060549_mssql.local_migration_391")]
+    partial class mssqllocal_migration_391
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
