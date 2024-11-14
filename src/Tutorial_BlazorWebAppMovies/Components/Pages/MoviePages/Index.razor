@@ -12,10 +12,7 @@
 <h1>Index</h1>
 
 <p>
-    <form action="/movies" data-enhance data-permanent>
-        <input type="search" name="titleFilter" />
-        <input type="submit" value="Search" />
-    </form>
+    <input type="search" @bind="titleFilter" @bind:event="oninput" />
 </p>
 
 <p>
@@ -41,10 +38,9 @@
 @code {
     private Tutorial_BlazorWebAppMoviesContext context = default!;
 
-    [SupplyParameterFromQuery]
-    private string? TitleFilter { get; set; }
+    private string titleFilter = string.Empty;
 
-    private IQueryable<Movie> FilteredMovies => context.Movie.Where(m => m.Title!.Contains(TitleFilter ?? string.Empty));
+    private IQueryable<Movie> FilteredMovies => context.Movie.Where(m => m.Title!.Contains(titleFilter));
     private PaginationState pagination = new PaginationState { ItemsPerPage = 2 };
 
     protected override void OnInitialized()
