@@ -24,11 +24,11 @@ namespace Tutorial_WpfBlazorApp
     {
         public MainWindow()
         {
-            var serviceCollection = new ServiceCollection();
-            serviceCollection.AddBlazorWebView();
-            Resources.Add("services", serviceCollection.BuildServiceProvider());
-
             InitializeComponent();
+
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddWpfBlazorWebView();
+            Resources.Add("services", serviceCollection.BuildServiceProvider());
         }
     }
 }
