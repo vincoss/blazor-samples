@@ -73,6 +73,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalRApp", "src\Bla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalRApp.Client", "src\BlazorSignalRApp\BlazorSignalRApp.Client\BlazorSignalRApp.Client.csproj", "{E437ED66-2E80-487F-8AB5-869A3F3C195E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_MauiBlazorHybridApp", "src\Default_MauiBlazorHybridApp\Default_MauiBlazorHybridApp.csproj", "{37701867-FAB0-4366-A6A8-E8B8CF2DE993}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +211,11 @@ Global
 		{E437ED66-2E80-487F-8AB5-869A3F3C195E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E437ED66-2E80-487F-8AB5-869A3F3C195E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E437ED66-2E80-487F-8AB5-869A3F3C195E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37701867-FAB0-4366-A6A8-E8B8CF2DE993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37701867-FAB0-4366-A6A8-E8B8CF2DE993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37701867-FAB0-4366-A6A8-E8B8CF2DE993}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{37701867-FAB0-4366-A6A8-E8B8CF2DE993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37701867-FAB0-4366-A6A8-E8B8CF2DE993}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -222,6 +229,7 @@ Global
 		{254BA027-BA67-4B8E-A048-09DE9B23A56D} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{81CD7845-F56A-4623-969D-4AEB6D6CC6DF} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{7D635754-AF7F-4930-870D-158BA05540BE} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
+		{37701867-FAB0-4366-A6A8-E8B8CF2DE993} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C4819EF-5052-413A-BD79-3FC25D4E4A66}
