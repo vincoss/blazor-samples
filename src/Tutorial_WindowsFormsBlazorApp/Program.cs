@@ -1,4 +1,4 @@
-namespace Default_WindowsFormsBlazorApp
+namespace Tutorial_WindowsFormsBlazorApp
 {
     internal static class Program
     {

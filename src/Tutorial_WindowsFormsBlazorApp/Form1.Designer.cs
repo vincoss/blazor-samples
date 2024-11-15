@@ -1,4 +1,4 @@
-﻿namespace Default_WindowsFormsBlazorApp
+﻿namespace Tutorial_WindowsFormsBlazorApp
 {
     partial class Form1
     {
@@ -49,10 +49,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-
         }
 
         #endregion
+
 
         private Microsoft.AspNetCore.Components.WebView.WindowsForms.BlazorWebView blazorWebView1;
     }
