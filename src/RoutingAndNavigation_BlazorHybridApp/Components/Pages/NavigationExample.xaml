@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlazorRoutingAndNavigation_MauiBlazorHybridApp.Components.Pages.NavigationExample"
+             Title="NavigationExample">
+    <StackLayout>
+        <Label Text="Navigation Example"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontSize="24" />
+        <Button x:Name="CloseButton" 
+                Clicked="CloseButton_Clicked" 
+                Text="Close" />
+    </StackLayout>
+</ContentPage>
