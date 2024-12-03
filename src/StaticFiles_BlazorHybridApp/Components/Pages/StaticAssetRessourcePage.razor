@@ -1,0 +1,19 @@
+﻿@page "/static-asset-resource"
+@using Microsoft.Extensions.Logging
+@using System.Resources
+@inject ILogger<StaticAssetPage> Logger
+
+<h3>StaticAssetPage</h3>
+
+<p>@dataResourceText</p>
+
+@code {
+    public string dataResourceText = "Loading resource ...";
+
+    protected override void OnInitialized()
+    {
+        var resources = new ResourceManager(typeof(StaticFiles_BlazorHybridApp.Resources.ResourcesStrings));
+
+        dataResourceText = resources.GetString("Data") ?? "'Data' not found.";
+    }
+}

@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default_MauiBlazorHybridApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingAndNavigation_BlazorHybridApp", "src\RoutingAndNavigation_BlazorHybridApp\RoutingAndNavigation_BlazorHybridApp.csproj", "{B6B00E88-4296-6A27-65E4-5BE09DFA3001}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFiles_BlazorHybridApp", "src\StaticFiles_BlazorHybridApp\StaticFiles_BlazorHybridApp.csproj", "{72D7F41E-1BBF-4436-93F5-089B062EF7A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -221,6 +223,11 @@ Global
 		{B6B00E88-4296-6A27-65E4-5BE09DFA3001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6B00E88-4296-6A27-65E4-5BE09DFA3001}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6B00E88-4296-6A27-65E4-5BE09DFA3001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,28 @@
+﻿@page "/static-asset"
+@using Microsoft.Extensions.Logging
+@inject ILogger<StaticAssetPage> Logger
+
+<h3>StaticAssetPage</h3>
+
+<p>@dataResourceText</p>
+
+@code 
+{
+    public string dataResourceText = "Loading resource ...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            using var stream = await FileSystem.OpenAppPackageFileAsync("Data.txt");
+            using var reader = new StreamReader(stream);
+
+            dataResourceText = await reader.ReadToEndAsync();
+        }
+        catch (FileNotFoundException ex)
+        {
+            dataResourceText = "Data file not found.";
+            Logger.LogError(ex, "'Resource/Raw/Data.txt' not found.");
+        }
+    }
+}

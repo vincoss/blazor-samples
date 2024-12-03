@@ -1,0 +1,112 @@
+﻿@page "/static-asset-resource-2"
+@using Microsoft.Extensions.Logging
+@using System.Resources
+@inject ILogger<StaticAssetPage> Logger
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+<h1>Static Asset Example 2</h1>
+
+<h2>Read a file</h2>
+
+<p>@dataResourceText</p>
+
+<h2>Call JavaScript</h2>
+
+<p>
+    <button @onclick="TriggerPrompt">Trigger browser window prompt</button>
+    <button @onclick="TriggerPrompt2">Trigger browser window prompt 2</button>
+</p>
+
+<p>@result</p>
+
+<h2>Show an image</h2>
+
+<p><img alt="BYD Shark 2024" src="/byd-shark.jpg" /></p>
+
+<p>
+    <em>Jeep</em> and <em>Jeep YJ</em> are registered trademarks of
+    <a href="https://www.stellantis.com">FCA US LLC (Stellantis NV)</a>.
+</p>
+
+@code {
+    private string dataResourceText = "Loading resource ...";
+    private IJSObjectReference? module;
+    private IJSObjectReference? module2;
+    private string result;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            dataResourceText = await ReadData();
+        }
+        catch (FileNotFoundException ex)
+        {
+            dataResourceText = "Data file not found.";
+            Logger.LogError(ex, "'wwwroot/data.txt' not found.");
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./scripts.js");
+            module2 = await JS.InvokeAsync<IJSObjectReference>("import", "./Components/Pages/StaticAssetRessourcePage2.razor.js");
+        }
+    }
+
+    private async Task TriggerPrompt()
+    {
+        result = await Prompt("Provide some text");
+    }
+
+    private async Task TriggerPrompt2()
+    {
+        result = await Prompt2("Provide some text");
+    }
+
+    public async ValueTask<string> Prompt(string message)
+    {
+       return  module is not null ? await module.InvokeAsync<string>("showPrompt", message) : null;
+    }
+
+    public async ValueTask<string> Prompt2(string message)
+    {
+       return     module2 is not null ? await module2.InvokeAsync<string>("showPromptCollocated", message) : null;
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            try
+            {
+                await module.DisposeAsync();
+            }
+            catch (JSDisconnectedException)
+            {
+            }
+        }
+
+        if (module2 is not null)
+        {
+            try
+            {
+                await module2.DisposeAsync();
+            }
+            catch (JSDisconnectedException)
+            {
+            }
+        }
+    }
+
+    private async Task<string> ReadData()
+    {
+        using var stream = await FileSystem.OpenAppPackageFileAsync("wwwroot/data.txt");
+        using var reader = new StreamReader(stream);
+
+        return await reader.ReadToEndAsync();
+    }
+}
