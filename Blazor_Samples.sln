@@ -79,6 +79,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingAndNavigation_Blazor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFiles_BlazorHybridApp", "src\StaticFiles_BlazorHybridApp\StaticFiles_BlazorHybridApp.csproj", "{72D7F41E-1BBF-4436-93F5-089B062EF7A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cronos_Samples", "src\Cronos_Samples\Cronos_Samples.csproj", "{839F0137-0A1A-4276-B33F-B041CD24503D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -228,6 +230,10 @@ Global
 		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72D7F41E-1BBF-4436-93F5-089B062EF7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{839F0137-0A1A-4276-B33F-B041CD24503D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839F0137-0A1A-4276-B33F-B041CD24503D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839F0137-0A1A-4276-B33F-B041CD24503D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839F0137-0A1A-4276-B33F-B041CD24503D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -242,6 +248,7 @@ Global
 		{81CD7845-F56A-4623-969D-4AEB6D6CC6DF} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{7D635754-AF7F-4930-870D-158BA05540BE} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
 		{53FA8DAA-8586-4645-A5BB-4EF9E2F5F3AA} = {65146420-E8B0-40B9-ABEE-494C24426ED7}
+		{839F0137-0A1A-4276-B33F-B041CD24503D} = {3130C615-FD05-438A-9EE2-2DDF217AFB47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C4819EF-5052-413A-BD79-3FC25D4E4A66}
